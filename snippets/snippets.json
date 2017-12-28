@@ -1,0 +1,15 @@
+{
+    "TypeScript TreeView Module": {
+        "prefix": "ej2-treeview",
+        "description": "TypeScript TreeView Module",
+        "body": [
+            "import { TreeView } from '@syncfusion/ej2-navigations';",
+            "",
+            "let hierarchicalData: { [key: string]: Object }[] = [{ id: '01', name: 'Local Disk (C:)' }]",
+            "let treeObj: TreeView = new TreeView({",
+                "fields: { dataSource: hierarchicalData, id: 'id', text: 'name', child: 'subChild' }",
+            "});",
+            "treeObj.appendTo('#tree');"
+          ]
+    } 
+}

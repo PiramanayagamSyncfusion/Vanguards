@@ -1,0 +1,43 @@
+{
+    "name": "vanguards",
+    "displayName": "TypeScript Snippet for Essential JavaScript 2 TreeView component",
+    "description": "TypeScript Snippet for Essential JavaScript 2 TreeView component",
+    "version": "1.0.11",
+    "publisher": "piramanayagamr",
+    "engines": {
+        "vscode": "^1.8.0"
+    },
+    "icon": "images/synclogo.png",
+    "galleryBanner": {
+        "color": "#0273D4",
+        "theme": "dark"
+    },
+    "categories": [
+        "Snippets",
+        "Other"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "typescript",
+                "path": "./snippets/snippets.json"
+            }
+        ],
+        "activationEvents": [
+            "onLanguage:typescript"
+        ]
+    },
+    "license": "SEE LICENSE IN LICENSE.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/PiramanayagamSyncfusion/Vanguards.git"
+    },
+    "keywords": [
+        "TypeScript",
+        "Syncfusion",
+        "TreeView",
+        "ej2",
+        "ej2-treeview",
+        "ej2-navigation"
+    ]
+}
