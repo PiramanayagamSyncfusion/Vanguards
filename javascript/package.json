@@ -20,7 +20,7 @@
         "snippets": [
             {
                 "language": "typescript",
-                "path": "./snippets/treeview.json"
+                "path": "./snippets/index.json"
             }
         ],
         "activationEvents": [

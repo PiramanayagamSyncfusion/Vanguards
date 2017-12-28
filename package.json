@@ -1,0 +1,6 @@
+{
+"devDependencies": {
+  "gulp": "latest",
+  "gulp-merge-json": "latest"
+  }
+}
