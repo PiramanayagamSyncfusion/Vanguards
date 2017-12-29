@@ -70,7 +70,7 @@
             "];",
             "",
             "var treeObj =  new ej.navigations.TreeView({",
-            "\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}', child: '${4:Child}' }",
+            "\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}', child: '${4:Child}' },",
             "\tallowEditing:true,",
             "\tnodeEditing: editing",
             "});",

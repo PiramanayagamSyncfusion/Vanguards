@@ -58,7 +58,7 @@
           "\t\tif (e.text.length < 3) { return; }",
           "\tvar query = new ej.data.Query().select(['ContactName', 'CustomerID']);",
           "\tquery = (e.text !== '') ? query.where('ContactName', 'startswith', e.text, true) : query;",
-          "\te.updateData(5:{dataSource}, query);",
+          "\te.updateData(${5:dataSource}, query);",
         "}",
     "}",
 "});",
