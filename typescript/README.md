@@ -1,8 +1,8 @@
-# Essential JavaScript 2 TreeView snippet for VSCode
+# TypeScript snippet for Essential JS 2 components
 
 ![Logo](./images/synclogo.png)
 
-This extension will add TypeScript snippet for Essential JavaScript 2 TreeView.
+This extension will add TypeScript snippet for Essential JS 2 components.
 
 ## TypeScript Snippets
 

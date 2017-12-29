@@ -1,9 +1,9 @@
 {
-    "name": "vanguards",
-    "displayName": "TypeScript Snippet for Essential JavaScript 2 TreeView component",
-    "description": "TypeScript Snippet for Essential JavaScript 2 TreeView component",
+    "name": "ej2-js-packages",
+    "displayName": "JavaScript snippet for Essential JS 2 components",
+    "description": "JavaScript snippet for Essential JS 2 components",
     "version": "1.0.11",
-    "publisher": "piramanayagamr",
+    "publisher": "gurunathan",
     "engines": {
         "vscode": "^1.8.0"
     },
