@@ -17,7 +17,7 @@
             "let toolbar: Toolbar = new Toolbar({",
             "items: ${1:items}",   
             "});",
-            "toolbar.appendTo('#{2:element}');"
+            "toolbar.appendTo('#${2:element}');"
        ]
     },
      "TypeScript Toolbar RTL Module": {
@@ -36,10 +36,10 @@
             "\t{ text: 'Underline' },",
             "\t];",
             "let toolbar: Toolbar = new Toolbar({",
-            "enableRtl: true",
+            "enableRtl: true,",
             "items: ${1:items}",   
             "});",
-            "toolbar.appendTo('#{2:element}');"
+            "toolbar.appendTo('#${2:element}');"
        ]
     }
 }

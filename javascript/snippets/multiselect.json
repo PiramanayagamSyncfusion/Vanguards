@@ -19,15 +19,15 @@
         "description": "JavaScript MultiSelect with Remote DataSource",
         "body": [
             "var dataSource = new ej.data.DataManager({",
-            "\turl: 'http://services.odata.org/V4/Northwind/Northwind.svc/'",
-            "\tadaptor: new ej.data.ODataV4Adaptor()",
+            "\turl: 'http://services.odata.org/V4/Northwind/Northwind.svc/',",
+            "\tadaptor: new ej.data.ODataV4Adaptor(),",
             "\tcrossDomain: true",
             "});",
           "var query=new ej.data.Query().from('Employees').select(['FirstName', 'City','EmployeeID']).take(6),",
             "var msObject   = new ej.dropdowns.MultiSelect({",
             "\tdataSource: ${1:dataSource},",
-            "\tquery: ${2:query}",
-            "\tfields: {text: '${3:FirstName}' value: '${4:EmployeeID}' },",
+            "\tquery: ${2:query},",
+            "\tfields: {text: '${3:FirstName}' ,value: '${4:EmployeeID}' },",
             "\tplaceholder:'${5:Select an employee}',",
             "\tsortOrder:'Ascending'",
           "});",
@@ -43,5 +43,7 @@
             "\tplaceholder: '${1:Select games}'});",
             "listObj.appendTo('#${2:selectElement}');"
        ]
-    }    
+    }
+
+    
 }

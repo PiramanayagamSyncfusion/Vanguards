@@ -9,7 +9,7 @@
            "let msObject: MultiSelect = new MultiSelect({",
            "\tdataSource: ${1:dataSource}",
            "});",
-           "msObject.appendTo('#{2:select}');"
+           "msObject.appendTo('#${2:select}');"
        ]
     },
      "TypeScript MultiSelect Databinding Module": {
@@ -33,7 +33,7 @@
            "\tplaceholder:'${4:Select customers}',",
            "\tsortOrder: '${5:Ascending}'",
            "\t});",
-           "\tcustomers.appendTo('#{6:select}');"
+           "\tcustomers.appendTo('#${6:select}');"
        ]
     },
      "TypeScript MultiSelect Grouping Module": {

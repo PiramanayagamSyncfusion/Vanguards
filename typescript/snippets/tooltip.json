@@ -7,7 +7,7 @@
           "let tooltip: Tooltip = new Tooltip({",
           "\tcontent: '${1:Tooltip content}'",
           "});",
-          "tooltip.appendTo('#{2:target}');"
+          "tooltip.appendTo('#${2:target}');"
        ]
     }
 }

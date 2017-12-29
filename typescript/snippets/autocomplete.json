@@ -33,7 +33,7 @@
             "\tplaceholder:'${4:Select a customer}',",
             "\tsortOrder: '${5:Ascending}'",
             "});",
-            "dropDownListObject.appendTo('#${6:ddlelement}');"
+            "atcObject.appendTo('#${6:ddlelement}');"
        ]
     },
      "TypeScript AutoComplete Filtering Module": {
@@ -43,20 +43,20 @@
             "import { AutoComplete } from '@syncfusion/ej2-dropdowns';",
             "import { Query, DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';",
             "",
-            "let dataSource: DataManager = new DataManager({,",
-            "url: 'http://services.odata.org/V4/Northwind/Northwind.svc/Customers',",
-            "adaptor: new ODataV4Adaptor,",
-            "crossDomain: true",
+            "let dataSource: DataManager = new DataManager({",
+            "\turl: 'http://services.odata.org/V4/Northwind/Northwind.svc/Customers',",
+            "\tadaptor: new ODataV4Adaptor,",
+            "\tcrossDomain: true",
             "});",
             "let fields: Object = { value: 'ContactName' };",
             "let query: Query = new Query().select(['ContactName']);",
             "let filter: AutoComplete = new AutoComplete({",
-            "dataSource: ${1:dataSource},",
-            "query: ${2:query},",
-            "fields: ${3:fields},",
-            "placeholder: '${4:Find a customer}',",
-            "filterType: '${5:StartsWith}',",
-            "sortOrder: '${6:Ascending}'",
+            "\tdataSource: ${1:dataSource},",
+            "\tquery: ${2:query},",
+            "\tfields: ${3:fields},",
+            "\tplaceholder: '${4:Find a customer}',",
+            "\tfilterType: '${5:StartsWith}',",
+            "\tsortOrder: '${6:Ascending}'",
             "});",
             "filter.appendTo('#${7:atcelement}');"
        ]

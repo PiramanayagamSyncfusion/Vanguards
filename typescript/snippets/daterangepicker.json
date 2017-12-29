@@ -8,7 +8,7 @@
           "let daterangepicker: DateRangePicker = new DateRangePicker({",
           "\tplaceholder: '${1:Select range}'",
           "});",
-          "datepickerObject.appendTo('#${2:element}');"
+          "daterangepicker.appendTo('#${2:element}');"
        ]
     }
 }

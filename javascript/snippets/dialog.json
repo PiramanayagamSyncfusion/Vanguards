@@ -5,7 +5,7 @@
         "body": [
             "var dialog = new ej.popups.Dialog({",
             "\tcontent: 'This is a Dialog with content',",
-            "\ttarget: document.getElementById('${1:container}')",
+            "\ttarget: document.getElementById('${1:container}'),",
             "\twidth: '250px'",
             "});",
             "dialog.appendTo('#${2:dialog}');",
@@ -23,8 +23,8 @@
        "body": [
             "var dialog = new ej.popups.Dialog({",
             "\tcontent: 'This is a Dialog with content',",
-            "\ttarget: document.getElementById('${1:container}')",
-            "\twidth: '250px'",
+            "\ttarget: document.getElementById('${1:container}'),",
+            "\twidth: '250px',",
             "\tenableRTL:true",
              "});",
             "dialog.appendTo('#${2:dialog}');",

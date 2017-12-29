@@ -21,10 +21,12 @@
            "\tcustomCharacters: {",
             "\t\tP: 'P,A,a,p',",
             "\t\tM: 'M,m'",
-          "\t}",
+          "\t},",
           "\tfloatLabelType: 'Never'",
           "});",
             "mask.appendTo('#${1:mask1}');"      
           ]
-    }
+    } 
+    
+
 }

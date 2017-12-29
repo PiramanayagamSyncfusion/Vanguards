@@ -104,7 +104,7 @@
             "];",
             "",
             "var treeObj =  new ej.navigations.TreeView({",
-            "\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}', child: '${4:Child}' }",
+            "\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}', child: '${4:Child}' },",
             "\tallowDragAndDrop: true,",
             "});",
             "treeObj.appendTo('#${5:tree}');"        
@@ -132,7 +132,7 @@
             "];",
             "",
             "var treeObj =  new ej.navigations.TreeView({",
-            "\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}', child: '${4:Child}' }",
+            "\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}', child: '${4:Child}' },",
             "\tshowCheckBox: true,",
             "});",
            "treeObj.appendTo('#${5:tree}');"     
@@ -160,7 +160,7 @@
             "];",
             "",
             "var treeObj =  new ej.navigations.TreeView({",
-            "\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}', child: '${4:Child}' }",
+            "\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}', child: '${4:Child}' },",
             "\tallowMultiSelection: true,",
             "});",
             "treeObj.appendTo('#${5:tree}');"        
@@ -188,7 +188,7 @@
             "];",
             "",
             "var treeObj =  new ej.navigations.TreeView({",
-            "\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}', child: '${4:Child}' }",
+            "\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}', child: '${4:Child}' },",
             "\tenableRtl: true,",
             "});",
              "treeObj.appendTo('#${5:tree}');"         

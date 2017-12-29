@@ -8,12 +8,12 @@
             "let items: { [key: string]: Object }[] = [",
             "\t\t{ header: 'ASP.NET', expanded: 'true', content: 'Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services.' },",
             "\t\t{ header: 'ASP.NET MVC', content: 'The Model-View-Controller (MVC) architectural pattern separates an application into three main components: the model, the view, and the controller.' },",
-            "\t\t{ header: 'JavaScript', content: 'JavaScript (JS) is an interpreted computer programming language. It was originally implemented as part of web browsers so that client-side scripts could interact with the user and alter the document content that was displayed.",
-            "\t]",
+            "\t\t{ header: 'JavaScript', content: 'JavaScript (JS) is an interpreted computer programming language. It was originally implemented as part of web browsers so that client-side scripts could interact with the user and alter the document content that was displayed.'}",
+            "\t];",
             "let accordion: Accordion = new Accordion({",
             "\titems: ${1:items}",
             "});",
-            "accordion.appendTo('#{2:accordion_html_markup}');"
+            "accordion.appendTo('#${2:accordion_html_markup}');"
        ]
     },
      "TypeScript Accordion RTL Module": {
@@ -25,13 +25,13 @@
             "let items: { [key: string]: Object }[] = [",
             "\t\t{ header: 'ASP.NET', expanded: 'true', content: 'Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services.' },",
             "\t\t{ header: 'ASP.NET MVC', content: 'The Model-View-Controller (MVC) architectural pattern separates an application into three main components: the model, the view, and the controller.' },",
-            "\t\t{ header: 'JavaScript', content: 'JavaScript (JS) is an interpreted computer programming language. It was originally implemented as part of web browsers so that client-side scripts could interact with the user and alter the document content that was displayed.",
-            "\t]",
+            "\t\t{ header: 'JavaScript', content: 'JavaScript (JS) is an interpreted computer programming language. It was originally implemented as part of web browsers so that client-side scripts could interact with the user and alter the document content that was displayed.'}",
+            "\t];",
             "let accordion: Accordion = new Accordion({",
-            "\tenableRtl: true",
+            "\tenableRtl: true,",
             "\titems: ${1:items}",
             "});",
-            "accordion.appendTo('#{2:accordion_html_markup}');"
+            "accordion.appendTo('#${2:accordion_html_markup}');"
        ]
     }
 }

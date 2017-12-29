@@ -32,7 +32,7 @@
             "\t\t{ text: 'Bold' },",
             "\t\t{ text: 'Italic' },",
             "\t\t{ text: 'Underline' },",
-          "\t]",
+          "\t],",
            "\tenableRtl:true",
         "});",
             "toolbar.appendTo('#${1:element}');"

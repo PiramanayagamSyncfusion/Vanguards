@@ -9,7 +9,7 @@
             "\t{",
             "\t\theader: { 'text': 'Twitter' },",
             "\t\tcontent: 'Twitter is an online social networking service that enables users to send and read short 140-character ' +",
-            "'messages called 'tweets'. '",
+            "'messages called tweets. '",
             "\t},",
             "\t{",
             "\t\theader: { 'text': 'Facebook' },",
@@ -27,7 +27,7 @@
             "let tabObj: Tab = new Tab({",
             "\titems: ${1:items}",
             "});",
-            "tabObj.appendTo('#{2:element}');"
+            "tabObj.appendTo('#${2:element}');"
        ]
     },
      "TypeScript Tab RTL Module": {
@@ -40,7 +40,7 @@
             "\t{",
             "\t\theader: { 'text': 'Twitter' },",
             "\t\tcontent: 'Twitter is an online social networking service that enables users to send and read short 140-character ' +",
-            "'messages called 'tweets'. '",
+            "'messages called tweets. '",
             "\t},",
             "\t{",
             "\t\theader: { 'text': 'Facebook' },",
@@ -56,10 +56,10 @@
             "\t}",
             "\t];",
             "let tabObj: Tab = new Tab({",
-            "\tenableRtl: true",
+            "\tenableRtl: true,",
             "\titems: ${1:items}",
             "});",
-            "tabObj.appendTo('#{2:element}');"
+            "tabObj.appendTo('#${2:element}');"
        ]
     }
 }

@@ -8,12 +8,12 @@
 			"let items: { [key: string]: Object }[] = [",
 			"\t\t{ header: 'ASP.NET', expanded: 'true', content: 'Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services.' },",
 			"\t\t{ header: 'ASP.NET MVC', content: 'The Model-View-Controller (MVC) architectural pattern separates an application into three main components: the model, the view, and the controller.' },",
-			"\t\t{ header: 'JavaScript', content: 'JavaScript (JS) is an interpreted computer programming language. It was originally implemented as part of web browsers so that client-side scripts could interact with the user and alter the document content that was displayed.",
-			"\t]",
+			"\t\t{ header: 'JavaScript', content: 'JavaScript (JS) is an interpreted computer programming language. It was originally implemented as part of web browsers so that client-side scripts could interact with the user and alter the document content that was displayed.'}",
+			"\t];",
 			"let accordion: Accordion = new Accordion({",
 			"\titems: ${1:items}",
 			"});",
-			"accordion.appendTo('#{2:accordion_html_markup}');"
+			"accordion.appendTo('#${2:accordion_html_markup}');"
 		]
 	},
 	"TypeScript Accordion RTL Module": {
@@ -25,13 +25,13 @@
 			"let items: { [key: string]: Object }[] = [",
 			"\t\t{ header: 'ASP.NET', expanded: 'true', content: 'Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services.' },",
 			"\t\t{ header: 'ASP.NET MVC', content: 'The Model-View-Controller (MVC) architectural pattern separates an application into three main components: the model, the view, and the controller.' },",
-			"\t\t{ header: 'JavaScript', content: 'JavaScript (JS) is an interpreted computer programming language. It was originally implemented as part of web browsers so that client-side scripts could interact with the user and alter the document content that was displayed.",
-			"\t]",
+			"\t\t{ header: 'JavaScript', content: 'JavaScript (JS) is an interpreted computer programming language. It was originally implemented as part of web browsers so that client-side scripts could interact with the user and alter the document content that was displayed.'}",
+			"\t];",
 			"let accordion: Accordion = new Accordion({",
-			"\tenableRtl: true",
+			"\tenableRtl: true,",
 			"\titems: ${1:items}",
 			"});",
-			"accordion.appendTo('#{2:accordion_html_markup}');"
+			"accordion.appendTo('#${2:accordion_html_markup}');"
 		]
 	},
 	"TypeScript AutoComplete Module": {
@@ -68,7 +68,7 @@
 			"\tplaceholder:'${4:Select a customer}',",
 			"\tsortOrder: '${5:Ascending}'",
 			"});",
-			"dropDownListObject.appendTo('#${6:ddlelement}');"
+			"atcObject.appendTo('#${6:ddlelement}');"
 		]
 	},
 	"TypeScript AutoComplete Filtering Module": {
@@ -78,20 +78,20 @@
 			"import { AutoComplete } from '@syncfusion/ej2-dropdowns';",
 			"import { Query, DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';",
 			"",
-			"let dataSource: DataManager = new DataManager({,",
-			"url: 'http://services.odata.org/V4/Northwind/Northwind.svc/Customers',",
-			"adaptor: new ODataV4Adaptor,",
-			"crossDomain: true",
+			"let dataSource: DataManager = new DataManager({",
+			"\turl: 'http://services.odata.org/V4/Northwind/Northwind.svc/Customers',",
+			"\tadaptor: new ODataV4Adaptor,",
+			"\tcrossDomain: true",
 			"});",
 			"let fields: Object = { value: 'ContactName' };",
 			"let query: Query = new Query().select(['ContactName']);",
 			"let filter: AutoComplete = new AutoComplete({",
-			"dataSource: ${1:dataSource},",
-			"query: ${2:query},",
-			"fields: ${3:fields},",
-			"placeholder: '${4:Find a customer}',",
-			"filterType: '${5:StartsWith}',",
-			"sortOrder: '${6:Ascending}'",
+			"\tdataSource: ${1:dataSource},",
+			"\tquery: ${2:query},",
+			"\tfields: ${3:fields},",
+			"\tplaceholder: '${4:Find a customer}',",
+			"\tfilterType: '${5:StartsWith}',",
+			"\tsortOrder: '${6:Ascending}'",
 			"});",
 			"filter.appendTo('#${7:atcelement}');"
 		]
@@ -113,7 +113,7 @@
 			"import { CheckBox } from '@syncfusion/ej2-buttons';",
 			"",
 			"let checkbox: CheckBox = new CheckBox({ label: '${1:Default}' });",
-			"checkbox.appendTo('#{2:element}');"
+			"checkbox.appendTo('#${2:element}');"
 		]
 	},
 	"TypeScript RadioButton Module": {
@@ -123,7 +123,7 @@
 			"import { RadioButton } from '@syncfusion/ej2-buttons';",
 			"",
 			"let radiobutton: RadioButton = new RadioButton({ label: '${1:Default}'});",
-			"radiobutton.appendTo('#{2:element}');"
+			"radiobutton.appendTo('#${2:element}');"
 		]
 	},
 	"TypeScript Calendar Module": {
@@ -245,7 +245,7 @@
 			"let daterangepicker: DateRangePicker = new DateRangePicker({",
 			"\tplaceholder: '${1:Select range}'",
 			"});",
-			"datepickerObject.appendTo('#${2:element}');"
+			"daterangepicker.appendTo('#${2:element}');"
 		]
 	},
 	"TypeScript Dialog Module": {
@@ -255,12 +255,12 @@
 			"import { Dialog } from '@syncfusion/ej2-popups';",
 			"",
 			"let dialog: Dialog = new Dialog({",
-			"\tcontent: 'This is a Dialog with content',",
-			"\ttarget: document.getElementById('${1:container}'),",
-			"\twidth: '250px'",
+			"\tcontent: '${1:This is a Dialog with content}',",
+			"\ttarget: document.getElementById('${2:container}'),",
+			"\twidth: '${3:250px}'",
 			"});",
-			"dialog.appendTo('#${2:dialog}');",
-			"document.getElementById('${3:targetButton}').onclick = (): void => {",
+			"dialog.appendTo('#${4:dialog}');",
+			"document.getElementById('${5:targetButton}').onclick = (): void => {",
 			"dialog.show();",
 			"}"
 		]
@@ -272,13 +272,13 @@
 			"import { Dialog } from '@syncfusion/ej2-popups';",
 			"",
 			"let dialog: Dialog = new Dialog({",
-			"\tcontent: 'This is a Dialog with content',",
-			"\ttarget: document.getElementById('${1:container}'),",
-			"\twidth: '250px'",
+			"\tcontent: '${1:This is a Dialog with content}',",
+			"\ttarget: document.getElementById('${2:container}'),",
+			"\twidth: '${3:250px}',",
 			"\tenableRtl: true",
 			"});",
-			"dialog.appendTo('#${2:dialog}');",
-			"document.getElementById('${3:targetButton}').onclick = (): void => {",
+			"dialog.appendTo('#${4:dialog}');",
+			"document.getElementById('${5:targetButton}').onclick = (): void => {",
 			"dialog.show();",
 			"}"
 		]
@@ -337,13 +337,13 @@
 			"let dropDownListObject: DropDownList = new DropDownList({",
 			"\tdataSource: ${1:dataSource},",
 			"\tfields: { text: '${2:text}', value: '${3:value}' },",
-			"\tplaceholder:'${4:Select a game}'",
+			"\tplaceholder:'${4:Select a game}',",
 			"\tallowFiltering: true,",
 			"\tfiltering: function (e: FilteringEventArgs) {",
 			"\t\tlet query = new Query();",
 			"\t\tquery = (e.text != '') ? query.where('${5:text}', 'startswith', e.text, true) : query;",
 			"\t\te.updateData(${6:dataSource}, query);",
-			"}",
+			"\t}",
 			"});",
 			"dropDownListObject.appendTo('#${7:ddlelement}');"
 		]
@@ -435,7 +435,7 @@
 			"\t\tM: 'M,m'",
 			"};",
 			"let mask: MaskedTextBox = new MaskedTextBox({",
-			"\tcustomCharacters: ${1:customCharacters} ",
+			"\tcustomCharacters: ${1:customCharacters},",
 			"\tmask: '${2:00:00 >PM}',",
 			"\tplaceholder: '${3:Time (ex: 10:00 PM, 10:00 AM)}',",
 			"\tfloatLabelType: '${4:Always}'",
@@ -453,7 +453,7 @@
 			"let msObject: MultiSelect = new MultiSelect({",
 			"\tdataSource: ${1:dataSource}",
 			"});",
-			"msObject.appendTo('#{2:select}');"
+			"msObject.appendTo('#${2:select}');"
 		]
 	},
 	"TypeScript MultiSelect Databinding Module": {
@@ -477,7 +477,7 @@
 			"\tplaceholder:'${4:Select customers}',",
 			"\tsortOrder: '${5:Ascending}'",
 			"\t});",
-			"\tcustomers.appendTo('#{6:select}');"
+			"\tcustomers.appendTo('#${6:select}');"
 		]
 	},
 	"TypeScript MultiSelect Grouping Module": {
@@ -524,7 +524,7 @@
 			"\t{",
 			"\t\theader: { 'text': 'Twitter' },",
 			"\t\tcontent: 'Twitter is an online social networking service that enables users to send and read short 140-character ' +",
-			"'messages called 'tweets'. '",
+			"'messages called tweets. '",
 			"\t},",
 			"\t{",
 			"\t\theader: { 'text': 'Facebook' },",
@@ -542,7 +542,7 @@
 			"let tabObj: Tab = new Tab({",
 			"\titems: ${1:items}",
 			"});",
-			"tabObj.appendTo('#{2:element}');"
+			"tabObj.appendTo('#${2:element}');"
 		]
 	},
 	"TypeScript Tab RTL Module": {
@@ -555,7 +555,7 @@
 			"\t{",
 			"\t\theader: { 'text': 'Twitter' },",
 			"\t\tcontent: 'Twitter is an online social networking service that enables users to send and read short 140-character ' +",
-			"'messages called 'tweets'. '",
+			"'messages called tweets. '",
 			"\t},",
 			"\t{",
 			"\t\theader: { 'text': 'Facebook' },",
@@ -571,10 +571,10 @@
 			"\t}",
 			"\t];",
 			"let tabObj: Tab = new Tab({",
-			"\tenableRtl: true",
+			"\tenableRtl: true,",
 			"\titems: ${1:items}",
 			"});",
-			"tabObj.appendTo('#{2:element}');"
+			"tabObj.appendTo('#${2:element}');"
 		]
 	},
 	"TypeScript TimePicker Module": {
@@ -607,7 +607,7 @@
 			"let toolbar: Toolbar = new Toolbar({",
 			"items: ${1:items}",
 			"});",
-			"toolbar.appendTo('#{2:element}');"
+			"toolbar.appendTo('#${2:element}');"
 		]
 	},
 	"TypeScript Toolbar RTL Module": {
@@ -626,10 +626,10 @@
 			"\t{ text: 'Underline' },",
 			"\t];",
 			"let toolbar: Toolbar = new Toolbar({",
-			"enableRtl: true",
+			"enableRtl: true,",
 			"items: ${1:items}",
 			"});",
-			"toolbar.appendTo('#{2:element}');"
+			"toolbar.appendTo('#${2:element}');"
 		]
 	},
 	"TypeScript Tooltip Module": {
@@ -640,7 +640,7 @@
 			"let tooltip: Tooltip = new Tooltip({",
 			"\tcontent: '${1:Tooltip content}'",
 			"});",
-			"tooltip.appendTo('#{2:target}');"
+			"tooltip.appendTo('#${2:target}');"
 		]
 	},
 	"TypeScript TreeView Module": {
@@ -689,7 +689,7 @@
 			"let treeObj: TreeView = new TreeView({",
 			"\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', parentID: '${3:parentID}', text: '${4:text}', hasChildren: '${5:hasChildren}' }",
 			"});",
-			"treeObj.appendTo('#{6:tree}');"
+			"treeObj.appendTo('#${6:tree}');"
 		]
 	},
 	"TypeScript TreeView Editing Module": {
@@ -740,7 +740,7 @@
 			"\t\t\t{ id: 3, parentID: 1, text: 'Johnson', isSelected: true },",
 			"\t\t\t{ id: 4, parentID: 1, text: 'Anderson' },",
 			"\t\t]",
-			"\t}",
+			"\t},",
 			"\t{",
 			"\t\tid: 5, text: 'Windows Team',",
 			"\t\tchild: [",
@@ -754,7 +754,7 @@
 			"\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}', child: '${4:child}', selected: '${5:isSelected}' },",
 			"\tallowDragAndDrop: true,",
 			"});",
-			"treeObj.appendTo('#{6:tree}');"
+			"treeObj.appendTo('#${6:tree}');"
 		]
 	},
 	"TypeScript TreeView Checkbox Module": {
@@ -802,7 +802,7 @@
 			"\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', parentID: '${3:parentID}', text: '${4:text}', hasChildren: '${5:hasChildren}', selected: '${6:selected}' },",
 			"\tallowMultiSelection: true,",
 			"});",
-			"treeObj.appendTo('#{6:tree}');"
+			"treeObj.appendTo('#${7:tree}');"
 		]
 	},
 	"TypeScript TreeView RTL Module": {
@@ -831,7 +831,7 @@
 			"\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}' },",
 			"\tenableRtl: true,",
 			"});",
-			"treeObj.appendTo('#{4:tree}');"
+			"treeObj.appendTo('#${4:tree}');"
 		]
 	}
 }

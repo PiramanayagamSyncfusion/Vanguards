@@ -45,7 +45,7 @@
             "let treeObj: TreeView = new TreeView({",
             "\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', parentID: '${3:parentID}', text: '${4:text}', hasChildren: '${5:hasChildren}' }",
             "});",
-            "treeObj.appendTo('#{6:tree}');"
+            "treeObj.appendTo('#${6:tree}');"
           ]
     },
     "TypeScript TreeView Editing Module": {
@@ -96,7 +96,7 @@
             "\t\t\t{ id: 3, parentID: 1, text: 'Johnson', isSelected: true },",
             "\t\t\t{ id: 4, parentID: 1, text: 'Anderson' },",
             "\t\t]",
-            "\t}",
+            "\t},",
             "\t{",
             "\t\tid: 5, text: 'Windows Team',",
             "\t\tchild: [",
@@ -110,7 +110,7 @@
             "\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}', child: '${4:child}', selected: '${5:isSelected}' },",
             "\tallowDragAndDrop: true,",
             "});",
-            "treeObj.appendTo('#{6:tree}');"
+            "treeObj.appendTo('#${6:tree}');"
        ]
     },
      "TypeScript TreeView Checkbox Module": {
@@ -158,7 +158,7 @@
             "\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', parentID: '${3:parentID}', text: '${4:text}', hasChildren: '${5:hasChildren}', selected: '${6:selected}' },",
             "\tallowMultiSelection: true,",
             "});",
-            "treeObj.appendTo('#{6:tree}');"
+            "treeObj.appendTo('#${7:tree}');"
        ]
     },
     "TypeScript TreeView RTL Module": {
@@ -187,7 +187,7 @@
             "\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}' },",
             "\tenableRtl: true,",
             "});",
-            "treeObj.appendTo('#{4:tree}');"
+            "treeObj.appendTo('#${4:tree}');"
        ]
     }
 }

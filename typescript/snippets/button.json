@@ -16,7 +16,7 @@
             "import { CheckBox } from '@syncfusion/ej2-buttons';",
             "",
             "let checkbox: CheckBox = new CheckBox({ label: '${1:Default}' });",
-            "checkbox.appendTo('#{2:element}');"
+            "checkbox.appendTo('#${2:element}');"
        ]
     },
     "TypeScript RadioButton Module": {
@@ -26,7 +26,7 @@
             "import { RadioButton } from '@syncfusion/ej2-buttons';",
             "",
             "let radiobutton: RadioButton = new RadioButton({ label: '${1:Default}'});",
-            "radiobutton.appendTo('#{2:element}');"
+            "radiobutton.appendTo('#${2:element}');"
        ]
     }
 }

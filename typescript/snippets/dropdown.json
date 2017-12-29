@@ -53,13 +53,13 @@
             "let dropDownListObject: DropDownList = new DropDownList({",
             "\tdataSource: ${1:dataSource},",
             "\tfields: { text: '${2:text}', value: '${3:value}' },",
-            "\tplaceholder:'${4:Select a game}'",
+            "\tplaceholder:'${4:Select a game}',",
             "\tallowFiltering: true,",
             "\tfiltering: function (e: FilteringEventArgs) {",
             "\t\tlet query = new Query();",
             "\t\tquery = (e.text != '') ? query.where('${5:text}', 'startswith', e.text, true) : query;",
             "\t\te.updateData(${6:dataSource}, query);",
-            "}",
+            "\t}",
             "});",
             "dropDownListObject.appendTo('#${7:ddlelement}');"
        ]
