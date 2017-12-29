@@ -1,0 +1,61 @@
+
+{
+     "JavaScript AutoComplete Module": {
+        "prefix": "ej2-js-autocomplete",
+        "description": "JavaScript AutoComplete Module",
+        "body": [
+            "var dataSource = ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis'];",
+            "var listObj  = new ej.dropdowns.AutoComplete({",
+            "\tdataSource: ${1:dataSource},", 
+            "\tplaceholder: '${2:Select games}'});",
+            "\tlistObj.appendTo('#${3:atcelement}');"
+          ]
+    } ,
+
+ 
+    
+    "JavaScript AutoComplete with Remote DataSource": {
+        "prefix": "ej2-js-autocomplete-ds-remote",
+        "description": "JavaScript AutoComplete with Remote DataSource",
+       "body": [
+            "var dataSource = new ej.data.DataManager({",
+            "\turl: 'http://services.odata.org/V4/Northwind/Northwind.svc/'",
+            "\tadaptor: new ej.data.ODataV4Adaptor()",
+            "\tcrossDomain: true",
+          "});",
+          "var query=new ej.data.Query().from('Employees').select(['FirstName', 'City','EmployeeID']).take(6),",
+            "var acObject  = new ej.dropdowns.AutoComplete({",
+            "\tdataSource: ${1:dataSource},",
+            "\tquery: ${2:query}",
+            "\tfields: { value: '${3:FirstName}' },",
+            "\tplaceholder:'${4:Select an employee}',",
+            "\tsortOrder:'Ascending'",
+          "});",
+            "acObject .appendTo('#${5:atcelement}');"
+          ]
+    },
+
+  "JavaScript AutoComplete with Filtering": {
+      "prefix": "ej2-js-autocomplete-filter",
+      "description": "JavaScript AutoComplete with Filtering",
+      "body": [
+          "var dataSource = new ej.data.DataManager({",
+            "\turl: 'http://services.odata.org/V4/Northwind/Northwind.svc/Customers'",
+            "\tadaptor: new ej.data.ODataV4Adaptor()",
+            "\tcrossDomain: true",
+         "});",
+        "var query=new ej.data.Query().select(['ContactName'])",
+        "var acObject  = new ej.dropdowns.DropDownList({",
+        "\tdataSource: ${1:dataSource},",
+        "\tquery:${2:query}",
+        "\tfields: { value: '${3:ContactName}' },",
+        "\tplaceholder:'${4:Select customers}',",
+        "\tsortOrder: 'Ascending',",
+        "\tfilterType: 'StartsWith',",
+       "});",
+       "acObject .appendTo('#${5:atcelement}');"
+          ]
+    }
+
+    
+}

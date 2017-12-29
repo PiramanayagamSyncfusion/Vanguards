@@ -1,0 +1,37 @@
+{
+     "JavaScript Dialog Module": {
+        "prefix": "ej2-js-dialog",
+        "description": "JavaScript Dialog Module",
+        "body": [
+            "var dialog = new ej.popups.Dialog({",
+            "\tcontent: 'This is a Dialog with content',",
+            "\ttarget: document.getElementById('${1:container}')",
+            "\twidth: '250px'",
+            "});",
+            "dialog.appendTo('#${2:dialog}');",
+            "document.getElementById('${3:targetButton}').onclick = function() {",
+             "\tdialog.show();",
+            "}"
+          ]
+    } ,
+
+ 
+    
+    "JavaScript Dialog with RTL": {
+        "prefix": "ej2-js-dialog-rtl",
+        "description": "JavaScript Dialog with RTL",
+       "body": [
+            "var dialog = new ej.popups.Dialog({",
+            "\tcontent: 'This is a Dialog with content',",
+            "\ttarget: document.getElementById('${1:container}')",
+            "\twidth: '250px'",
+            "\tenableRTL:true",
+             "});",
+            "dialog.appendTo('#${2:dialog}');",
+            "document.getElementById('${3:targetButton}').onclick = function() {",
+             "\tdialog.show();",
+            "}"
+          ]
+    } 
+    
+}

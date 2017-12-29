@@ -1,0 +1,35 @@
+{
+     "JavaScript Accordion Module": {
+        "prefix": "ej2-js-accordion",
+        "description": "JavaScript Accordion Module",
+        "body": [
+            "var accordion = new ej.navigations.Accordion({",
+             "\titems: [",
+             "\t\t{ header: 'ASP.NET', expanded: 'true', content: 'Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services.' },",
+             "\t\t{ header: 'ASP.NET MVC', content: 'The Model-View-Controller (MVC) architectural pattern separates an application into three main components: the model, the view, and the controller.' },",
+             "\t\t{ header: 'JavaScript', content: 'JavaScript (JS) is an interpreted computer programming language. It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed.' },",
+            "\t]",
+         "});",
+       "accordion.appendTo('#${1:element}');"
+        ]
+    } ,
+
+ 
+ 
+    "JavaScript Accordion with RTL": {
+        "prefix": "ej2-js-accordion-rtl",
+        "description": "JavaScript Accordion with RTL",
+       "body": [
+            "var accordion = new ej.navigations.Accordion({",
+             "\titems: [",
+             "\t\t{ header: 'ASP.NET', expanded: 'true', content: 'Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services.' },",
+             "\t\t{ header: 'ASP.NET MVC', content: 'The Model-View-Controller (MVC) architectural pattern separates an application into three main components: the model, the view, and the controller.' },",
+             "\t\t{ header: 'JavaScript', content: 'JavaScript (JS) is an interpreted computer programming language. It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed.' },",
+            "\t]",
+            "\tenableRtl: true",
+         "});",
+       "accordion.appendTo('#${1:element}');"
+          ]
+    } 
+    
+}

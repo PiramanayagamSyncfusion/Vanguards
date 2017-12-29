@@ -1,0 +1,42 @@
+{
+    "JavaScript Toolbar Module": {
+        "prefix": "ej2-js-toolbar",
+        "description": "JavaScript Toolbar Module",
+        "body": [
+            "var toolbar = new ej.navigations.Toolbar({",
+            "\titems: [",
+            "\t\t{ text: 'Cut' },",
+            "\t\t{ text: 'Copy' },",
+            "\t\t{ text: 'Paste' },",
+            "\t\t{ type: 'Separator'},",
+            "\t\t{ text: 'Bold' },",
+            "\t\t{ text: 'Italic' },",
+            "\t\t{ text: 'Underline' },",
+          "\t]",
+        "});",
+            "toolbar.appendTo('#${1:element}');"
+           
+          ]
+    } ,
+
+    "JavaScript ToolbarToolbar": {
+        "prefix": "ej2-js-toolbar-rtl",
+        "description": "JavaScript Toolbar Toolbar",
+        "body": [
+            "var toolbar = new ej.navigations.Toolbar({",
+            "\titems: [",
+            "\t\t{ text: 'Cut' },",
+            "\t\t{ text: 'Copy' },",
+            "\t\t{ text: 'Paste' },",
+            "\t\t{ type: 'Separator'},",
+            "\t\t{ text: 'Bold' },",
+            "\t\t{ text: 'Italic' },",
+            "\t\t{ text: 'Underline' },",
+          "\t]",
+           "\tenableRtl:true",
+        "});",
+            "toolbar.appendTo('#${1:element}');"
+           
+          ]
+    } 
+}

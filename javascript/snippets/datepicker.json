@@ -1,0 +1,14 @@
+{
+    "JavaScript DatePicker Module": {
+        "prefix": "ej2-js-datepicker",
+        "description": "JavaScript DatePicker Module",
+        "body": [
+             "var datepicker = new ej.calendars.DatePicker({",
+              "\tplaceholder: '${1:Choose a date}'",
+             "});",
+           "datepicker.appendTo('#${2:element}');"
+            
+          ]
+    } 
+
+}

@@ -1,0 +1,14 @@
+{
+    "JavaScript DateRangePicker Module": {
+        "prefix": "ej2-js-daterangepicker",
+        "description": "JavaScript DateRangePicker Module",
+        "body": [
+             "var daterangepicker = new ej.calendars.DateRangePicker({",
+              "\tplaceholder: '${1:Select a range}'",
+             "});",
+           "daterangepicker.appendTo('#${2:element}');"
+            
+          ]
+    } 
+ 
+}

@@ -1,0 +1,23 @@
+{
+    "JavaScript ContextMenu Module": {
+        "prefix": "ej2-js-contextmenu",
+        "description": "JavaScript ContextMenu Module",
+        "body": [
+            "var menuItems = [",
+            "\t{",
+            "\t\ttext: 'Cut'",
+            "\t}",
+            "\t{",
+            "\t\ttext: 'Copy'",
+            "\t}",
+            "\t{",
+           "\t\ttext: 'Paste'",
+          "\t}];",
+         "var menuOptions = {",
+           "\ttarget: '#${1:target}',",
+           "\titems: ${2:menuItems}",
+       "};",
+           "var menuObj = new ej.navigations.ContextMenu(menuOptions, '#${3:contextmenu}');"
+          ]
+    } 
+}

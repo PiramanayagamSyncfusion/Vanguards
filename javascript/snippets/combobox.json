@@ -1,0 +1,68 @@
+
+{
+     "JavaScript Combobox Module": {
+        "prefix": "ej2-js-combobox",
+        "description": "JavaScript Combobox Module",
+        "body": [
+            "var dataSource = ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis'];",
+            "var comboBoxObject = new ej.dropdowns.ComboBox({",
+            "\tdataSource: ${1:dataSource},", 
+            "\tplaceholder: '${2:Select games}'});",
+            "\tcomboBoxObject.appendTo('#${3:comboelement}');"
+          ]
+    } ,
+
+ 
+    
+    "JavaScript Combobox with Remote DataSource": {
+        "prefix": "ej2-js-combobox-ds-remote",
+        "description": "JavaScript Combobox with Remote DataSource",
+       "body": [
+            "var dataSource = new ej.data.DataManager({",
+            "\turl: 'http://services.odata.org/V4/Northwind/Northwind.svc/'",
+            "\tadaptor: new ej.data.ODataV4Adaptor()",
+            "\tcrossDomain: true",
+          "});",
+          "var query=new ej.data.Query().from('Employees').select(['FirstName', 'City','EmployeeID']).take(6),",
+            "var comboBoxObject = new ej.dropdowns.ComboBox({",
+              "\tdataSource: ${1:dataSource},",
+              "\tquery: ${2:query}",
+              "\tfields: { value: '${3:FirstName}' },",
+              "\tplaceholder:'${4:Select an employee}',",
+             "\tsortOrder:'Ascending'",
+          "});",
+            "comboBoxObject.appendTo('#${5:comboelement}');"
+          ]
+    },
+
+  "JavaScript Combobox with Filtering": {
+      "prefix": "ej2-js-combobox-filter",
+      "description": "JavaScript Combobox with Filtering",
+      "body": [
+          "var dataSource = new ej.data.DataManager({",
+            "\turl: 'http://services.odata.org/V4/Northwind/Northwind.svc/Customers'",
+            "\tadaptor: new ej.data.ODataV4Adaptor()",
+            "\tcrossDomain: true",
+         "});",
+          "var query=new ej.data.Query().select(['ContactName', 'CustomerID']).take(7),",
+        "var comboBoxObject = new ej.dropdowns.ComboBox({",
+        "\tdataSource: ${1:dataSource},",
+        "\tquery:${2:query}",
+        "\tfields: { text: 'ContactName', value: 'CustomerID' },",
+        "\tplaceholder:'${3:Select customers}',",
+        "\tsortOrder: 'Ascending',",
+        "\tallowFiltering: true,",
+        "\tfiltering: (e) => {",
+        "\tif(e.text == '') e.updateData(${4:dataSource});",
+        "\telse{",
+          "\t\tif (e.text.length < 3) { return; }",
+          "\tvar query = new ej.data.Query().select(['ContactName', 'CustomerID']);",
+          "\tquery = (e.text !== '') ? query.where('ContactName', 'startswith', e.text, true) : query;",
+          "\te.updateData(5:{dataSource}, query);",
+        "}",
+    "}",
+"});",
+"comboBoxObject.appendTo('#${6:comboelement}');"
+          ]
+    }    
+}

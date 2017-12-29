@@ -1,0 +1,47 @@
+
+{
+     "JavaScript MultiSelect Module": {
+        "prefix": "ej2-js-multiselect",
+        "description": "JavaScript MultiSelect Module",
+         "body": [
+            "var dataSource = ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis'];",
+            "var listObj  = new ej.dropdowns.MultiSelect({",
+            "\tdataSource: ${1:dataSource},", 
+            "\tplaceholder: '${2:Select games}'});",
+            "\tlistObj.appendTo('#${3:select}');"
+          ]
+    } ,
+
+ 
+    
+    "JavaScript MultiSelect with Remote DataSource": {
+        "prefix": "ej2-js-multiselect-ds-remote",
+        "description": "JavaScript MultiSelect with Remote DataSource",
+        "body": [
+            "var dataSource = new ej.data.DataManager({",
+            "\turl: 'http://services.odata.org/V4/Northwind/Northwind.svc/'",
+            "\tadaptor: new ej.data.ODataV4Adaptor()",
+            "\tcrossDomain: true",
+            "});",
+          "var query=new ej.data.Query().from('Employees').select(['FirstName', 'City','EmployeeID']).take(6),",
+            "var msObject   = new ej.dropdowns.MultiSelect({",
+            "\tdataSource: ${1:dataSource},",
+            "\tquery: ${2:query}",
+            "\tfields: {text: '${3:FirstName}' value: '${4:EmployeeID}' },",
+            "\tplaceholder:'${5:Select an employee}',",
+            "\tsortOrder:'Ascending'",
+          "});",
+            "msObject .appendTo('#${6:select}');"
+          ]
+    },
+
+  "JavaScript MultiSelect with Grouping": {
+      "prefix": "ej2-multiselect-grouping",
+      "description": "JavaScript MultiSelect with Grouping",
+      "body": [
+            "var listObj = new ej.dropdowns.MultiSelect({",
+            "\tplaceholder: '${1:Select games}'});",
+            "listObj.appendTo('#${2:selectElement}');"
+       ]
+    }    
+}

@@ -1,0 +1,30 @@
+{
+    "JavaScript MaskedTextbox Module": {
+        "prefix": "ej2-js-maskedtextbox",
+        "description": "JavaScript MaskedTextbox Module",
+        "body": [
+             "var mask = new ej.inputs.MaskedTextBox({",
+             "\tmask: '000-000-0000'",
+             "});",   
+            "mask.appendTo('#${1:mask1}');"
+          ]
+    } ,
+
+ 
+    
+    "JavaScript MaskedTextbox with custom characters": {
+        "prefix": "ej2-js-maskedtextbox-customch",
+        "description": "JavaScript MaskedTextbox with custom characters",
+        "body": [
+          "var mask1 = new ej.inputs.MaskedTextBox({",
+          "\tmask: '00:00 >PM',",
+           "\tcustomCharacters: {",
+            "\t\tP: 'P,A,a,p',",
+            "\t\tM: 'M,m'",
+          "\t}",
+          "\tfloatLabelType: 'Never'",
+          "});",
+            "mask.appendTo('#${1:mask1}');"      
+          ]
+    }
+}

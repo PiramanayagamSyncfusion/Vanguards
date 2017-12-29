@@ -1,0 +1,14 @@
+{
+    "JavaScript TimePicker Module": {
+        "prefix": "ej2-js-timepicker",
+        "description": "JavaScript TimePicker Module",
+        "body": [
+             "var timepicker  = new ej.calendars.TimePicker({",
+              "\tplaceholder: '${1:Select a time}'",
+             "});",
+           "timepicker.appendTo('#${2:element}');"
+            
+          ]
+    } 
+
+}

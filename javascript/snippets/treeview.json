@@ -1,30 +1,198 @@
 {
-    "TypeScript TreeView Module": {
+    "Javascript TreeView Module": {
         "prefix": "ej2-js-treeview",
-        "description": "TypeScript TreeView Module",
+        "description": "Javascript TreeView Module",
         "body": [
-            "import { TreeView } from '@syncfusion/ej2-navigations';",
-            "",
-            "let data: { [key: string]: Object }[] = [",
+            
+            "var dataSource = [",
             "\t{",
-            "\t\tnodeId: '01', nodeText: 'Music',",
-            "\t\tnodeChild: [",
-            "\t\t\t{ nodeId: '01-01', nodeText: 'Gouttes.mp3' }",
+            "\t\tid: '01', text: 'Music',",
+            "\t\tChild: [",
+            "\t\t\t{ id: '01-01', text: 'Gouttes.mp3' }",
             "\t\t]",
             "\t},",
             "\t{",
-            "\t\tnodeId: '02', nodeText: 'Videos', expanded: true,",
-            "\t\tnodeChild: [",
-            "\t\t\t{ nodeId: '02-01', nodeText: 'Naturals.mp4' },",
-            "\t\t\t{ nodeId: '02-02', nodeText: 'Wild.mpeg' },",
+            "\t\tid: '02', text: 'Videos', expanded: true,",
+            "\t\tChild: [",
+            "\t\t\t{ id: '02-01', text: 'Naturals.mp4' },",
+            "\t\t\t{ id: '02-02', text: 'Wild.mpeg' },",
             "\t\t]",
             "\t},",
             "];",
             "",
-            "let treeObj: TreeView = new TreeView({",
-            "\tfields: { dataSource: ${1:data}, id: '${2:nodeId}', text: '${3:nodeText}', child: '${4:nodeChild}' }",
+            "var treeObj =  new ej.navigations.TreeView({",
+            "\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}', child: '${4:Child}' }",
             "});",
             "treeObj.appendTo('#${5:tree}');"
         ]
-    }
+    },
+
+    "JavaScript TreeView with self-referential data source.": {
+        "prefix": "ej2-js-treeview-self",
+        "description": "JavaScript TreeView with self-referential data source",
+        "body": [
+            "var dataSource = [",
+            "\t{ id: 1, text: 'Discover Music', hasChild: true, expanded: true },",
+            "\t{ id: 2, pid: 1, text: 'Hot Singles' },",
+            "\t{ id: 3, pid: 1, text: 'Rising Artists' },",
+            "\t{ id: 4, pid: 1, text: 'Live Music' },",
+            "\t{ id: 6, pid: 1, text: 'Best of 2017 So Far' },",
+            "\t{ id: 7, text: 'Sales and Events', hasChild: true },",
+            "\t{ id: 8, pid: 7, text: '100 Albums - $5 Each' },",
+            "\t{ id: 9, pid: 7, text: 'Hip-Hop and R&B Sale' },",
+            "\t{ id: 10, pid: 7, text: 'CD Deals' },];",
+            "var treeObj =  new ej.navigations.TreeView({",
+            "\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}', parentID: '${4:pid}', hasChildren: '${5:hasChild}'  }",
+            "});",
+            "treeObj.appendTo('#${6:tree}');"
+          ]
+    } ,
+
+
+ "JavaScript TreeView with editing support.": {
+        "prefix": "ej2-js-treeview-editing",
+        "description": "JavaScript TreeView with editing support",
+        "body": [
+              "var dataSource = [",
+            "\t{",
+            "\t\tid: '01', text: 'Music',",
+            "\t\tChild: [",
+            "\t\t\t{ id: '01-01', text: 'Gouttes.mp3' }",
+            "\t\t]",
+            "\t},",
+            "\t{",
+            "\t\tid: '02', text: 'Videos', expanded: true,",
+            "\t\tChild: [",
+            "\t\t\t{ id: '02-01', text: 'Naturals.mp4' },",
+            "\t\t\t{ id: '02-02', text: 'Wild.mpeg' },",
+            "\t\t]",
+            "\t},",
+            "];",
+            "",
+            "var treeObj =  new ej.navigations.TreeView({",
+            "\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}', child: '${4:Child}' }",
+            "\tallowEditing:true,",
+            "\tnodeEditing: editing",
+            "});",
+            "treeObj.appendTo('#${5:tree}');",
+            "function editing(args) {",
+            "\tif (args.node.parentNode.parentNode.nodetext !== 'LI') {",
+            "\t\targs.cancel = true;",
+            " \t}",
+            "}"
+          ]
+    } ,
+
+    "JavaScript TreeView with drag and drop.": {
+        "prefix": "ej2-js-treeview-drag",
+        "description": "JavaScript TreeView with drag and drop",
+        "body": [
+             "var dataSource = [",
+            "\t{",
+            "\t\tid: '01', text: 'Music',",
+            "\t\tChild: [",
+            "\t\t\t{ id: '01-01', text: 'Gouttes.mp3' }",
+            "\t\t]",
+            "\t},",
+            "\t{",
+            "\t\tid: '02', text: 'Videos', expanded: true,",
+            "\t\tChild: [",
+            "\t\t\t{ id: '02-01', text: 'Naturals.mp4' },",
+            "\t\t\t{ id: '02-02', text: 'Wild.mpeg' },",
+            "\t\t]",
+            "\t},",
+            "];",
+            "",
+            "var treeObj =  new ej.navigations.TreeView({",
+            "\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}', child: '${4:Child}' }",
+            "\tallowDragAndDrop: true,",
+            "});",
+            "treeObj.appendTo('#${5:tree}');"        
+          ]
+    } ,
+    
+     "JavaScript TreeView with Checkbox": {
+        "prefix": "ej2-js-treeview-checkbox",
+        "description": "JavaScript TreeView with Checkbox",
+        "body": [
+            "var dataSource = [",
+            "\t{",
+            "\t\tid: '01', text: 'Music',",
+            "\t\tChild: [",
+            "\t\t\t{ id: '01-01', text: 'Gouttes.mp3' }",
+            "\t\t]",
+            "\t},",
+            "\t{",
+            "\t\tid: '02', text: 'Videos', expanded: true,",
+            "\t\tChild: [",
+            "\t\t\t{ id: '02-01', text: 'Naturals.mp4' },",
+            "\t\t\t{ id: '02-02', text: 'Wild.mpeg' },",
+            "\t\t]",
+            "\t},",
+            "];",
+            "",
+            "var treeObj =  new ej.navigations.TreeView({",
+            "\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}', child: '${4:Child}' }",
+            "\tshowCheckBox: true,",
+            "});",
+           "treeObj.appendTo('#${5:tree}');"     
+          ]
+    } ,
+    
+    "JavaScript TreeView with MultiSelection": {
+        "prefix": "ej2-js-treeview-multiselect",
+        "description": "JavaScript TreeView with MultiSelection",
+        "body": [
+           "var dataSource = [",
+            "\t{",
+            "\t\tid: '01', text: 'Music',",
+            "\t\tChild: [",
+            "\t\t\t{ id: '01-01', text: 'Gouttes.mp3' }",
+            "\t\t]",
+            "\t},",
+            "\t{",
+            "\t\tid: '02', text: 'Videos', expanded: true,",
+            "\t\tChild: [",
+            "\t\t\t{ id: '02-01', text: 'Naturals.mp4' },",
+            "\t\t\t{ id: '02-02', text: 'Wild.mpeg' },",
+            "\t\t]",
+            "\t},",
+            "];",
+            "",
+            "var treeObj =  new ej.navigations.TreeView({",
+            "\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}', child: '${4:Child}' }",
+            "\tallowMultiSelection: true,",
+            "});",
+            "treeObj.appendTo('#${5:tree}');"        
+          ]
+    } ,
+    
+    "JavaScript TreeView with RTL": {
+        "prefix": "ej2-js-treeview-rtl",
+        "description": "JavaScript TreeView with rtl",
+        "body": [
+            "var dataSource = [",
+            "\t{",
+            "\t\tid: '01', text: 'Music',",
+            "\t\tChild: [",
+            "\t\t\t{ id: '01-01', text: 'Gouttes.mp3' }",
+            "\t\t]",
+            "\t},",
+            "\t{",
+            "\t\tid: '02', text: 'Videos', expanded: true,",
+            "\t\tChild: [",
+            "\t\t\t{ id: '02-01', text: 'Naturals.mp4' },",
+            "\t\t\t{ id: '02-02', text: 'Wild.mpeg' },",
+            "\t\t]",
+            "\t},",
+            "];",
+            "",
+            "var treeObj =  new ej.navigations.TreeView({",
+            "\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}', child: '${4:Child}' }",
+            "\tenableRtl: true,",
+            "});",
+             "treeObj.appendTo('#${5:tree}');"         
+          ]
+    } 
+    
 }

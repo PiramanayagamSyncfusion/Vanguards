@@ -1,0 +1,13 @@
+{
+    "JavaScript Tooltip Module": {
+        "prefix": "ej2-js-tooltip",
+        "description": "JavaScript Tooltip Module",
+        "body": [
+            "var tooltip = new ej.popups.Tooltip({",
+            "\tcontent: 'Tooltip content'",
+             "});",
+           "tooltip.appendTo('#${1:target}');"
+           
+          ]
+    } 
+}

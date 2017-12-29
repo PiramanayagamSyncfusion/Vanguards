@@ -1,0 +1,31 @@
+{
+    "JavaScript Button Module": {
+        "prefix": "ej2-js-button",
+        "description": "JavaScript Button Module",
+        "body": [ 
+             "var button = new ej.buttons.Button();",
+             "button.appendTo('#${1:element}');"
+           
+          ]
+    },
+
+     "JavaScript Checkbox Module ": {
+        "prefix": "ej2-js-checkbox",
+        "description": "JavaScript Checkbox Module",
+        "body": [ 
+             "var checkbox = new ej.buttons.CheckBox({ label: '${1:Default}' });",
+             "checkbox.appendTo('#${2:element}');"
+           
+          ]
+    },
+     "JavaScript RadioButton Module ": {
+        "prefix": "ej2-js-radio",
+        "description": "JavaScript RadioButton Module",
+        "body": [ 
+             "var radiobutton = new ej.buttons.RadioButton({ label: '${1:Option 1}', name: '${2:default}'});",
+             "radiobutton.appendTo('#${3:element1}');"
+           
+          ]
+    }
+    
+}

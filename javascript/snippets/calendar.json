@@ -1,0 +1,16 @@
+{
+    "JavaScript Calendar Module": {
+        "prefix": "ej2-js-calendar",
+        "description": "JavaScript Calendar Module",
+        "body": [
+             "var calendar  = new ej.calendars.Calendar({",
+               "\tchange: function (args) {",
+               "\t(document.getElementById('${1:date_label}')).textContent = 'Selected Value: ' + args.value.toLocaleDateString();",
+             "}",
+             "});",
+           "calendar.appendTo('#${2:element}');"
+            
+          ]
+    } 
+
+}

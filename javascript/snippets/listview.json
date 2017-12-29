@@ -1,0 +1,63 @@
+
+{
+     "JavaScript ListView Module": {
+        "prefix": "ej2-js-listview",
+        "description": "JavaScript ListView Module",
+        "body": [
+            "var arts = [",
+            "\t{ text: 'Artwork', id: '01' },", 
+            "\t{ text: 'Abstract', id: '02' },",
+            "\t{ text: 'Modern Painting', id: '03' },",
+            "\t{ text: 'Ceramics', id: '04' },",
+            "\t{ text: 'Animation Art', id: '05' },",
+            "\t{ text: 'Oil Painting', id: '06' }",
+            "];",
+        "var listviewInstance = new ej.lists.ListView({",
+        "\tdataSource: ${1:arts}",
+       "});",
+       "listviewInstance.appendTo('#${2:element}');"
+       ]
+    } ,
+
+ 
+    
+    "JavaScript ListView with Remote DataSource": {
+        "prefix": "ej2-js-listview-ds-remote",
+        "description": "JavaScript ListView with Remote DataSource",
+       "body": [
+            "var dataSource = new ej.data.DataManager({",
+            "\turl: 'http://services.odata.org/V4/Northwind/Northwind.svc/'",
+            "\tcrossDomain: true",
+          "});",
+          "var query=new ej.data.Query().from('Products').select('ProductID,ProductName').take(6),",
+            "var listviewInstance   = new ej.lists.ListView({",
+            "\tdataSource: ${1:dataSource},",
+            "\tquery: ${2:query}",
+            "\t fields: { id: '${3:ProductID}', text: '${4:ProductName}' },",
+            "\theaderTitle: '${5:Product Name}'',",
+            "\tshowHeader: true'",
+          "});",
+            "listviewInstance.appendTo('#${6:element}');"
+          ]
+    },
+
+  "JavaScript ListView with RTL": {
+      "prefix": "ej2-js-listview-rtl",
+      "description": "JavaScript ListView with RTL",
+      "body": [
+            "var arts = [",
+            "\t{ text: 'Artwork', id: '01' },", 
+            "\t{ text: 'Abstract', id: '02' },",
+            "\t{ text: 'Modern Painting', id: '03' },",
+            "\t{ text: 'Ceramics', id: '04' },",
+            "\t{ text: 'Animation Art', id: '05' },",
+            "\t{ text: 'Oil Painting', id: '06' }",
+            "];",
+        "var listviewInstance = new ej.lists.ListView({",
+        "\tdataSource: ${1:arts}",
+        "\tenableRtl:true",
+       "});",
+       "listviewInstance.appendTo('#${2:element}');"
+       ]
+    }    
+}

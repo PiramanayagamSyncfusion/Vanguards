@@ -1,0 +1,13 @@
+{
+    "JavaScript NumericTextBox Module": {
+        "prefix": "ej2-js-numerictextbox",
+        "description": "JavaScript NumericTextBox Module",
+        "body": [
+             "var numeric = new ej.inputs.NumericTextBox({",
+             "\tvalue: 10",
+         "});",
+           "numeric.appendTo('#${1:numeric}');"
+           
+          ]
+    } 
+}
