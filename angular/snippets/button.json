@@ -38,6 +38,30 @@
             "}"
         ]
     },
+    "Angular CheckBox Module": {
+        "prefix": "ej2-ng-checkbox-module",
+        "description": "Angular CheckBox Module",
+        "body": [
+            "import { NgModule } from '@angular/core';",
+            "import { BrowserModule  } from '@angular/platform-browser';",
+            "",
+            "import { ${1:App}Component } from './${1:app}.component';",
+            "import { CheckBoxModule } from '@syncfusion/ej2-ng-buttons';",
+            "import { enableRipple } from '@syncfusion/ej2-base';",
+            "enableRipple(true);",
+            "",
+            "@NgModule({",
+            "\timports: [",
+            "\t\tBrowserModule,",
+            "\t\tCheckBoxModule,",
+            "\t],",
+            "\tdeclarations: [${1:App}Component],",
+            "\tbootstrap: [${1:App}Component],",
+            "})",
+            "export class ${1:App}Module { }",
+            "$0"
+        ]
+    },
     "Angular Checkbox": {
         "prefix": "ej2-ng-checkbox",
         "description": "Insert the snippet for Checkbox",
@@ -48,23 +72,44 @@
             "\tselector: '${1:app}',",
             "\ttemplate: `<div class='checkbox-control'>",
             "\t<div class='row'>",
-            "\t\t <ej-checkbox #checkbox label='CheckBox: true' [checked]='true' (change)='changeHandler()'></ej-checkbox>",
+            "\t\t<ej-checkbox label='Angular'></ej-checkbox>",
             "\t</div>",
             "\t<div class='row'>",
-            "\t\t<ej-checkbox label='Checked, Disabled' [checked]='true' [disabled] = 'true'></ej-checkbox>",
+            "\t\t<ej-checkbox label='JavaScript'></ej-checkbox>",
             "\t</div>",
             "\t<div class='row'>",
-            "\t\t<ej-checkbox label='Indeterminate, Disabled' [indeterminate] = 'true' [disabled] = 'true'></ej-checkbox>",
+            "\t\t<ej-checkbox label='TypeScript'></ej-checkbox>",
             "\t</div>",
             "\t</div>`",
             "})",
             "",
             "export class ${2:App}Component {",
             "\tconstructor() { }",
-            "\tpublic changeHandler() : void {",
-            "\t\tthis.checkbox.label = 'CheckBox: ' + this.checkbox.checked;",
-            "\t}",
             "}"
+        ]
+    },
+    "Angular RadioButton Module": {
+        "prefix": "ej2-ng-radiobutton-module",
+        "description": "Angular RadioButton Module",
+        "body": [
+            "import { NgModule } from '@angular/core';",
+            "import { BrowserModule  } from '@angular/platform-browser';",
+            "",
+            "import { ${1:App}Component } from './${1:app}.component';",
+            "import { RadioButtonModule } from '@syncfusion/ej2-ng-buttons';",
+            "import { enableRipple } from '@syncfusion/ej2-base';",
+            "enableRipple(true);",
+            "",
+            "@NgModule({",
+            "\timports: [",
+            "\t\tBrowserModule,",
+            "\t\tRadioButtonModule,",
+            "\t],",
+            "\tdeclarations: [${1:App}Component],",
+            "\tbootstrap: [${1:App}Component],",
+            "})",
+            "export class ${1:App}Module { }",
+            "$0"
         ]
     },
     "Angular Radio Button": {

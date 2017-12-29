@@ -1,6 +1,6 @@
 {
     "Angular ToolBar Module": {
-        "prefix": "ej2-ng-accordion-module",
+        "prefix": "ej2-ng-toolbar-module",
         "description": "Angular Toolbar Module",
         "body": [
             "import { NgModule } from '@angular/core';",
@@ -30,7 +30,6 @@
             "\tselector: '${1:app}',",
             "\ttemplate: `<ej-toolbar>",
             "\t<e-items>",
-            "\t\t<e-items>",
             "\t\t<e-item text='Copy'></e-item>",
             "\t\t<e-item text='Paste'></e-item>",
             "\t\t<e-item type='Separator'></e-item>",
@@ -42,8 +41,6 @@
             "})",
             "",
             "export class ${2:App}Component {",
-            "\t @ViewChild('element') element;",
-            "\t ngAfterViewInit() { }",
             "}"
         ]
     },
@@ -52,13 +49,12 @@
         "description": "Toolbar is rendered with RTL support",
         "body": [
             "import { Component, ViewChild } from '@angular/core';",
-            "\timport {Toolbar} from '@syncfusion/ej2-navigations';",
+            "import {Toolbar} from '@syncfusion/ej2-navigations';",
             "",
             "@Component({",
             "\tselector: '${1:app}',",
             "\ttemplate: `<ej-toolbar enableRtl='true'>",
             "\t<e-items>",
-            "\t\t<e-items>",
             "\t\t<e-item text='Copy'></e-item>",
             "\t\t<e-item text='Paste'></e-item>",
             "\t\t<e-item type='Separator'></e-item>",
@@ -70,8 +66,6 @@
             "})",
             "",
             "export class ${2:App}Component {",
-            "\t @ViewChild('element') element;",
-            "\t ngAfterViewInit() { }",
             "}"
         ]
     }

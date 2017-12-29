@@ -37,8 +37,6 @@
             "})",
             "",
             "export class ${2:App}Component {",
-            "\t @ViewChild('element') element;",
-            "\t ngAfterViewInit() { }",
             "}"
         ]
     },
@@ -60,8 +58,6 @@
             "})",
             "",
             "export class ${2:App}Component {",
-                "\t @ViewChild('element') element;",
-                "\t ngAfterViewInit() { }",
             "}"
         ]
     }

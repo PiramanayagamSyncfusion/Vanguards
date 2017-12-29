@@ -81,7 +81,7 @@
             "export class ${2:App}Component {",
             "\tpublic headerText: Object = [{ 'text': '${3:Twitter}' }, { 'text': '${4:Facebook}' },{ 'text': '${5:WhatsApp}' }];",
             "\tpublic content0: string = 'Twitter is an online social networking service that enables users to send and read short 140-character ' +",
-            "\t\t'messages called 'tweets'. Registered users can read and post tweets, but those who are unregistered can only read ' +",
+            "\t\t'messages called tweets. Registered users can read and post tweets, but those who are unregistered can only read ' +",
             "\t\t'them. Users access Twitter through the website interface, SMS or mobile device app Twitter Inc. is based in San ' +",
             "\t\t'Francisco and has more than 25 offices around the world. Twitter was created in March 2006 by Jack Dorsey, ' +",
             "\t\t'Evan Williams, Biz Stone, and Noah Glass and launched in July 2006. The service rapidly gained worldwide popularity, ' +",

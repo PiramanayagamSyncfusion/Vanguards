@@ -71,7 +71,7 @@
             "",
             "@Component({",
             "\tselector: '${1:app}',",
-            "\ttemplate: `<ej-listview id='sample-list' [dataSource]='data' [enableRtl]='rtl' [headerTitle]='headerTitle' [showHeader]='true'></ej-listview>`",
+            "\ttemplate: `<ej-listview id='sample-list' [dataSource]='data' [enableRtl]=true [headerTitle]='headerTitle' [showHeader]='true'></ej-listview>`",
             "})",
             "",
             "export class ${2:App}Component {",

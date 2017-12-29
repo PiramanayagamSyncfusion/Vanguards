@@ -46,6 +46,7 @@
         "body": [
             "import { Component } from '@angular/core';",
             "import { MultiSelectComponent } from '@syncfusion/ej2-ng-dropdowns';",
+            "import { Query, DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data'",
             "",
             "@Component({",
             "\tselector: '${1:app}',",
