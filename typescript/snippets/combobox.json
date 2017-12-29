@@ -1,0 +1,67 @@
+{
+    "TypeScript ComboBox Module": {
+        "prefix": "ej2-combobox",
+        "description": "TypeScript ComboBox Module",
+        "body": [
+            "import { ComboBox } from '@syncfusion/ej2-dropdowns';",
+            "",
+            "let dataSource: string[] = ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis'];",
+            "let comboBoxObject: ComboBox = new ComboBox({",
+            "\tdataSource: ${1:dataSource},",
+            "\tplaceholder: '${2:Select a game}'",
+            "});",
+            "comboBoxObject.appendTo('#${3:comboelement}');"
+       ]
+    },
+    "TypeScript ComboBox DataBinding Module": {
+        "prefix": "ej2-combobox-ds-remote",
+        "description": "TypeScript ComboBox DataBinding Module",
+        "body": [
+            "import { ComboBox } from '@syncfusion/ej2-dropdowns';",
+            "import { Query, DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';",
+            "",
+            "let dataSource: DataManager = new DataManager({",
+            "\turl: 'http://services.odata.org/V4/Northwind/Northwind.svc/',",
+            "\tadaptor: new ODataV4Adaptor,",
+            "\tcrossDomain: true",
+            "});",
+            "let query: Query = new Query().from('Customers').select(['ContactName', 'CustomerID']).take(6);",
+            "let fields: Object = { text: 'ContactName', value: 'CustomerID' }",
+            "let customers: ComboBox = new ComboBox({",
+            "\tdataSource: ${1:dataSource}",
+            "\tquery: ${2:query}",
+            "\tfields: ${3:fields},",
+            "\tsortOrder: '${4:Ascending}',",
+            "\tplaceholder:'${5:Select a customer}'",
+            "\t});",
+            "customers.appendTo('#${6:comboelement}');"
+       ]
+    },
+    "TypeScript ComboBox Filtering Module": {
+        "prefix": "ej2-combobox-filter",
+        "description": "TypeScript ComboBox Filtering Module",
+        "body": [
+            "import { ComboBox, FilteringEventArgs } from '@syncfusion/ej2-dropdowns';",
+            "import { DataManager, Query } from '@syncfusion/ej2-data';",
+            "",
+            "let dataSource: { [key: string]: Object }[] = [",
+            "\t{ value: 's1', text: 'California' },",
+            "\t{ value: 's2', text: 'Florida' },",
+            "\t{ value: 's3', text: 'Alaska' },",
+            "\t{ value: 's4', text: 'Georgia' },",
+            "];",
+            "let comboBoxObject: ComboBox = new ComboBox({",
+            "\tdataSource: ${1:dataSource},",
+            "\tfields: { text: '${2:text}', value: '${3:value}' },",
+            "\tplaceholder: '${3:Select a Country}'",
+            "\tallowFiltering: true,",
+            "\tsortOrder: 'Ascending',",
+            "\tfiltering: function (e: FilteringEventArgs) {",
+            "\t\tlet query = new Query();",
+            "\t\tquery = (e.text != '') ? query.where('${4:text}', 'startswith', e.text, true) : query;",
+            "\t\te.updateData(${5:dataSource}, query);",
+            "\t});",
+            "comboBoxObject.appendTo('#${6:comboelement}');"
+       ]
+    }
+}

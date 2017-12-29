@@ -1,0 +1,64 @@
+{
+    "TypeScript ListView Module": {
+        "prefix": "ej2-listview",
+        "description": "TypeScript ListView Module",
+        "body": [
+          "import { ListView } from '@syncfusion/ej2-lists';",
+          "",
+          "let dataSource: { [key: string]: string }[] = [",
+          "\t{ text: 'Artwork', id: '01' },",
+          "\t{ text: 'Abstract', id: '02' },",
+          "\t{ text: 'Modern Painting', id: '03' },",
+          "\t{ text: 'Ceramics', id: '04' },",
+          "\t{ text: 'Animation Art', id: '05' },",
+          "\t{ text: 'Oil Painting', id: '06' }];",
+          "let listviewInstance: ListView = new ListView({",
+          "\tdataSource: ${1:dataSource}",
+          "});",
+          "listviewInstance.appendTo('#${2:element}');"
+       ]
+    },
+    "TypeScript ListView DataBinding Module": {
+        "prefix": "ej2-listview-ds-remote",
+        "description": "TypeScript ListView DataBinding Module",
+        "body": [
+          "import { ListView } from '@syncfusion/ej2-lists';",
+          "import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';",
+          "",
+          "let dataSource: DataManager = new DataManager({",
+          "\t\turl: 'http://js.syncfusion.com/ejServices/Wcf/Northwind.svc/',",
+          "\t\tcrossDomain: true",
+          "\t});",
+          "let query: Query = new Query().from('Products').select('ProductID,ProductName').take(6);",
+          "let fields: Object = { id: 'ProductID', text: 'ProductName' };", 
+          "let listviewInstance: ListView = new ListView({",
+          "\tdataSource: ${1:dataSource},",
+          "\tquery: ${2:query},",
+          "\tfields: ${3:fields},",
+          "\theaderTitle: '${4:Product Name}',",
+          "\tshowHeader: ${5:true}",
+          "});",
+          "listviewInstance.appendTo('#${6:element}')"
+       ]
+    },
+    "TypeScript ListView RTL Module": {
+        "prefix": "ej2-listview-rtl",
+        "description": "TypeScript ListView RTL Module",
+        "body": [
+          "import { ListView } from '@syncfusion/ej2-lists';",
+          "",
+          "let dataSource: { [key: string]: string }[] = [",
+          "\t{ text: 'Artwork', id: '01' },",
+          "\t{ text: 'Abstract', id: '02' },",
+          "\t{ text: 'Modern Painting', id: '03' },",
+          "\t{ text: 'Ceramics', id: '04' },",
+          "\t{ text: 'Animation Art', id: '05' },",
+          "\t{ text: 'Oil Painting', id: '06' }];",
+          "let listviewInstance: ListView = new ListView({",
+          "\tenableRtl: true,",
+          "\tdataSource: ${1:dataSource}",
+          "});",
+          "listviewInstance.appendTo('#${2:element}');"
+       ]
+    }
+}

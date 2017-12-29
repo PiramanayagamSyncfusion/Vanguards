@@ -1,0 +1,67 @@
+{
+    "TypeScript DropDown Module": {
+        "prefix": "ej2-dropdown",
+        "description": "TypeScript DropDown Module",
+        "body": [
+            "import { DropDownList } from '@syncfusion/ej2-dropdowns';",
+            "",
+            "let dataSource: string[] = ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis'];",
+            "let dropDownListObject: DropDownList = new DropDownList({",
+            "\tdataSource: ${1:dataSource},",
+            "\tplaceholder: '${2:Select a game}'",
+            "});",
+            "dropDownListObject.appendTo('#${3:ddlelement}');"
+       ]
+    },
+     "TypeScript DropDown Databinding Module": {
+        "prefix": "ej2-dropdown-ds-remote",
+        "description": "TypeScript DropDown Databinding Module",
+        "body": [
+            "import { DropDownList } from '@syncfusion/ej2-dropdowns';",
+            "import { Query, DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';",
+            "",
+            "let dataSource: DataManager = new DataManager({",
+            "\turl: 'http://services.odata.org/V4/Northwind/Northwind.svc/',",
+            "\tadaptor: new ODataV4Adaptor,",
+            "\tcrossDomain: true",
+            "});",
+            "let query: Query = new Query().from('Customers').select(['ContactName', 'CustomerID']).take(6);",
+            "let fields: Object = { text: 'ContactName', value: 'CustomerID' }",
+            "let dropDownListObject: DropDownList = new DropDownList({",
+            "\tdataSource: ${1:dataSource},",
+            "\tquery: ${2:query},",
+            "\tfields: ${3:fields},",
+            "\tplaceholder:'${4:Select a customer}',",
+            "\tsortOrder: '${5:Ascending}'",
+            "});",
+            "dropDownListObject.appendTo('#${6:ddlelement}');"
+       ]
+    },
+     "TypeScript DropDown Filtering Module": {
+        "prefix": "ej2-dropdown-filter",
+        "description": "TypeScript DropDown Filtering Module",
+        "body": [
+            "import { DropDownList, FilteringEventArgs } from '@syncfusion/ej2-dropdowns';",
+            "import { DataManager, Query } from '@syncfusion/ej2-data';",
+            "",
+            "let dataSource: { [key: string]: Object }[] = [",
+            "\t{ value: 's1', text: 'California' },",
+            "\t{ value: 's2', text: 'Florida' },",
+            "\t{ value: 's3', text: 'Alaska' },",
+            "\t{ value: 's4', text: 'Georgia' },",
+            "];",
+            "let dropDownListObject: DropDownList = new DropDownList({",
+            "\tdataSource: ${1:dataSource},",
+            "\tfields: { text: '${2:text}', value: '${3:value}' },",
+            "\tplaceholder:'${4:Select a game}'",
+            "\tallowFiltering: true,",
+            "\tfiltering: function (e: FilteringEventArgs) {",
+            "\t\tlet query = new Query();",
+            "\t\tquery = (e.text != '') ? query.where('${5:text}', 'startswith', e.text, true) : query;",
+            "\t\te.updateData(${6:dataSource}, query);",
+            "}",
+            "});",
+            "dropDownListObject.appendTo('#${7:ddlelement}');"
+       ]
+    }
+}

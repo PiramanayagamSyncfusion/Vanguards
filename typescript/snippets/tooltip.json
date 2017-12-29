@@ -1,0 +1,13 @@
+{
+    "TypeScript Tooltip Module": {
+        "prefix": "ej2-tooltip",
+        "description": "TypeScript Tooltip Module",
+        "body": [
+          "import { Tooltip } from '@syncfusion/ej2-popups';",
+          "let tooltip: Tooltip = new Tooltip({",
+          "\tcontent: '${1:Tooltip content}'",
+          "});",
+          "tooltip.appendTo('#{2:target}');"
+       ]
+    }
+}

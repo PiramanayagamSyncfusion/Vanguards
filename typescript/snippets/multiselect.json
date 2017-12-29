@@ -1,0 +1,61 @@
+{
+    "TypeScript MultiSelect Module": {
+        "prefix": "ej2-multiselect",
+        "description": "TypeScript MultiSelect Module",
+        "body": [
+           "import { MultiSelect } from '@syncfusion/ej2-dropdowns';",
+           "",
+           "let dataSource: string[] = ['Badminton', 'Basketball', 'Cricket', 'Football', 'Golf', 'Gymnastics', 'Hockey', 'Rugby', 'Snooker', 'Tennis'];",
+           "let msObject: MultiSelect = new MultiSelect({",
+           "\tdataSource: ${1:dataSource}",
+           "});",
+           "msObject.appendTo('#{2:select}');"
+       ]
+    },
+     "TypeScript MultiSelect Databinding Module": {
+        "prefix": "ej2-multiselect-ds-remote",
+        "description": "TypeScript MultiSelect Databinding Module",
+        "body": [
+           "import { MultiSelect } from '@syncfusion/ej2-dropdowns';",
+           "import { Query, DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';",
+           "",
+           "let dataSource: DataManager = new DataManager({",
+           "\t\turl: 'http://services.odata.org/V4/Northwind/Northwind.svc/',",
+           "\t\tadaptor: new ODataV4Adaptor,",
+           "\t\tcrossDomain: true",
+           "\t});",
+           "let query: Query = new Query().from('Customers').select(['ContactName', 'CustomerID']).take(6);",
+           "let fields: Object = { text: 'ContactName', value: 'CustomerID' }",
+           "let customers: MultiSelect = new MultiSelect({",
+           "\tdataSource: ${1:dataSource},",
+           "\tquery: ${2:query},",
+           "\tfields: ${3:fields},",
+           "\tplaceholder:'${4:Select customers}',",
+           "\tsortOrder: '${5:Ascending}'",
+           "\t});",
+           "\tcustomers.appendTo('#{6:select}');"
+       ]
+    },
+     "TypeScript MultiSelect Grouping Module": {
+        "prefix": "ej2-multiselect-grouping",
+        "description": "TypeScript MultiSelect Grouping Module",
+        "body": [
+            "import { MultiSelect } from '@syncfusion/ej2-dropdowns';",
+            "",
+            "let dataSource: { [key: string]: Object }[] = [",
+            "\t{ text: 'Cabbage', groupBy: 'Leafy and Salad', value: 'item1' },",
+            "\t{ text: 'Spinach', groupBy: 'Leafy and Salad', value: 'item2' },",
+            "\t{ text: 'Wheat grass', groupBy: 'Leafy and Salad', value: 'item3' },",
+            "\t{ text: 'Yarrow', groupBy: 'Leafy and Salad', value: 'item4' },",
+            "\t{ text: 'Pumpkins', groupBy: 'Leafy and Salad', value: 'item5' }",
+            "];",
+            "let vegetables: MultiSelect = new MultiSelect({",
+            "dataSource: ${1:dataSource},",
+            "fields: { groupBy: '${2:groupBy}', text: '${3:text}', value: '${4:value}' },",
+            "placeholder: '${5:Select vegetables}',",
+            "popupHeight: '${6:200px}'",
+            "});",
+            "vegetables.appendTo('#${6:select}');"
+       ]
+    }
+}

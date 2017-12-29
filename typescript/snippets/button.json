@@ -1,0 +1,32 @@
+{
+    "TypeScript Button Module": {
+        "prefix": "ej2-button",
+        "description": "TypeScript Button Module",
+        "body": [
+            "import { Button } from '@syncfusion/ej2-buttons';",
+            "",
+            "let button: Button = new Button();",
+            "button.appendTo('#${1:element}');"
+       ]
+    },
+    "TypeScript CheckBox Module": {
+        "prefix": "ej2-checkbox",
+        "description": "TypeScript CheckBox Module",
+        "body": [
+            "import { CheckBox } from '@syncfusion/ej2-buttons';",
+            "",
+            "let checkbox: CheckBox = new CheckBox({ label: '${1:Default}' });",
+            "checkbox.appendTo('#{2:element}');"
+       ]
+    },
+    "TypeScript RadioButton Module": {
+        "prefix": "ej2-radio",
+        "description": "TypeScript RadioButton Module",
+        "body": [
+            "import { RadioButton } from '@syncfusion/ej2-buttons';",
+            "",
+            "let radiobutton: RadioButton = new RadioButton({ label: '${1:Default}'});",
+            "radiobutton.appendTo('#{2:element}');"
+       ]
+    }
+}

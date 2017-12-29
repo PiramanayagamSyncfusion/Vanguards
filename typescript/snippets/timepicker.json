@@ -1,0 +1,14 @@
+{
+    "TypeScript TimePicker Module": {
+        "prefix": "ej2-timepicker",
+        "description": "TypeScript TimePicker Module",
+        "body": [
+          "import { TimePicker } from '@syncfusion/ej2-dropdowns';",
+          "let dataSource: string[] = ['Badminton', 'Basketball', 'Cricket', 'Football', 'Golf', 'Gymnastics', 'Hockey', 'Tennis'];",
+          "let timeObject: TimePicker = new TimePicker({",
+          "\tplaceholder: '${1:Select a Time}'" ,
+          "});",
+          "timeObject.appendTo('#${2:element}');"
+       ]
+    }
+}

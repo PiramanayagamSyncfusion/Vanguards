@@ -1,0 +1,35 @@
+{
+    "TypeScript Masked TextBox Module": {
+        "prefix": "ej2-maskedtextbox",
+        "description": "TypeScript Masked TextBox Module",
+        "body": [
+            "import { MaskedTextBox } from '@syncfusion/ej2-inputs';",
+            "",
+            "let mask: MaskedTextBox = new MaskedTextBox({",
+            "\tmask: '${1:000-000-0000}',",
+            "\tplaceholder: '${2:MaskedTextBox}',",
+            "\tfloatLabelType: '${3:Always}'",
+            "});",
+            "mask.appendTo('#${4:mask}');"
+       ]
+    },
+    "TypeScript Masked TextBox Custom Characters Module": {
+        "prefix": "ej2-maskedtextbox-customch",
+        "description": "TypeScript Masked TextBox Custom Characters Module",
+        "body": [
+            "import { MaskedTextBox } from '@syncfusion/ej2-inputs';",
+            "",
+            "let customCharacters: Object = {",
+            "\t\tP: 'P,A,a,p',",
+            "\t\tM: 'M,m'",
+            "};",
+            "let mask: MaskedTextBox = new MaskedTextBox({",
+            "\tcustomCharacters: ${1:customCharacters} ",
+            "\tmask: '${2:00:00 >PM}',",
+            "\tplaceholder: '${3:Time (ex: 10:00 PM, 10:00 AM)}',",
+            "\tfloatLabelType: '${4:Always}'",
+            "});",
+            "mask.appendTo('#${5:mask}');"
+       ]
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "TypeScript Calendar Module": {
+        "prefix": "ej2-calendar",
+        "description": "TypeScript Calendar Module",
+        "body": [
+          "import { Calendar, ChangedEventArgs } from '@syncfusion/ej2-calendars';",
+          "",
+          "let calendarObject: Calendar = new Calendar();",
+          "calendarObject.appendTo('#${1:element}');"
+       ]
+    }
+}

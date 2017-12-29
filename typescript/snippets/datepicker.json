@@ -1,0 +1,14 @@
+{
+    "TypeScript DatePicker Module": {
+        "prefix": "ej2-datepicker",
+        "description": "TypeScript DatePicker Module",
+        "body": [
+          "import { DatePicker } from '@syncfusion/ej2-calendars';",
+          "",
+          "let datepickerObject: DatePicker = new DatePicker({",
+          "\tplaceholder: '${1:Enter date}'",
+          "});",
+          "datepickerObject.appendTo('#${2:element}');"
+       ]
+    }
+}

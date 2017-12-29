@@ -1,0 +1,25 @@
+{
+    "TypeScript ContextMenu Module": {
+        "prefix": "ej2-contextmenu",
+        "description": "TypeScript ContextMenu Module",
+        "body": [
+            "import { ContextMenu, MenuItemModel, ContextMenuModel } from '@syncfusion/ej2-navigations';",
+            "",
+            "let items: MenuItemModel[] = [",
+            "\t{",
+            "\t\ttext: 'Cut'",
+            "\t},",
+            "\t{",
+            "\t\ttext: 'Copy'",
+            "\t},",
+            "\t{",
+            "\t\ttext: 'Paste'",
+            "\t}];",
+            "let menuOptions: ContextMenuModel = {",
+            "\ttarget: '#${1:target}',",
+            "\titems: ${2:items}",
+            "\t};",
+            "let menuObj: ContextMenu = new ContextMenu(menuOptions, '#${3:contextmenu}');"
+       ]
+    }
+}

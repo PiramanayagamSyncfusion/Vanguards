@@ -1,0 +1,37 @@
+{
+    "TypeScript Dialog Module": {
+        "prefix": "ej2-dialog",
+        "description": "TypeScript Dialog Module",
+        "body": [
+            "import { Dialog } from '@syncfusion/ej2-popups';",
+            "",
+            "let dialog: Dialog = new Dialog({",
+            "\tcontent: 'This is a Dialog with content',",
+            "\ttarget: document.getElementById('${1:container}'),",
+            "\twidth: '250px'",
+            "});", 
+            "dialog.appendTo('#${2:dialog}');",
+            "document.getElementById('${3:targetButton}').onclick = (): void => {",
+            "dialog.show();",
+            "}"
+       ]
+    },
+    "TypeScript Dialog RTL Module": {
+        "prefix": "ej2-dialog-rtl",
+        "description": "TypeScript Dialog Module",
+        "body": [
+            "import { Dialog } from '@syncfusion/ej2-popups';",
+            "",
+            "let dialog: Dialog = new Dialog({",
+            "\tcontent: 'This is a Dialog with content',",
+            "\ttarget: document.getElementById('${1:container}'),",
+            "\twidth: '250px'",
+            "\tenableRtl: true",
+            "});", 
+            "dialog.appendTo('#${2:dialog}');",
+            "document.getElementById('${3:targetButton}').onclick = (): void => {",
+            "dialog.show();",
+            "}"
+       ]
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "TypeScript NumericTextBox Module": {
+        "prefix": "ej2-numerictextbox",
+        "description": "TypeScript NumericTextBox Module",
+        "body": [
+          "import {NumericTextBox} from '@syncfusion/ej2-inputs';",
+          "",
+          "let numeric: NumericTextBox = new NumericTextBox({",
+          "\tvalue: ${1:10}",
+          "});",
+          "numeric.appendTo('#${2:numeric}');"
+       ]
+    }
+}

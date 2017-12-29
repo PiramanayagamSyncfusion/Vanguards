@@ -1,30 +1,837 @@
 {
+	"TypeScript Accordion Module": {
+		"prefix": "ej2-accordion",
+		"description": "TypeScript Accordion Module",
+		"body": [
+			"import {Accordion} from '@syncfusion/ej2-navigations';",
+			"",
+			"let items: { [key: string]: Object }[] = [",
+			"\t\t{ header: 'ASP.NET', expanded: 'true', content: 'Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services.' },",
+			"\t\t{ header: 'ASP.NET MVC', content: 'The Model-View-Controller (MVC) architectural pattern separates an application into three main components: the model, the view, and the controller.' },",
+			"\t\t{ header: 'JavaScript', content: 'JavaScript (JS) is an interpreted computer programming language. It was originally implemented as part of web browsers so that client-side scripts could interact with the user and alter the document content that was displayed.",
+			"\t]",
+			"let accordion: Accordion = new Accordion({",
+			"\titems: ${1:items}",
+			"});",
+			"accordion.appendTo('#{2:accordion_html_markup}');"
+		]
+	},
+	"TypeScript Accordion RTL Module": {
+		"prefix": "ej2-accordion-rtl",
+		"description": "TypeScript Accordion RTL Module",
+		"body": [
+			"import {Accordion} from '@syncfusion/ej2-navigations';",
+			"",
+			"let items: { [key: string]: Object }[] = [",
+			"\t\t{ header: 'ASP.NET', expanded: 'true', content: 'Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services.' },",
+			"\t\t{ header: 'ASP.NET MVC', content: 'The Model-View-Controller (MVC) architectural pattern separates an application into three main components: the model, the view, and the controller.' },",
+			"\t\t{ header: 'JavaScript', content: 'JavaScript (JS) is an interpreted computer programming language. It was originally implemented as part of web browsers so that client-side scripts could interact with the user and alter the document content that was displayed.",
+			"\t]",
+			"let accordion: Accordion = new Accordion({",
+			"\tenableRtl: true",
+			"\titems: ${1:items}",
+			"});",
+			"accordion.appendTo('#{2:accordion_html_markup}');"
+		]
+	},
+	"TypeScript AutoComplete Module": {
+		"prefix": "ej2-autocomplete",
+		"description": "TypeScript AutoComplete Module",
+		"body": [
+			"import { AutoComplete } from '@syncfusion/ej2-dropdowns';",
+			"let dataSource: string[] = ['Badminton', 'Basketball', 'Cricket', 'Football', 'Golf', 'Gymnastics', 'Hockey', 'Tennis'];",
+			"let atcObject: AutoComplete = new AutoComplete({",
+			"\tdataSource: ${1:dataSource},",
+			"\tplaceholder: '${2:Find a game}'",
+			"});",
+			"atcObject.appendTo('#${3:atcelement}');"
+		]
+	},
+	"TypeScript AutoComplete Databinding Module": {
+		"prefix": "ej2-autocomplete-ds-remote",
+		"description": "TypeScript AutoComplete Databinding Module",
+		"body": [
+			"import { AutoComplete } from '@syncfusion/ej2-dropdowns';",
+			"import { Query, DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';",
+			"",
+			"let dataSource: DataManager = new DataManager({",
+			"\turl: 'http://services.odata.org/V4/Northwind/Northwind.svc/',",
+			"\tadaptor: new ODataV4Adaptor,",
+			"\tcrossDomain: true",
+			"});",
+			"let query: Query = new Query().from('Customers').select(['ContactName', 'CustomerID']).take(6);",
+			"let fields: Object = { text: 'ContactName', value: 'CustomerID' }",
+			"let atcObject: AutoComplete = new AutoComplete({",
+			"\tdataSource: ${1:dataSource},",
+			"\tquery: ${2:query},",
+			"\tfields: ${3:fields},",
+			"\tplaceholder:'${4:Select a customer}',",
+			"\tsortOrder: '${5:Ascending}'",
+			"});",
+			"dropDownListObject.appendTo('#${6:ddlelement}');"
+		]
+	},
+	"TypeScript AutoComplete Filtering Module": {
+		"prefix": "ej2-autocomplete-filter",
+		"description": "TypeScript AutoComplete Filtering Module",
+		"body": [
+			"import { AutoComplete } from '@syncfusion/ej2-dropdowns';",
+			"import { Query, DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';",
+			"",
+			"let dataSource: DataManager = new DataManager({,",
+			"url: 'http://services.odata.org/V4/Northwind/Northwind.svc/Customers',",
+			"adaptor: new ODataV4Adaptor,",
+			"crossDomain: true",
+			"});",
+			"let fields: Object = { value: 'ContactName' };",
+			"let query: Query = new Query().select(['ContactName']);",
+			"let filter: AutoComplete = new AutoComplete({",
+			"dataSource: ${1:dataSource},",
+			"query: ${2:query},",
+			"fields: ${3:fields},",
+			"placeholder: '${4:Find a customer}',",
+			"filterType: '${5:StartsWith}',",
+			"sortOrder: '${6:Ascending}'",
+			"});",
+			"filter.appendTo('#${7:atcelement}');"
+		]
+	},
+	"TypeScript Button Module": {
+		"prefix": "ej2-button",
+		"description": "TypeScript Button Module",
+		"body": [
+			"import { Button } from '@syncfusion/ej2-buttons';",
+			"",
+			"let button: Button = new Button();",
+			"button.appendTo('#${1:element}');"
+		]
+	},
+	"TypeScript CheckBox Module": {
+		"prefix": "ej2-checkbox",
+		"description": "TypeScript CheckBox Module",
+		"body": [
+			"import { CheckBox } from '@syncfusion/ej2-buttons';",
+			"",
+			"let checkbox: CheckBox = new CheckBox({ label: '${1:Default}' });",
+			"checkbox.appendTo('#{2:element}');"
+		]
+	},
+	"TypeScript RadioButton Module": {
+		"prefix": "ej2-radio",
+		"description": "TypeScript RadioButton Module",
+		"body": [
+			"import { RadioButton } from '@syncfusion/ej2-buttons';",
+			"",
+			"let radiobutton: RadioButton = new RadioButton({ label: '${1:Default}'});",
+			"radiobutton.appendTo('#{2:element}');"
+		]
+	},
+	"TypeScript Calendar Module": {
+		"prefix": "ej2-calendar",
+		"description": "TypeScript Calendar Module",
+		"body": [
+			"import { Calendar, ChangedEventArgs } from '@syncfusion/ej2-calendars';",
+			"",
+			"let calendarObject: Calendar = new Calendar();",
+			"calendarObject.appendTo('#${1:element}');"
+		]
+	},
+	"TypeScript ComboBox Module": {
+		"prefix": "ej2-combobox",
+		"description": "TypeScript ComboBox Module",
+		"body": [
+			"import { ComboBox } from '@syncfusion/ej2-dropdowns';",
+			"",
+			"let dataSource: string[] = ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis'];",
+			"let comboBoxObject: ComboBox = new ComboBox({",
+			"\tdataSource: ${1:dataSource},",
+			"\tplaceholder: '${2:Select a game}'",
+			"});",
+			"comboBoxObject.appendTo('#${3:comboelement}');"
+		]
+	},
+	"TypeScript ComboBox DataBinding Module": {
+		"prefix": "ej2-combobox-ds-remote",
+		"description": "TypeScript ComboBox DataBinding Module",
+		"body": [
+			"import { ComboBox } from '@syncfusion/ej2-dropdowns';",
+			"import { Query, DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';",
+			"",
+			"let dataSource: DataManager = new DataManager({",
+			"\turl: 'http://services.odata.org/V4/Northwind/Northwind.svc/',",
+			"\tadaptor: new ODataV4Adaptor,",
+			"\tcrossDomain: true",
+			"});",
+			"let query: Query = new Query().from('Customers').select(['ContactName', 'CustomerID']).take(6);",
+			"let fields: Object = { text: 'ContactName', value: 'CustomerID' }",
+			"let customers: ComboBox = new ComboBox({",
+			"\tdataSource: ${1:dataSource}",
+			"\tquery: ${2:query}",
+			"\tfields: ${3:fields},",
+			"\tsortOrder: '${4:Ascending}',",
+			"\tplaceholder:'${5:Select a customer}'",
+			"\t});",
+			"customers.appendTo('#${6:comboelement}');"
+		]
+	},
+	"TypeScript ComboBox Filtering Module": {
+		"prefix": "ej2-combobox-filter",
+		"description": "TypeScript ComboBox Filtering Module",
+		"body": [
+			"import { ComboBox, FilteringEventArgs } from '@syncfusion/ej2-dropdowns';",
+			"import { DataManager, Query } from '@syncfusion/ej2-data';",
+			"",
+			"let dataSource: { [key: string]: Object }[] = [",
+			"\t{ value: 's1', text: 'California' },",
+			"\t{ value: 's2', text: 'Florida' },",
+			"\t{ value: 's3', text: 'Alaska' },",
+			"\t{ value: 's4', text: 'Georgia' },",
+			"];",
+			"let comboBoxObject: ComboBox = new ComboBox({",
+			"\tdataSource: ${1:dataSource},",
+			"\tfields: { text: '${2:text}', value: '${3:value}' },",
+			"\tplaceholder: '${3:Select a Country}'",
+			"\tallowFiltering: true,",
+			"\tsortOrder: 'Ascending',",
+			"\tfiltering: function (e: FilteringEventArgs) {",
+			"\t\tlet query = new Query();",
+			"\t\tquery = (e.text != '') ? query.where('${4:text}', 'startswith', e.text, true) : query;",
+			"\t\te.updateData(${5:dataSource}, query);",
+			"\t});",
+			"comboBoxObject.appendTo('#${6:comboelement}');"
+		]
+	},
+	"TypeScript ContextMenu Module": {
+		"prefix": "ej2-contextmenu",
+		"description": "TypeScript ContextMenu Module",
+		"body": [
+			"import { ContextMenu, MenuItemModel, ContextMenuModel } from '@syncfusion/ej2-navigations';",
+			"",
+			"let items: MenuItemModel[] = [",
+			"\t{",
+			"\t\ttext: 'Cut'",
+			"\t},",
+			"\t{",
+			"\t\ttext: 'Copy'",
+			"\t},",
+			"\t{",
+			"\t\ttext: 'Paste'",
+			"\t}];",
+			"let menuOptions: ContextMenuModel = {",
+			"\ttarget: '#${1:target}',",
+			"\titems: ${2:items}",
+			"\t};",
+			"let menuObj: ContextMenu = new ContextMenu(menuOptions, '#${3:contextmenu}');"
+		]
+	},
+	"TypeScript DatePicker Module": {
+		"prefix": "ej2-datepicker",
+		"description": "TypeScript DatePicker Module",
+		"body": [
+			"import { DatePicker } from '@syncfusion/ej2-calendars';",
+			"",
+			"let datepickerObject: DatePicker = new DatePicker({",
+			"\tplaceholder: '${1:Enter date}'",
+			"});",
+			"datepickerObject.appendTo('#${2:element}');"
+		]
+	},
+	"TypeScript DateRangePicker Module": {
+		"prefix": "ej2-daterangepicker",
+		"description": "TypeScript DateRangePicker Module",
+		"body": [
+			"import { DateRangePicker } from '@syncfusion/ej2-calendars';",
+			"",
+			"let daterangepicker: DateRangePicker = new DateRangePicker({",
+			"\tplaceholder: '${1:Select range}'",
+			"});",
+			"datepickerObject.appendTo('#${2:element}');"
+		]
+	},
+	"TypeScript Dialog Module": {
+		"prefix": "ej2-dialog",
+		"description": "TypeScript Dialog Module",
+		"body": [
+			"import { Dialog } from '@syncfusion/ej2-popups';",
+			"",
+			"let dialog: Dialog = new Dialog({",
+			"\tcontent: 'This is a Dialog with content',",
+			"\ttarget: document.getElementById('${1:container}'),",
+			"\twidth: '250px'",
+			"});",
+			"dialog.appendTo('#${2:dialog}');",
+			"document.getElementById('${3:targetButton}').onclick = (): void => {",
+			"dialog.show();",
+			"}"
+		]
+	},
+	"TypeScript Dialog RTL Module": {
+		"prefix": "ej2-dialog-rtl",
+		"description": "TypeScript Dialog Module",
+		"body": [
+			"import { Dialog } from '@syncfusion/ej2-popups';",
+			"",
+			"let dialog: Dialog = new Dialog({",
+			"\tcontent: 'This is a Dialog with content',",
+			"\ttarget: document.getElementById('${1:container}'),",
+			"\twidth: '250px'",
+			"\tenableRtl: true",
+			"});",
+			"dialog.appendTo('#${2:dialog}');",
+			"document.getElementById('${3:targetButton}').onclick = (): void => {",
+			"dialog.show();",
+			"}"
+		]
+	},
+	"TypeScript DropDown Module": {
+		"prefix": "ej2-dropdown",
+		"description": "TypeScript DropDown Module",
+		"body": [
+			"import { DropDownList } from '@syncfusion/ej2-dropdowns';",
+			"",
+			"let dataSource: string[] = ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis'];",
+			"let dropDownListObject: DropDownList = new DropDownList({",
+			"\tdataSource: ${1:dataSource},",
+			"\tplaceholder: '${2:Select a game}'",
+			"});",
+			"dropDownListObject.appendTo('#${3:ddlelement}');"
+		]
+	},
+	"TypeScript DropDown Databinding Module": {
+		"prefix": "ej2-dropdown-ds-remote",
+		"description": "TypeScript DropDown Databinding Module",
+		"body": [
+			"import { DropDownList } from '@syncfusion/ej2-dropdowns';",
+			"import { Query, DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';",
+			"",
+			"let dataSource: DataManager = new DataManager({",
+			"\turl: 'http://services.odata.org/V4/Northwind/Northwind.svc/',",
+			"\tadaptor: new ODataV4Adaptor,",
+			"\tcrossDomain: true",
+			"});",
+			"let query: Query = new Query().from('Customers').select(['ContactName', 'CustomerID']).take(6);",
+			"let fields: Object = { text: 'ContactName', value: 'CustomerID' }",
+			"let dropDownListObject: DropDownList = new DropDownList({",
+			"\tdataSource: ${1:dataSource},",
+			"\tquery: ${2:query},",
+			"\tfields: ${3:fields},",
+			"\tplaceholder:'${4:Select a customer}',",
+			"\tsortOrder: '${5:Ascending}'",
+			"});",
+			"dropDownListObject.appendTo('#${6:ddlelement}');"
+		]
+	},
+	"TypeScript DropDown Filtering Module": {
+		"prefix": "ej2-dropdown-filter",
+		"description": "TypeScript DropDown Filtering Module",
+		"body": [
+			"import { DropDownList, FilteringEventArgs } from '@syncfusion/ej2-dropdowns';",
+			"import { DataManager, Query } from '@syncfusion/ej2-data';",
+			"",
+			"let dataSource: { [key: string]: Object }[] = [",
+			"\t{ value: 's1', text: 'California' },",
+			"\t{ value: 's2', text: 'Florida' },",
+			"\t{ value: 's3', text: 'Alaska' },",
+			"\t{ value: 's4', text: 'Georgia' },",
+			"];",
+			"let dropDownListObject: DropDownList = new DropDownList({",
+			"\tdataSource: ${1:dataSource},",
+			"\tfields: { text: '${2:text}', value: '${3:value}' },",
+			"\tplaceholder:'${4:Select a game}'",
+			"\tallowFiltering: true,",
+			"\tfiltering: function (e: FilteringEventArgs) {",
+			"\t\tlet query = new Query();",
+			"\t\tquery = (e.text != '') ? query.where('${5:text}', 'startswith', e.text, true) : query;",
+			"\t\te.updateData(${6:dataSource}, query);",
+			"}",
+			"});",
+			"dropDownListObject.appendTo('#${7:ddlelement}');"
+		]
+	},
+	"TypeScript ListView Module": {
+		"prefix": "ej2-listview",
+		"description": "TypeScript ListView Module",
+		"body": [
+			"import { ListView } from '@syncfusion/ej2-lists';",
+			"",
+			"let dataSource: { [key: string]: string }[] = [",
+			"\t{ text: 'Artwork', id: '01' },",
+			"\t{ text: 'Abstract', id: '02' },",
+			"\t{ text: 'Modern Painting', id: '03' },",
+			"\t{ text: 'Ceramics', id: '04' },",
+			"\t{ text: 'Animation Art', id: '05' },",
+			"\t{ text: 'Oil Painting', id: '06' }];",
+			"let listviewInstance: ListView = new ListView({",
+			"\tdataSource: ${1:dataSource}",
+			"});",
+			"listviewInstance.appendTo('#${2:element}');"
+		]
+	},
+	"TypeScript ListView DataBinding Module": {
+		"prefix": "ej2-listview-ds-remote",
+		"description": "TypeScript ListView DataBinding Module",
+		"body": [
+			"import { ListView } from '@syncfusion/ej2-lists';",
+			"import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';",
+			"",
+			"let dataSource: DataManager = new DataManager({",
+			"\t\turl: 'http://js.syncfusion.com/ejServices/Wcf/Northwind.svc/',",
+			"\t\tcrossDomain: true",
+			"\t});",
+			"let query: Query = new Query().from('Products').select('ProductID,ProductName').take(6);",
+			"let fields: Object = { id: 'ProductID', text: 'ProductName' };",
+			"let listviewInstance: ListView = new ListView({",
+			"\tdataSource: ${1:dataSource},",
+			"\tquery: ${2:query},",
+			"\tfields: ${3:fields},",
+			"\theaderTitle: '${4:Product Name}',",
+			"\tshowHeader: ${5:true}",
+			"});",
+			"listviewInstance.appendTo('#${6:element}')"
+		]
+	},
+	"TypeScript ListView RTL Module": {
+		"prefix": "ej2-listview-rtl",
+		"description": "TypeScript ListView RTL Module",
+		"body": [
+			"import { ListView } from '@syncfusion/ej2-lists';",
+			"",
+			"let dataSource: { [key: string]: string }[] = [",
+			"\t{ text: 'Artwork', id: '01' },",
+			"\t{ text: 'Abstract', id: '02' },",
+			"\t{ text: 'Modern Painting', id: '03' },",
+			"\t{ text: 'Ceramics', id: '04' },",
+			"\t{ text: 'Animation Art', id: '05' },",
+			"\t{ text: 'Oil Painting', id: '06' }];",
+			"let listviewInstance: ListView = new ListView({",
+			"\tenableRtl: true,",
+			"\tdataSource: ${1:dataSource}",
+			"});",
+			"listviewInstance.appendTo('#${2:element}');"
+		]
+	},
+	"TypeScript Masked TextBox Module": {
+		"prefix": "ej2-maskedtextbox",
+		"description": "TypeScript Masked TextBox Module",
+		"body": [
+			"import { MaskedTextBox } from '@syncfusion/ej2-inputs';",
+			"",
+			"let mask: MaskedTextBox = new MaskedTextBox({",
+			"\tmask: '${1:000-000-0000}',",
+			"\tplaceholder: '${2:MaskedTextBox}',",
+			"\tfloatLabelType: '${3:Always}'",
+			"});",
+			"mask.appendTo('#${4:mask}');"
+		]
+	},
+	"TypeScript Masked TextBox Custom Characters Module": {
+		"prefix": "ej2-maskedtextbox-customch",
+		"description": "TypeScript Masked TextBox Custom Characters Module",
+		"body": [
+			"import { MaskedTextBox } from '@syncfusion/ej2-inputs';",
+			"",
+			"let customCharacters: Object = {",
+			"\t\tP: 'P,A,a,p',",
+			"\t\tM: 'M,m'",
+			"};",
+			"let mask: MaskedTextBox = new MaskedTextBox({",
+			"\tcustomCharacters: ${1:customCharacters} ",
+			"\tmask: '${2:00:00 >PM}',",
+			"\tplaceholder: '${3:Time (ex: 10:00 PM, 10:00 AM)}',",
+			"\tfloatLabelType: '${4:Always}'",
+			"});",
+			"mask.appendTo('#${5:mask}');"
+		]
+	},
+	"TypeScript MultiSelect Module": {
+		"prefix": "ej2-multiselect",
+		"description": "TypeScript MultiSelect Module",
+		"body": [
+			"import { MultiSelect } from '@syncfusion/ej2-dropdowns';",
+			"",
+			"let dataSource: string[] = ['Badminton', 'Basketball', 'Cricket', 'Football', 'Golf', 'Gymnastics', 'Hockey', 'Rugby', 'Snooker', 'Tennis'];",
+			"let msObject: MultiSelect = new MultiSelect({",
+			"\tdataSource: ${1:dataSource}",
+			"});",
+			"msObject.appendTo('#{2:select}');"
+		]
+	},
+	"TypeScript MultiSelect Databinding Module": {
+		"prefix": "ej2-multiselect-ds-remote",
+		"description": "TypeScript MultiSelect Databinding Module",
+		"body": [
+			"import { MultiSelect } from '@syncfusion/ej2-dropdowns';",
+			"import { Query, DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';",
+			"",
+			"let dataSource: DataManager = new DataManager({",
+			"\t\turl: 'http://services.odata.org/V4/Northwind/Northwind.svc/',",
+			"\t\tadaptor: new ODataV4Adaptor,",
+			"\t\tcrossDomain: true",
+			"\t});",
+			"let query: Query = new Query().from('Customers').select(['ContactName', 'CustomerID']).take(6);",
+			"let fields: Object = { text: 'ContactName', value: 'CustomerID' }",
+			"let customers: MultiSelect = new MultiSelect({",
+			"\tdataSource: ${1:dataSource},",
+			"\tquery: ${2:query},",
+			"\tfields: ${3:fields},",
+			"\tplaceholder:'${4:Select customers}',",
+			"\tsortOrder: '${5:Ascending}'",
+			"\t});",
+			"\tcustomers.appendTo('#{6:select}');"
+		]
+	},
+	"TypeScript MultiSelect Grouping Module": {
+		"prefix": "ej2-multiselect-grouping",
+		"description": "TypeScript MultiSelect Grouping Module",
+		"body": [
+			"import { MultiSelect } from '@syncfusion/ej2-dropdowns';",
+			"",
+			"let dataSource: { [key: string]: Object }[] = [",
+			"\t{ text: 'Cabbage', groupBy: 'Leafy and Salad', value: 'item1' },",
+			"\t{ text: 'Spinach', groupBy: 'Leafy and Salad', value: 'item2' },",
+			"\t{ text: 'Wheat grass', groupBy: 'Leafy and Salad', value: 'item3' },",
+			"\t{ text: 'Yarrow', groupBy: 'Leafy and Salad', value: 'item4' },",
+			"\t{ text: 'Pumpkins', groupBy: 'Leafy and Salad', value: 'item5' }",
+			"];",
+			"let vegetables: MultiSelect = new MultiSelect({",
+			"dataSource: ${1:dataSource},",
+			"fields: { groupBy: '${2:groupBy}', text: '${3:text}', value: '${4:value}' },",
+			"placeholder: '${5:Select vegetables}',",
+			"popupHeight: '${6:200px}'",
+			"});",
+			"vegetables.appendTo('#${6:select}');"
+		]
+	},
+	"TypeScript NumericTextBox Module": {
+		"prefix": "ej2-numerictextbox",
+		"description": "TypeScript NumericTextBox Module",
+		"body": [
+			"import {NumericTextBox} from '@syncfusion/ej2-inputs';",
+			"",
+			"let numeric: NumericTextBox = new NumericTextBox({",
+			"\tvalue: ${1:10}",
+			"});",
+			"numeric.appendTo('#${2:numeric}');"
+		]
+	},
+	"TypeScript Tab Module": {
+		"prefix": "ej2-tab",
+		"description": "TypeScript Tab Module",
+		"body": [
+			"import {Tab } from '@syncfusion/ej2-navigations';",
+			"",
+			"let items: { [key: string]: Object }[] = [",
+			"\t{",
+			"\t\theader: { 'text': 'Twitter' },",
+			"\t\tcontent: 'Twitter is an online social networking service that enables users to send and read short 140-character ' +",
+			"'messages called 'tweets'. '",
+			"\t},",
+			"\t{",
+			"\t\theader: { 'text': 'Facebook' },",
+			"\t\tcontent: 'Facebook is an online social networking service headquartered in Menlo Park, California. Its website was ' +",
+			"'launched on February 4, 2004, by Mark Zuckerberg with his Harvard College roommates and fellow students Eduardo ' +",
+			"'Saverin, Andrew McCollum, Dustin Moskovitz and Chris Hughes. '",
+			"\t},",
+			"\t{",
+			"\t\theader: { 'text': 'WhatsApp' },",
+			"\t\tcontent: 'WhatsApp Messenger is a proprietary cross-platform instant messaging client for smartphones that operates ' +",
+			"'under a subscription business model. It uses the Internet to send text messages, images, video, user location and ' +",
+			"'audio media messages to other users using standard cellular mobile numbers. '",
+			"\t}",
+			"\t];",
+			"let tabObj: Tab = new Tab({",
+			"\titems: ${1:items}",
+			"});",
+			"tabObj.appendTo('#{2:element}');"
+		]
+	},
+	"TypeScript Tab RTL Module": {
+		"prefix": "ej2-tab-rtl",
+		"description": "TypeScript Tab RTL Module",
+		"body": [
+			"import { Tab } from '@syncfusion/ej2-navigations';",
+			"",
+			"let items: { [key: string]: Object }[] = [",
+			"\t{",
+			"\t\theader: { 'text': 'Twitter' },",
+			"\t\tcontent: 'Twitter is an online social networking service that enables users to send and read short 140-character ' +",
+			"'messages called 'tweets'. '",
+			"\t},",
+			"\t{",
+			"\t\theader: { 'text': 'Facebook' },",
+			"\t\tcontent: 'Facebook is an online social networking service headquartered in Menlo Park, California. Its website was ' +",
+			"'launched on February 4, 2004, by Mark Zuckerberg with his Harvard College roommates and fellow students Eduardo ' +",
+			"'Saverin, Andrew McCollum, Dustin Moskovitz and Chris Hughes. '",
+			"\t},",
+			"\t{",
+			"\t\theader: { 'text': 'WhatsApp' },",
+			"\t\tcontent: 'WhatsApp Messenger is a proprietary cross-platform instant messaging client for smartphones that operates ' +",
+			"'under a subscription business model. It uses the Internet to send text messages, images, video, user location and ' +",
+			"'audio media messages to other users using standard cellular mobile numbers. '",
+			"\t}",
+			"\t];",
+			"let tabObj: Tab = new Tab({",
+			"\tenableRtl: true",
+			"\titems: ${1:items}",
+			"});",
+			"tabObj.appendTo('#{2:element}');"
+		]
+	},
+	"TypeScript TimePicker Module": {
+		"prefix": "ej2-timepicker",
+		"description": "TypeScript TimePicker Module",
+		"body": [
+			"import { TimePicker } from '@syncfusion/ej2-dropdowns';",
+			"let dataSource: string[] = ['Badminton', 'Basketball', 'Cricket', 'Football', 'Golf', 'Gymnastics', 'Hockey', 'Tennis'];",
+			"let timeObject: TimePicker = new TimePicker({",
+			"\tplaceholder: '${1:Select a Time}'",
+			"});",
+			"timeObject.appendTo('#${2:element}');"
+		]
+	},
+	"TypeScript Toolbar Module": {
+		"prefix": "ej2-toolbar",
+		"description": "TypeScript Toolbar Module",
+		"body": [
+			"import {Toolbar} from '@syncfusion/ej2-navigations';",
+			"",
+			"let items: { [key: string]: Object }[] = [",
+			"\t{ text: 'Cut' },",
+			"\t{ text: 'Copy' },",
+			"\t{ text: 'Paste' },",
+			"\t{ type: 'Separator'},",
+			"\t{ text: 'Bold' },",
+			"\t{ text: 'Italic' },",
+			"\t{ text: 'Underline' },",
+			"\t]",
+			"let toolbar: Toolbar = new Toolbar({",
+			"items: ${1:items}",
+			"});",
+			"toolbar.appendTo('#{2:element}');"
+		]
+	},
+	"TypeScript Toolbar RTL Module": {
+		"prefix": "ej2-toolbar-rtl",
+		"description": "TypeScript Toolbar RTL Module",
+		"body": [
+			"import {Toolbar} from '@syncfusion/ej2-navigations';",
+			"",
+			"let items: { [key: string]: Object }[] = [",
+			"\t{ text: 'Cut' },",
+			"\t{ text: 'Copy' },",
+			"\t{ text: 'Paste' },",
+			"\t{ type: 'Separator'},",
+			"\t{ text: 'Bold' },",
+			"\t{ text: 'Italic' },",
+			"\t{ text: 'Underline' },",
+			"\t];",
+			"let toolbar: Toolbar = new Toolbar({",
+			"enableRtl: true",
+			"items: ${1:items}",
+			"});",
+			"toolbar.appendTo('#{2:element}');"
+		]
+	},
+	"TypeScript Tooltip Module": {
+		"prefix": "ej2-tooltip",
+		"description": "TypeScript Tooltip Module",
+		"body": [
+			"import { Tooltip } from '@syncfusion/ej2-popups';",
+			"let tooltip: Tooltip = new Tooltip({",
+			"\tcontent: '${1:Tooltip content}'",
+			"});",
+			"tooltip.appendTo('#{2:target}');"
+		]
+	},
 	"TypeScript TreeView Module": {
 		"prefix": "ej2-treeview",
 		"description": "TypeScript TreeView Module",
 		"body": [
 			"import { TreeView } from '@syncfusion/ej2-navigations';",
 			"",
-			"let data: { [key: string]: Object }[] = [",
+			"let dataSource: { [key: string]: Object }[] = [",
 			"\t{",
-			"\t\tnodeId: '01', nodeText: 'Music',",
-			"\t\tnodeChild: [",
-			"\t\t\t{ nodeId: '01-01', nodeText: 'Gouttes.mp3' }",
+			"\t\tid: '01', text: 'Music',",
+			"\t\tchild: [",
+			"\t\t\t{ id: '01-01', text: 'Gouttes.mp3' }",
 			"\t\t]",
 			"\t},",
 			"\t{",
-			"\t\tnodeId: '02', nodeText: 'Videos', expanded: true,",
-			"\t\tnodeChild: [",
-			"\t\t\t{ nodeId: '02-01', nodeText: 'Naturals.mp4' },",
-			"\t\t\t{ nodeId: '02-02', nodeText: 'Wild.mpeg' },",
+			"\t\tid: '02', text: 'Videos', expanded: true,",
+			"\t\tchild: [",
+			"\t\t\t{ id: '02-01', text: 'Naturals.mp4' },",
+			"\t\t\t{ id: '02-02', text: 'Wild.mpeg' },",
 			"\t\t]",
 			"\t},",
 			"];",
 			"",
 			"let treeObj: TreeView = new TreeView({",
-			"\tfields: { dataSource: '${1:data}', id: '${2:nodeId}', text: '${3:nodeText}', child: '${4:nodeChild}' }",
+			"\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}', child: '${4:child}' }",
 			"});",
 			"treeObj.appendTo('#${5:tree}');"
+		]
+	},
+	"TypeScript TreeView Self Referencial Module": {
+		"prefix": "ej2-treeview-self",
+		"description": "TypeScript TreeView Self Referencial Module",
+		"body": [
+			"import { TreeView } from '@syncfusion/ej2-navigations';",
+			"",
+			"let dataSource: { [key: string]: Object }[] = [",
+			"\t{ id: 1, text: 'Discover Music', hasChildren: true, expanded: true },",
+			"\t{ id: 2, parentID: 1, text: 'Hot Singles' },",
+			"\t{ id: 3, parentID: 1, text: 'Rising Artists' },",
+			"\t{ id: 4, parentID: 1, text: 'Live Music' },",
+			"\t{ id: 6, parentID: 1, text: 'Best of 2017 So Far' },",
+			"\t{ id: 7, text: 'Sales and Events', hasChildren: true },",
+			"\t{ id: 8, parentID: 7, text: '100 Albums - $5 Each' }",
+			"\t];",
+			"let treeObj: TreeView = new TreeView({",
+			"\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', parentID: '${3:parentID}', text: '${4:text}', hasChildren: '${5:hasChildren}' }",
+			"});",
+			"treeObj.appendTo('#{6:tree}');"
+		]
+	},
+	"TypeScript TreeView Editing Module": {
+		"prefix": "ej2-treeview-editing",
+		"description": "TypeScript TreeView Editing Module",
+		"body": [
+			"import { TreeView, NodeEditEventArgs } from '@syncfusion/ej2-navigations';",
+			"",
+			"let dataSource: { [key: string]: Object }[] = [",
+			"\t{",
+			"\t\tid: '01', text: 'Music',",
+			"\t\tchild: [",
+			"\t\t\t{ id: '01-01', text: 'Gouttes.mp3' }",
+			"\t\t]",
+			"\t},",
+			"\t{",
+			"\t\tid: '02', text: 'Videos', expanded: true,",
+			"\t\tchild: [",
+			"\t\t\t{ id: '02-01', text: 'Naturals.mp4' },",
+			"\t\t\t{ id: '02-02', text: 'Wild.mpeg' },",
+			"\t\t]",
+			"\t},",
+			"];",
+			"let treeObj: TreeView = new TreeView({",
+			"\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}', child: '${4:child}' },",
+			"\tallowEditing: true,",
+			"\tnodeEditing: editing",
+			"});",
+			"treeObj.appendTo('#{5:tree}');",
+			"function editing(args: NodeEditEventArgs) {",
+			"\tif (args.node.parentNode.parentNode.nodetext !== 'LI') {",
+			"\t\targs.cancel = true;",
+			"\t}",
+			"}"
+		]
+	},
+	"TypeScript TreeView Drag Module": {
+		"prefix": "ej2-treeview-drag",
+		"description": "TypeScript TreeView Drag Module",
+		"body": [
+			"import { TreeView } from '@syncfusion/ej2-navigations';",
+			"",
+			"let dataSource: { [key: string]: Object }[] = [",
+			"\t{",
+			"\t\tid: 1, text: 'ASP.NET MVC Team', expanded: true,",
+			"\t\tchild: [",
+			"\t\t\t{ id: 2, parentID: 1, text: 'Smith' },",
+			"\t\t\t{ id: 3, parentID: 1, text: 'Johnson', isSelected: true },",
+			"\t\t\t{ id: 4, parentID: 1, text: 'Anderson' },",
+			"\t\t]",
+			"\t}",
+			"\t{",
+			"\t\tid: 5, text: 'Windows Team',",
+			"\t\tchild: [",
+			"\t\t\t{ id: 6, parentID: 5, text: 'Clark' },",
+			"\t\t\t{ id: 7, parentID: 5, text: 'Wright' },",
+			"\t\t\t{ id: 8, parentID: 5, text: 'Lopez' },",
+			"\t\t]",
+			"\t}",
+			"];",
+			"let treeObj: TreeView = new TreeView({",
+			"\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}', child: '${4:child}', selected: '${5:isSelected}' },",
+			"\tallowDragAndDrop: true,",
+			"});",
+			"treeObj.appendTo('#{6:tree}');"
+		]
+	},
+	"TypeScript TreeView Checkbox Module": {
+		"prefix": "ej2-treeview-checkbox",
+		"description": "TypeScript TreeView Checkbox Module",
+		"body": [
+			"import { TreeView } from '@syncfusion/ej2-navigations';",
+			"",
+			"let dataSource: { [key: string]: Object }[] = [",
+			"\t{ id: 1, text: 'Australia', hasChildren: true, expanded: true },",
+			"\t{ id: 2, parentID: 1, text: 'New South Wales', isChecked: true },",
+			"\t{ id: 3, parentID: 1, text: 'Victoria' },",
+			"\t{ id: 4, parentID: 1, text: 'South Australia' },",
+			"\t{ id: 6, parentID: 1, text: 'Western Australia', isChecked: true },",
+			"\t{ id: 7, text: 'Brazil', hasChildren: true },",
+			"\t{ id: 8, parentID: 7, text: 'Paraná' },",
+			"\t{ id: 9, parentID: 7, text: 'Ceará' },",
+			"\t{ id: 10, parentID: 7, text: 'Acre' }",
+			"];",
+			"let treeObj: TreeView = new TreeView({",
+			"\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', parentID: '${3:parentID}', text: '${4:text}', hasChildren: '${5:hasChildren}' },",
+			"\tshowCheckBox: true,",
+			"});",
+			"treeObj.appendTo('#${6:tree}');"
+		]
+	},
+	"TypeScript TreeView MultiSelection Module": {
+		"prefix": "ej2-treeview-multiselect",
+		"description": "TypeScript TreeView MultiSelection Module",
+		"body": [
+			"import { TreeView } from '@syncfusion/ej2-navigations';",
+			"",
+			"let dataSource: { [key: string]: Object }[] = [",
+			"\t{ id: 1, text: 'Australia', hasChildren: true, expanded: true },",
+			"\t{ id: 2, parentID: 1, text: 'New South Wales', selected: true },",
+			"\t{ id: 3, parentID: 1, text: 'Victoria' },",
+			"\t{ id: 4, parentID: 1, text: 'South Australia' },",
+			"\t{ id: 6, parentID: 1, text: 'Western Australia', selected: true },",
+			"\t{ id: 7, text: 'Brazil', hasChildren: true },",
+			"\t{ id: 8, parentID: 7, text: 'Paraná' },",
+			"\t{ id: 9, parentID: 7, text: 'Ceará' },",
+			"\t{ id: 10, parentID: 7, text: 'Acre' }",
+			"];",
+			"let treeObj: TreeView = new TreeView({",
+			"\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', parentID: '${3:parentID}', text: '${4:text}', hasChildren: '${5:hasChildren}', selected: '${6:selected}' },",
+			"\tallowMultiSelection: true,",
+			"});",
+			"treeObj.appendTo('#{6:tree}');"
+		]
+	},
+	"TypeScript TreeView RTL Module": {
+		"prefix": "ej2-treeview-rtl",
+		"description": "TypeScript TreeView RTL Module",
+		"body": [
+			"import { TreeView } from '@syncfusion/ej2-navigations';",
+			"",
+			"let dataSource: { [key: string]: Object }[] = [",
+			"\t{",
+			"\t\tid: '01', text: 'Music',",
+			"\t\tchild: [",
+			"\t\t\t{ id: '01-01', text: 'Gouttes.mp3' }",
+			"\t\t]",
+			"\t},",
+			"\t{",
+			"\t\tid: '02', text: 'Videos', expanded: true,",
+			"\t\tchild: [",
+			"\t\t\t{ id: '02-01', text: 'Naturals.mp4' },",
+			"\t\t\t{ id: '02-02', text: 'Wild.mpeg' },",
+			"\t\t]",
+			"\t},",
+			"];",
+			"",
+			"let treeObj: TreeView = new TreeView({",
+			"\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}' },",
+			"\tenableRtl: true,",
+			"});",
+			"treeObj.appendTo('#{4:tree}');"
 		]
 	}
 }

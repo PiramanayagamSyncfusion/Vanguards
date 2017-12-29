@@ -1,0 +1,64 @@
+{
+    "TypeScript AutoComplete Module": {
+        "prefix": "ej2-autocomplete",
+        "description": "TypeScript AutoComplete Module",
+        "body": [
+          "import { AutoComplete } from '@syncfusion/ej2-dropdowns';",
+          "let dataSource: string[] = ['Badminton', 'Basketball', 'Cricket', 'Football', 'Golf', 'Gymnastics', 'Hockey', 'Tennis'];",
+          "let atcObject: AutoComplete = new AutoComplete({",
+          "\tdataSource: ${1:dataSource},",
+          "\tplaceholder: '${2:Find a game}'",
+          "});",
+          "atcObject.appendTo('#${3:atcelement}');"
+       ]
+    },
+    "TypeScript AutoComplete Databinding Module": {
+        "prefix": "ej2-autocomplete-ds-remote",
+        "description": "TypeScript AutoComplete Databinding Module",
+        "body": [
+            "import { AutoComplete } from '@syncfusion/ej2-dropdowns';",
+            "import { Query, DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';",
+            "",
+            "let dataSource: DataManager = new DataManager({",
+            "\turl: 'http://services.odata.org/V4/Northwind/Northwind.svc/',",
+            "\tadaptor: new ODataV4Adaptor,",
+            "\tcrossDomain: true",
+            "});",
+            "let query: Query = new Query().from('Customers').select(['ContactName', 'CustomerID']).take(6);",
+            "let fields: Object = { text: 'ContactName', value: 'CustomerID' }",
+            "let atcObject: AutoComplete = new AutoComplete({",
+            "\tdataSource: ${1:dataSource},",
+            "\tquery: ${2:query},",
+            "\tfields: ${3:fields},",
+            "\tplaceholder:'${4:Select a customer}',",
+            "\tsortOrder: '${5:Ascending}'",
+            "});",
+            "dropDownListObject.appendTo('#${6:ddlelement}');"
+       ]
+    },
+     "TypeScript AutoComplete Filtering Module": {
+        "prefix": "ej2-autocomplete-filter",
+        "description": "TypeScript AutoComplete Filtering Module",
+        "body": [
+            "import { AutoComplete } from '@syncfusion/ej2-dropdowns';",
+            "import { Query, DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';",
+            "",
+            "let dataSource: DataManager = new DataManager({,",
+            "url: 'http://services.odata.org/V4/Northwind/Northwind.svc/Customers',",
+            "adaptor: new ODataV4Adaptor,",
+            "crossDomain: true",
+            "});",
+            "let fields: Object = { value: 'ContactName' };",
+            "let query: Query = new Query().select(['ContactName']);",
+            "let filter: AutoComplete = new AutoComplete({",
+            "dataSource: ${1:dataSource},",
+            "query: ${2:query},",
+            "fields: ${3:fields},",
+            "placeholder: '${4:Find a customer}',",
+            "filterType: '${5:StartsWith}',",
+            "sortOrder: '${6:Ascending}'",
+            "});",
+            "filter.appendTo('#${7:atcelement}');"
+       ]
+    }
+}

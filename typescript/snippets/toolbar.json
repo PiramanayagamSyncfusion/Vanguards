@@ -1,0 +1,45 @@
+{
+    "TypeScript Toolbar Module": {
+        "prefix": "ej2-toolbar",
+        "description": "TypeScript Toolbar Module",
+        "body": [
+            "import {Toolbar} from '@syncfusion/ej2-navigations';",
+            "",
+            "let items: { [key: string]: Object }[] = [",
+            "\t{ text: 'Cut' },",
+            "\t{ text: 'Copy' },",
+            "\t{ text: 'Paste' },",
+            "\t{ type: 'Separator'},",
+            "\t{ text: 'Bold' },",
+            "\t{ text: 'Italic' },",
+            "\t{ text: 'Underline' },",
+            "\t]",
+            "let toolbar: Toolbar = new Toolbar({",
+            "items: ${1:items}",   
+            "});",
+            "toolbar.appendTo('#{2:element}');"
+       ]
+    },
+     "TypeScript Toolbar RTL Module": {
+        "prefix": "ej2-toolbar-rtl",
+        "description": "TypeScript Toolbar RTL Module",
+        "body": [
+            "import {Toolbar} from '@syncfusion/ej2-navigations';",
+            "",
+            "let items: { [key: string]: Object }[] = [",
+            "\t{ text: 'Cut' },",
+            "\t{ text: 'Copy' },",
+            "\t{ text: 'Paste' },",
+            "\t{ type: 'Separator'},",
+            "\t{ text: 'Bold' },",
+            "\t{ text: 'Italic' },",
+            "\t{ text: 'Underline' },",
+            "\t];",
+            "let toolbar: Toolbar = new Toolbar({",
+            "enableRtl: true",
+            "items: ${1:items}",   
+            "});",
+            "toolbar.appendTo('#{2:element}');"
+       ]
+    }
+}
