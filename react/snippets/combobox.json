@@ -1,0 +1,79 @@
+{
+    "React ComboBox Module": {
+        "prefix": "ej2-react-combobox",
+        "description": "React ComboBox Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { ComboBoxComponent } from '@syncfusion/ej2-react-dropdowns';",
+            "export default class ${1:App} extends React.Component<{}, {}> {",
+            "\trender() {",
+            "\treturn (",
+            "\t\t<ComboBoxComponent id='comboelement'></ComboBoxComponent>",
+            "\t);",
+            "\t}",
+            "\t}",
+            "ReactDOM.render(<${1:App} />, document.getElementById('sample'));"
+        ]
+    },
+    "React ComboBox DataBinding Module": {
+        "prefix": "ej2-react-combobox-ds-remote",
+        "description": "React ComboBox DataBinding Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { ComboBoxComponent } from '@syncfusion/ej2-react-dropdowns';",
+            "export default class ${1:App} extends React.Component<{}, {}> {",
+            "\t\tprivate dataSource: { [key: string]: Object }[] = [",
+            "\t\t\t{ Id: 'game1', text: 'Badminton' },",
+            "\t\t\t{ Id: 'game2', text: 'Football' },",
+            "\t\t\t{ Id: 'game3', text: 'Tennis' }",
+            "\t];",
+            "\t\tprivate fields: object = { text: 'text', value: 'Id' };",
+            "render() {",
+            "\treturn (",
+            "\t\t\t<ComboBoxComponent id='comboelement' dataSource={this.${1:dataSource}} fields={this.${1:fields}} placeholder='Select a game' />",
+            "\t);",
+            "\t\t}",
+            "\t}",
+            "ReactDOM.render(<${1:App} />, document.getElementById('sample'));"
+        ]
+    },
+    "React ComboBox Filtering Module": {
+        "prefix": "ej2-react-combobox-filter",
+        "description": "React ComboBox Filtering Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { ComboBoxComponent } from '@syncfusion/ej2-react-dropdowns';",
+            "import { Query } from '@syncfusion/ej2-data';",
+
+            "export default class ${1:App} extends React.Component<{}, {}> {",
+            "\tconstructor() {",
+            "\t\tsuper();",
+            "\t\tthis.onFiltering = this.onFiltering.bind(this);",
+            "\t}",
+            "\tprivate dataSource: { [key: string]: Object; }[] = [",
+            "\t{ value: 's1', text: 'California' },",
+            "\t{ value: 's2', text: 'Florida' },",
+            "\t{ value: 's3', text: 'Alaska' },",
+            "\t{ value: 's4', text: 'Georgia' },",
+            "\t];",
+            "\tprivate fields: object = { text: '${2:text}', value: '${3:value}' };",
+            "\tprivate sortOrder: string = 'Ascending';",
+            "\tonFiltering(args: FilteringEventArgs) {",
+            "\t\tlet query = new Query();",
+            "\t\tquery = (args.text != ",
+            ") ? query.where('Country', 'startswith', args.text, true) : query;",
+            "\t\targs.updateData(this.dataSource, query);",
+            "\t}",
+            "\trender() {",
+            "\t\treturn (",
+            "\t\t\t<ComboBoxComponent id='comboelement' popupHeight='250px' fields={this.fields} filtering={this.onFiltering} allowFiltering={true} sortOrder={this.sortOrder} dataSource={this.${4:dataSource}} placeholder='Select a country' />",
+            "\t\t);",
+            "\t}",
+            "}",
+            "ReactDOM.render(<${1:App} />, document.getElementById('sample'));"
+        ]
+    }
+}

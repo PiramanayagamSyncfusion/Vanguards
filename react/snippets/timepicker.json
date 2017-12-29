@@ -1,0 +1,19 @@
+{
+    "React TimePicker Module": {
+        "prefix": "ej2-react-timepicker",
+        "description": "React TimePicker Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { enableRipple } from '@syncfusion/ej2-base';",
+            "import { TimePickerComponent } from '@syncfusion/ej2-react-calendars';",
+            "enableRipple(true);",
+            "class ${1:App} extends React.Component<{}, {}> {",
+            "\trender() {",
+            "\t\treturn <TimePickerComponent id='timepicker' placeholder='Select a Time'  />",
+            "\t}",
+            "};",
+            "ReactDOM.render(<${1:App} />, document.getElementById('timer'));"
+        ]
+    }
+}

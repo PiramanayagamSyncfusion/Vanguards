@@ -1,0 +1,62 @@
+{
+    "React Button Module": {
+        "prefix": "ej2-react-button",
+        "description": "React Button Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { ButtonComponent } from '@syncfusion/ej2-react-buttons';",
+            "import { enableRipple } from '@syncfusion/ej2-base';",
+            "enableRipple(true);",
+            "class ${1:App} extends React.Component<{}, {}> {",
+            "\trender() {",
+            "\treturn (",
+            "\t\t<ButtonComponent>Button</ButtonComponent>",
+            "\t);",
+            "\t}",
+            "}",
+            "ReactDom.render(<${1:App} />,document.getElementById('button'));"
+        ]
+    },
+    "React CheckBox Module": {
+        "prefix": "ej2-react-checkbox",
+        "description": "React CheckBox Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { CheckBoxComponent } from '@syncfusion/ej2-react-buttons';",
+            "import { enableRipple } from '@syncfusion/ej2-base';",
+            "enableRipple(true);",
+            "class ${1:App} extends React.Component<{}, {}> {",
+            "\trender() {",
+            "\treturn (",
+            "\t\t  <CheckBoxComponent label='Default' />",
+            "\t);",
+            "\t}",
+            "}",
+            "ReactDom.render(<${1:App} />,document.getElementById('check-box'));"
+        ]
+    },
+    "React RadioButton Module": {
+        "prefix": "ej2-react-radio",
+        "description": "React RadioButton Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { RadioButtonComponent } from '@syncfusion/ej2-react-buttons';",
+            "import { enableRipple } from '@syncfusion/ej2-base';",
+            "enableRipple(true);",
+            "class ${1:App} extends React.Component<{}, {}> {",
+            "\trender() {",
+            "\treturn (",
+            "\t\t<ul>",
+            "\t\t<li><RadioButtonComponent label='Option 1' name='default' /></li>",
+            "\t\t<li><RadioButtonComponent label='Option 2' name='default' /></li>",
+            "\t\t</ul>",
+            "\t);",
+            "\t}",
+            "}",
+            "ReactDom.render(<${1:App} />,document.getElementById('radio-button'));"
+        ]
+    }
+}

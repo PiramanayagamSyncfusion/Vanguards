@@ -1,0 +1,79 @@
+{
+    "React DropDown Module": {
+        "prefix": "ej2-react-dropdown",
+        "description": "React DropDown Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';",
+            "export default class ${1:App} extends React.Component<{}, {}> {",
+            "private dataSource: string[] = ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis'];",
+            "\trender() {",
+            "\t\treturn (",
+            "\t\t\t <DropDownListComponent id='ddlelement' dataSource={this.${1:dataSource}} />",
+            "\t\t);",
+            "\t}",
+            "}",
+            "ReactDOM.render(<${1:App} />, document.getElementById('sample'));"
+        ]
+    },
+    "React DropDown Databinding Module": {
+        "prefix": "ej2-react-dropdown-ds-remote",
+        "description": "React DropDown Databinding Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';",
+            "export default class ${1:App} extends React.Component<{}, {}> {",
+            "\t\tprivate dataSource: { [key: string]: Object }[] = [",
+            "\t\t{ value: 'game1', text: 'Badminton' },",
+            "\t\t{ value: 'game2', text: 'Football' },",
+            "\t\t{ value: 'game3', text: 'Tennis' }",
+            "\t\t];",
+            "\t\tprivate fields: object = { text: '${2:text}', value: '${3:value}' };",
+            "\trender() {",
+            "\t\treturn (",
+            "\t\t\t <DropDownListComponent id='ddlelement' dataSource={this.${4:dataSource}} />",
+            "\t\t);",
+            "\t}",
+            "}",
+            "ReactDOM.render(<${1:App} />, document.getElementById('sample'));"
+        ]
+    },
+    "React DropDown Filtering Module": {
+        "prefix": "ej2-react-dropdown-filter",
+        "description": "React DropDown Filtering Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { DropDownListComponent, FilteringEventArgs } from '@syncfusion/ej2-react-dropdowns';",
+            "import { Query } from '@syncfusion/ej2-data';",
+            "export default class ${1:App} extends React.Component<{}, {}> {",
+            "\tconstructor() {",
+            "\t\tsuper();",
+            "\t\tthis.onFiltering = this.onFiltering.bind(this);",
+            "\t}",
+            "\tprivate dataSource: { [key: string]: Object; }[] = [",
+            "\t\t{ value: 's1', text: 'California' },",
+            "\t\t{ value: 's2', text: 'Florida' },",
+            "\t\t{ value: 's3', text: 'Alaska' },",
+            "\t\t{ value: 's4', text: 'Georgia' },",
+            "\t];",
+            "\tprivate fields: object = { text: '${2:text}', value: '${3:value}'};",
+            "\tprivate sortOrder: string = 'Ascending';",
+            "\tonFiltering(args: FilteringEventArgs) {",
+            "\t\tlet query = new Query();",
+            "\t\tquery = (args.text != ",
+            ") ? query.where('Country', 'startswith', args.text, true) : query;",
+            "\t\targs.updateData(this.dataSource, query);",
+            "\t}",
+            "\trender() {",
+            "\t\treturn (",
+            "\t\t\t <DropDownListComponent id='ddlelement' popupHeight='250px' fields={this.fields} filtering={this.onFiltering} allowFiltering={true} dataSource={this. ${5:dataSource}} placeholder='${4:Select a game}' />",
+            "\t\t);",
+            "\t}",
+            "}",
+            "ReactDOM.render(<${1:App} />, document.getElementById('sample'));"
+        ]
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "React Tooltip Module": {
+        "prefix": "ej2-react-tooltip",
+        "description": "React Tooltip Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { TooltipComponent } from '@syncfusion/ej2-react-popups';",
+            "",
+            "class ${1:App} extends React.Component<{}, {}> {",
+            "",
+            "\trender() {",
+            "\tlet ${2:style}: object = {",
+            "\t\tdisplay: 'inline-block',",
+            "\t\tmargin: '60px'",
+            "\t};",
+            "\treturn (",
+            "\t\t<TooltipComponent content='Tooltip Content' style={${2:style}}>",
+            "\t\tShow Tooltip",
+            "\t\t</TooltipComponent>",
+            "\t);",
+            "\t}",
+            "}",
+            "ReactDom.render(<${1:App} />, document.getElementById('sample'));"
+        ]
+    }
+}

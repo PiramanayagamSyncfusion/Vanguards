@@ -1,0 +1,12 @@
+{
+    "React NumericTextBox Module": {
+        "prefix": "ej2-react-numerictextbox",
+        "description": "React NumericTextBox Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { NumericTextBoxComponent } from '@syncfusion/ej2-react-inputs';",
+            "\t\tReactDOM.render(<NumericTextBoxComponent value={10} > </NumericTextBoxComponent>,document.getElementById('numericContainer'));"
+       ]
+    }
+}

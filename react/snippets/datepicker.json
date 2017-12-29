@@ -1,0 +1,18 @@
+{
+    "React DatePicker Module": {
+        "prefix": "ej2-react-datepicker",
+        "description": "React DatePicker Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';",
+            "class ${1:App} extends React.Component<{}, {}> {",
+                "\trender() {",
+                    "\t\treturn <DatePickerComponent id='datepicker' placeholder='Enter date' />;",
+                "\t}",
+            "}",
+            "ReactDOM.render(<${1:App} />, document.getElementById('element'));"
+       ]
+    }
+}
+   

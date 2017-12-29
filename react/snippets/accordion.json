@@ -1,0 +1,48 @@
+{
+    "React Accordion Module": {
+        "prefix": "ej2-react-accordion",
+        "description": "React Accordion Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { AccordionComponent, AccordionItemsDirective, AccordionItemDirective } from '@syncfusion/ej2-react-navigations';",
+            "class ${1:App} extends React.Component<{}, {}> {",
+            "\trender() {",
+            "\t\treturn (",
+            "\t\t<AccordionComponent>",
+            "\t\t\t<AccordionItemsDirective>",
+            "\t\t\t<AccordionItemDirective expanded='true' header='ASP.NET' content='Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services.' />",
+            "\t\t\t<AccordionItemDirective header='ASP.NET MVC' content='The Model-View-Controller (MVC) architectural pattern separates an application into three main components: the model, the view, and the controller.' />",
+            "\t\t\t<AccordionItemDirective header='JavaScript' content= 'JavaScript (JS) is an interpreted computer programming language.It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed.' />",
+            "\t\t\t</AccordionItemsDirective>",
+            "\t\t</AccordionComponent>",
+            "\t\t);",
+            "\t}",
+            "}",
+            "ReactDOM.render(<${1:App}/>, document.getElementById('element'));"
+        ]
+    },
+    "React Accordion RTL Module": {
+        "prefix": "ej2-react-accordion-rtl",
+        "description": "React Accordion RTL Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { AccordionComponent, AccordionItemsDirective, AccordionItemDirective } from '@syncfusion/ej2-react-navigations';",
+            "class ${1:App} extends React.Component<{}, {}> {",
+            "\trender() {",
+            "\t\treturn (",
+            "\t\t<AccordionComponent enableRtl='true'>",
+            "\t\t\t<AccordionItemsDirective>",
+            "\t\t\t<AccordionItemDirective expanded='true' header='ASP.NET' content='Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services.' />",
+            "\t\t\t<AccordionItemDirective header='ASP.NET MVC' content='The Model-View-Controller (MVC) architectural pattern separates an application into three main components: the model, the view, and the controller.' />",
+            "\t\t\t<AccordionItemDirective header='JavaScript' content= 'JavaScript (JS) is an interpreted computer programming language.It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed.' />",
+            "\t\t\t</AccordionItemsDirective>",
+            "\t\t</AccordionComponent>",
+            "\t\t);",
+            "\t}",
+            "}",
+            "ReactDOM.render(<${1:App}/>, document.getElementById('element'));"
+        ]
+    }
+}

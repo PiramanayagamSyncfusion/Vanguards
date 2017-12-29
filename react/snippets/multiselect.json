@@ -1,0 +1,72 @@
+{
+    "React MultiSelect Module": {
+        "prefix": "ej2-react-multiselect",
+        "description": "React MultiSelect Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { MultiSelectComponent } from '@syncfusion/ej2-react-dropdowns';",
+            "export default class ${1:App} extends React.Component<{}, {}> {",
+            "\tprivate dataSource: string[] = ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis'];",
+            "\trender() {",
+            "\treturn (",
+            "\t\t<MultiSelectComponent id='mtselement' dataSource={this. ${2:dataSource}}  placeholder='Find a game' />",
+            "\t);",
+            "\t}",
+            "}",
+            "ReactDOM.render(<${1:App} />, document.getElementById('sample'));"
+        ]
+    },
+    "React MultiSelect Databinding Module": {
+        "prefix": "ej2-react-multiselect-ds-remote",
+        "description": "React MultiSelect Databinding Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { MultiSelectComponent } from '@syncfusion/ej2-react-dropdowns';",
+            "import { Query, DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';",
+            "export default class ${1:App} extends React.Component<{}, {}> {",
+            "\tprivate dataSource: DataManager = new DataManager({",
+            "\t\turl: 'http://services.odata.org/V4/Northwind/Northwind.svc/',",
+            "\t\tadaptor: new ODataV4Adaptor,",
+            "\t\tcrossDomain: true",
+            "\t});",
+            "\tprivate query: Query = new Query().from('Customers').select(['ContactName', 'CustomerID']).take(6);",
+            "\t private fields: object = { text: 'ContactName', value: 'CustomerID' };",
+            "\tprivate sortOrder: string = 'Ascending';",
+            "\trender() {",
+            "\treturn (",
+            "\t\t<MultiSelectComponent id='mtselement' query={this.query} dataSource={this.${2:dataSource}} fields={this.fields} sortOrder={this.sortOrder} placeholder='Select a customer' />",
+            "\t);",
+            "\t}",
+            "}",
+            "ReactDOM.render(<${1:App} />, document.getElementById('sample'));"
+        ]
+    },
+    "React MultiSelect Grouping Module": {
+        "prefix": "ej2-react-multiselect-grouping",
+        "description": "React MultiSelect Grouping Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { MultiSelectComponent } from '@syncfusion/ej2-react-dropdowns';",
+            "export default class ${1:App} extends React.Component<{}, {}> {",
+            "\tprivate dataSource: { [key: string]: Object }[] = [",
+            "\t\t{ text: 'Cabbage', groupBy: 'Leafy and Salad', value: 'item1' },",
+            "\t\t{ text: 'Spinach', groupBy: 'Leafy and Salad', value: 'item2' }, ",
+            "\t\t{ text: 'Chickpea', groupBy: 'Beans', value: 'item6' },",
+            "\t\t{ text: 'Green bean', groupBy: 'Beans', value: 'item7' },",
+            "\t\t{ text: 'Nopal', groupBy: 'Bulb and Stem', value: 'item10' },",
+            "\t\t{ text: 'Onion', groupBy: 'Bulb and Stem', value: 'item11' }",
+            "\t];",
+            "\tprivate fields: object = { groupBy: '${2:groupBy}', text: '${3:text}', value: '${4:value}' };",
+            "\trender() {",
+            "\treturn (",
+            "\t\t <MultiSelectComponent id='mtselement' popupHeight='200px' fields={this.fields} dataSource={this.${5:dataSource}} placeholder='Select a vegetable'/>",
+            "\t);",
+            "\t}",
+            "}",
+            "ReactDOM.render(<${1:App} />, document.getElementById('sample'));"
+        ]
+    }
+}

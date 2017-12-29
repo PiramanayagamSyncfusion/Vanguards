@@ -1,0 +1,17 @@
+{
+    "React DateRangePicker Module": {
+        "prefix": "ej2-react-daterangepicker",
+        "description": "React DateRangePicker Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { DateRangePickerComponent } from '@syncfusion/ej2-react-calendars';",
+            "class App extends React.Component<{}, {}> {",
+            "\trender() {",
+            "\t\treturn <DateRangePickerComponent id='daterangepicker' placeholder='Select a range' />",
+            "\t}",
+            "};",
+            "ReactDOM.render(<App />, document.getElementById('element'));"
+        ]
+    }
+}

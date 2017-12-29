@@ -1,0 +1,26 @@
+{
+    "React Dialog Module": {
+        "prefix": "ej2-react-dialog",
+        "description": "React Dialog Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { DialogComponent } from '@syncfusion/ej2-react-popups';",
+            "ReactDOM.render(<DialogComponent",
+            "\t\twidth='250px' content='This is a Dialog with content' ref={dialog => this.dialogInstance = dialog} target='#container'>",
+            "</DialogComponent>, document.getElementById('dialog'));"
+        ]
+    },
+    "React Dialog RTL Module": {
+        "prefix": "ej2-react-dialog-rtl",
+        "description": "React Dialog Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { DialogComponent } from '@syncfusion/ej2-react-popups';",
+            "ReactDOM.render(<DialogComponent",
+            "\t\twidth='250px'  content='This is a Dialog with content' enableRtl='true' ref={dialog => this.dialogInstance = dialog} target='#container'>",
+            "</DialogComponent>, document.getElementById('dialog'));"
+        ]
+    }
+}

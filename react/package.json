@@ -19,15 +19,16 @@
     "contributes": {
         "snippets": [
             {
-                "language": "javascriptreact",
-                "path": "./index.json",
-                "extensions": [
-                    ".jsx"
-                ]
+                "language": "javascript",
+                "path": "./index.json"
             }
         ],
+        "extensions": [
+            ".jsx",
+            ".tsx"
+        ],
         "activationEvents": [
-            "onLanguage:javascriptreact"
+            "onLanguage:javascript"
         ]
     },
     "license": "SEE LICENSE IN LICENSE.md",

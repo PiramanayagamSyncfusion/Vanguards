@@ -1,0 +1,42 @@
+{
+    "React Masked TextBox Module": {
+        "prefix": "ej2-react-maskedtextbox",
+        "description": "React Masked TextBox Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { MaskedTextBoxComponent } from '@syncfusion/ej2-react-inputs';",
+            "class ${1:App} extends React.Component<{}, {}> {",
+            "\trender() {",
+            "\t\treturn (",
+            "\t\t<div>",
+            "\t\t\t<label class='label'>Enter the mobile number</label>",
+            "\t\t\t<MaskedTextBoxComponent ${2:mask}={'000-000-0000'} >",
+            "\t\t\t</MaskedTextBoxComponent>",
+            "\t\t</div>",
+            "\t);",
+            "\t}",
+            "};",
+            "\tReactDOM.render(<${1:App} />, document.getElementById('maskedContainer'));"
+        ]
+    },
+    "React Masked TextBox Custom Characters Module": {
+        "prefix": "ej2-react-maskedtextbox-customch",
+        "description": "React Masked TextBox Custom Characters Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { MaskedTextBoxComponent } from '@syncfusion/ej2-react-inputs';",
+            "class ${1:App} extends React.Component<{}, {}> {",
+            "\tpublic ${3:chars}: Object = { P: 'P,A,a,p', M: 'M,m'};",
+            "\trender() {",
+            "\t\treturn (",
+            "\t\t\t<MaskedTextBoxComponent ${2:mask}='00:00 >PM'  customCharacters= {this.${3:chars}}  placeholder= 'Time (ex: 10:00 PM, 10:00 AM)' floatLabelType='Always'>",
+            "\t\t\t</MaskedTextBoxComponent>",
+            "\t\t);",
+            "\t}",
+            "};",
+            "ReactDOM.render(<${1:App} />, document.getElementById('maskedContainer'));"
+        ]
+    }
+}

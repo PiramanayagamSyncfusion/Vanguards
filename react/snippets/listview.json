@@ -1,0 +1,71 @@
+{
+    "React ListView Module": {
+        "prefix": "ej2-react-listview",
+        "description": "React ListView Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { ListViewComponent } from '@syncfusion/ej2-react-lists';",
+            "export default class ${1:App} extends React.Component<{}, {}> {",
+            "\tprivate dataSource: { [key: string]: string }[] = [",
+            "\t{ text: 'Artwork', id: '01' },",
+            "\t{ text: 'Abstract', id: '02' },",
+            "\t{ text: 'Modern Painting', id: '03' },",
+            "\t{ text: 'Ceramics', id: '04' },",
+            "\t{ text: 'Animation Art', id: '05' },",
+            "\t{ text: 'Oil Painting', id: '06' }];",
+            "\trender() {",
+            "\t\treturn (",
+            "\t\t\t<ListViewComponent id='list' dataSource={this.${2:dataSource}} ></ListViewComponent>",
+            "\t\t);",
+            "\t}",
+            "}",
+            "ReactDOM.render(<${1:App} />, document.getElementById('element'));"
+        ]
+    },
+    "React ListView Datasource Module": {
+        "prefix": "ej2-react-listview-ds-remote",
+        "description": "React ListView Datasource Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { ListViewComponent } from '@syncfusion/ej2-react-lists';",
+            "import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';",
+            "export default class ${1:App} extends React.Component<{}, {}> {",
+            "\tprivate dataSource = new DataManager({ url: 'http://js.syncfusion.com/ejServices/Wcf/Northwind.svc/', crossDomain: true });",
+            "\tprivate query = new Query().from('Products').select('ProductID,ProductName').take(6);",
+            "\tprivate fields = { id: 'ProductID', text: 'ProductName' };",
+            "\trender() {",
+            "\t\treturn (",
+            "\t\t<ListViewComponent id='list' dataSource={this.${2:dataSource}} fields={this.fields} query={this.query} showHeader = 'true' headerTitle = 'Product Name'></ListViewComponent>",
+            "\t\t);",
+            "\t}",
+            "}",
+            "ReactDOM.render(<${1:App} />, document.getElementById('element'));"
+        ]
+    },
+    "React ListView RTL Module": {
+        "prefix": "ej2-react-listview-rtl",
+        "description": "React ListView RTL Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { ListViewComponent } from '@syncfusion/ej2-react-lists';",
+            "export default class ${1:App} extends React.Component<{}, {}> {",
+            "\tprivate dataSource: { [key: string]: string }[] = [",
+            "\t{ text: 'Artwork', id: '01' },",
+            "\t{ text: 'Abstract', id: '02' },",
+            "\t{ text: 'Modern Painting', id: '03' },",
+            "\t{ text: 'Ceramics', id: '04' },",
+            "\t{ text: 'Animation Art', id: '05' },",
+            "\t{ text: 'Oil Painting', id: '06' }];",
+            "\trender() {",
+            "\t\treturn (",
+            "\t\t\t<ListViewComponent id='list' dataSource={this.${2:dataSource}} enableRtl='true'></ListViewComponent>",
+            "\t\t);",
+            "\t}",
+            "}",
+            "ReactDOM.render(<${1:App} />, document.getElementById('element'));"
+        ]
+    }
+}

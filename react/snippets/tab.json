@@ -1,0 +1,58 @@
+{
+    "React Tab Module": {
+        "prefix": "ej2-react-tab",
+        "description": "React Tab Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-react-navigations';",
+            "export default class App extends React.Component<{}, {}> {",
+            "\trender() {",
+            "\t\tlet headertext: any;",
+            "\theadertext = [{ text: 'Twitter'}, { text: 'Facebook'}, { text: 'WhatsApp'}];",
+            "\treturn (",
+            "\t\t<TabComponent heightAdjustMode='Auto' id='tabelement'>",
+            "\t\t<TabItemsDirective>",
+            "\t\t<TabItemDirective header= { headertext[0] }",
+            "\t\t\tcontent= { 'Twitter ' } />",
+            "\t\t<TabItemDirective header= { headertext[1] }",
+            "\t\t\tcontent= { 'Facebook'  } />",
+            "\t\t<TabItemDirective header= { headertext[2] }",
+            "\t\t\tcontent= { 'WhatsApp Messenger' }/>",
+            "\t\t</TabItemsDirective>",
+            "\t\t</TabComponent>",
+            "\t);",
+            "\t}",
+            "}",
+            "ReactDOM.render(<App />, document.getElementById('element'));"
+        ]
+    },
+    "React Tab RTL Module": {
+        "prefix": "ej2-react-tab-rtl",
+        "description": "React Tab RTL Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-react-navigations';",
+            "export default class App extends React.Component<{}, {}> {",
+            "\trender() {",
+            "\t\tlet headertext: any;",
+            "\theadertext = [{ text: 'Twitter'}, { text: 'Facebook'}, { text: 'WhatsApp'}];",
+            "\treturn (",
+            "\t\t<TabComponent heightAdjustMode='Auto' enableRtl='true' id='tabelement'>",
+            "\t\t<TabItemsDirective>",
+            "\t\t<TabItemDirective header= { headertext[0] }",
+            "\t\t\tcontent= { 'Twitter ' } />",
+            "\t\t<TabItemDirective header= { headertext[1] }",
+            "\t\t\tcontent= { 'Facebook'  } />",
+            "\t\t<TabItemDirective header= { headertext[2] }",
+            "\t\t\tcontent= { 'WhatsApp Messenger' }/>",
+            "\t\t</TabItemsDirective>",
+            "\t\t</TabComponent>",
+            "\t);",
+            "\t}",
+            "}",
+            "ReactDOM.render(<App />, document.getElementById('element'));"
+        ]
+    }
+}

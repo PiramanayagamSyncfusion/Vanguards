@@ -1,0 +1,31 @@
+{
+    "React ContextMenu Module": {
+        "prefix": "ej2-react-contextmenu",
+        "description": "React ContextMenu Module",
+        "body": [
+            "import * as React from 'react';",
+            "import * as ReactDOM from 'react-dom';",
+            "import { ContextMenuComponent, MenuItemModel } from '@syncfusion/ej2-react-navigations';",
+            "export default class ${1:App} extends React.Component<{}, {}> {",
+            "\tprivate menuItems: MenuItemModel[] = [",
+            "\t{",
+            "\t\ttext: 'Cut'",
+            "\t},",
+            "\t{",
+            "\t\ttext: 'Copy'",
+            "\t},",
+            "\t{",
+            "\t\ttext: 'Paste'",
+            "\t}];",
+            "render() {",
+            "\treturn (",
+            "\t<div>",
+            "\t\t<div id='target'>Right click / Touch hold to open the ContextMenu</div>",
+            "\t\t<ContextMenuComponent target='#target' items={this.${2:menuItems}} />",
+            "\t</div>",
+            "\t);",
+            "}",
+            "}"
+        ]
+    }
+}
