@@ -1,0 +1,40 @@
+{
+    "Angular DateRangePicker Module": {
+        "prefix": "ej2-ng-daterangepicker-module",
+        "description": "Angular DateRangePicker Module",
+        "body": [
+            "import { NgModule } from '@angular/core';",
+            "import { BrowserModule  } from '@angular/platform-browser';",
+            "",
+            "import { ${1:App}Component } from './${1:app}.component';",
+            "import { DateRangePickerModule } from '@syncfusion/ej2-ng-calendars';",
+            "",
+            "@NgModule({",
+            "\timports: [",
+            "\t\tBrowserModule,",
+            "\t\tDateRangePickerModule,",
+            "\t],",
+            "\tdeclarations: [${1:App}Component],",
+            "\tbootstrap: [${1:App}Component],",
+            "})",
+            "export class ${1:App}Module { }",
+            "$0"
+        ]
+    },
+    "Angular Basic DateRangepicker Component": {
+        "prefix": "ej2-ng-daterangepicker",
+        "description": "This will insert the snippet for DateRangePicker",
+        "body": [
+            "import { Component } from '@angular/core';",
+            "",
+            "@Component({",
+            "\tselector: '${1:app}',",
+            "\ttemplate: `<ej-daterangepicker placeholder='Select a range'></ej-daterangepicker>`",
+            "})",
+            "",
+            "export class ${2:App}Component {",
+            "\tconstructor() {}",
+            "}"
+        ]
+    }
+}

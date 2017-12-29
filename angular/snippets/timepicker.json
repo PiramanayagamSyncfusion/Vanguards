@@ -1,0 +1,44 @@
+{
+    "Angular TimePicker Module": {
+        "prefix": "ej2-ng-timepicker-module",
+        "description": "Angular TimePicker Module",
+        "body": [
+            "import { NgModule } from '@angular/core';",
+            "import { BrowserModule  } from '@angular/platform-browser';",
+            "",
+            "import { ${1:App}Component } from './${1:app}.component';",
+            "import { TimePickerModule } from '@syncfusion/ej2-ng-calendars';",
+            "",
+            "@NgModule({",
+            "\timports: [",
+            "\t\tBrowserModule,",
+            "\t\tTimePickerModule,",
+            "\t],",
+            "\tdeclarations: [${1:App}Component],",
+            "\tbootstrap: [${1:App}Component],",
+            "})",
+            "export class ${1:App}Module { }",
+            "$0"
+        ]
+    },
+    "Angular Basic TimePicker Component": {
+        "prefix": "ej2-ng-timePicker",
+        "description": "This will insert the snippet for TimePicker",
+        "body": [
+            "import { Component } from '@angular/core';",
+            "import { enableRipple } from '@syncfusion/ej2-base';",
+            "",
+            "enableRipple(true);",
+            "",
+            "@Component({",
+            "\tselector: '${1:app}',",
+            "\ttemplate: `<ej-timepicker [placeholder]='watermark'></ej-timepicker>`",
+            "})",
+            "",
+            "export class ${2:App}Component {",
+                "\tpublic watermark: string = 'Select a time';",
+                "\tconstructor() {}",
+            "}"
+        ]
+    }
+}

@@ -1,0 +1,68 @@
+{
+    "Angular Accordion Module": {
+        "prefix": "ej2-ng-accordion-module",
+        "description": "Angular Accordion Module",
+        "body": [
+            "import { NgModule } from '@angular/core';",
+            "import { BrowserModule  } from '@angular/platform-browser';",
+            "import { ${1:App}Component } from './${1:app}.component';",
+            "import { AccordionComponent, AccordionItemDirective, AccordionItemsDirective } from '@syncfusion/ej2-ng-navigations';",
+            "",
+            "@NgModule({",
+            "\timports: [",
+            "\t\tBrowserModule",
+            "\t],",
+            "\tdeclarations: [${1:App}Component,AccordionComponent,AccordionItemsDirective,AccordionItemDirective],",
+            "\tbootstrap: [${1:App}Component],",
+            "})",
+            "export class ${1:App}Module { }",
+            "$0"
+        ]
+    },
+    "Angular Basic Accordion Component": {
+        "prefix": "ej2-ng-accordion",
+        "description": "This will insert the snippet for Accordion",
+        "body": [
+            "import { Component, ViewChild  } from '@angular/core';",
+            "",
+            "@Component({",
+            "\tselector: '${1:app}',",
+            "\ttemplate: `<ej-accordion>",
+            "\t<e-accordionitems>",
+              "\t\t<e-accordionitem expanded='true' header='ASP.NET' content='Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services.'></e-accordionitem>",
+              "\t\t<e-accordionitem header='ASP.NET MVC' content='The Model-View-Controller (MVC) architectural pattern separates an application into three main components: the model, the view, and the controller.'></e-accordionitem>",
+              "\t\t<e-accordionitem header='JavaScript' content='JavaScript (JS) is an interpreted computer programming language.It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed.'></e-accordionitem>",
+            "\t</e-accordionitems>",
+          "\t</ej-accordion>`",
+            "})",
+            "",
+            "export class ${2:App}Component {",
+            "\t @ViewChild('element') element;",
+            "\t ngAfterViewInit() { }",
+            "}"
+        ]
+    },
+    "Angular RTL in Accordion Component": {
+        "prefix": "ej2-ng-accordion-rtl",
+        "description": "Accordion is rendered with RTL support",
+        "body": [
+            "import { Component, ViewChild } from '@angular/core';",
+            "",
+            "@Component({",
+            "\tselector: '${1:app}',",
+            "\ttemplate: `<ej-accordion enableRtl='true'>",
+            "\t<e-accordionitems>",
+              "\t\t<e-accordionitem expanded='true' header='ASP.NET' content='Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services.'></e-accordionitem>",
+              "\t\t<e-accordionitem header='ASP.NET MVC' content='The Model-View-Controller (MVC) architectural pattern separates an application into three main components: the model, the view, and the controller.'></e-accordionitem>",
+              "\t\t<e-accordionitem header='JavaScript' content='JavaScript (JS) is an interpreted computer programming language.It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed.'></e-accordionitem>",
+            "\t</e-accordionitems>",
+          "\t</ej-accordion>`",
+            "})",
+            "",
+            "export class ${2:App}Component {",
+                "\t @ViewChild('element') element;",
+                "\t ngAfterViewInit() { }",
+            "}"
+        ]
+    }
+}

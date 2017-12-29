@@ -1,0 +1,40 @@
+{
+    "Angular NumericTextBox Module": {
+        "prefix": "ej2-ng-numerictextbox-module",
+        "description": "Angular NumericTextBox Module",
+        "body": [
+            "import { NgModule } from '@angular/core';",
+            "import { BrowserModule  } from '@angular/platform-browser';",
+            "import { FormsModule } from '@angular/forms';",
+            "",
+            "import { ${1:App}Component } from './${1:app}.component';",
+            "import { NumericTextBoxComponent } from '@syncfusion/ej2-ng-inputs';",
+            "",
+            "@NgModule({",
+            "\timports: [",
+            "\t\tBrowserModule,FormsModule",
+            "\t],",
+            "\tdeclarations: [${1:App}Component, NumericTextBoxComponent],",
+            "\tbootstrap: [${1:App}Component],",
+            "})",
+            "export class ${1:App}Module { }",
+            "$0"
+        ]
+    },
+    "Angular Basic NumericTextBox Component": {
+        "prefix": "ej2-ng-numerictextbox",
+        "description": "This will insert the snippet for NumerixTextbox",
+        "body": [
+            "import { Component } from '@angular/core';",
+            "",
+            "@Component({",
+            "\tselector: '${1:app}',",
+            "\ttemplate: `<ej-numerictextbox format='c2' value='10'></ej-numerictextbox>`",
+            "})",
+            "",
+            "export class ${2:App}Component {",
+                "\tconstructor() {}",
+            "}"
+        ]
+    }
+}

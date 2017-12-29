@@ -1,0 +1,39 @@
+{
+    "Angular Tooltip Module": {
+        "prefix": "ej2-ng-tooltip-module",
+        "description": "Angular Tooltip Module",
+        "body": [
+            "import { NgModule } from '@angular/core';",
+            "import { BrowserModule  } from '@angular/platform-browser';",
+            "",
+            "import { ${1:App}Component } from './${1:app}.component';",
+            "import { TooltipModule } from '@syncfusion/ej2-ng-popups';",
+            "",
+            "@NgModule({",
+            "\timports: [",
+            "\t\tBrowserModule,TooltipModule",
+            "\t],",
+            "\tdeclarations: [${1:App}Component],",
+            "\tbootstrap: [${1:App}Component],",
+            "})",
+            "export class ${1:App}Module { }",
+            "$0"
+        ]
+    },
+    "Angular Basic Tooltip Component": {
+        "prefix": "ej2-ng-tooltip",
+        "description": "This will insert the snippet for Tooltip Component",
+        "body": [
+            "import { Component } from '@angular/core';",
+            "",
+            "@Component({",
+            "\tselector: '${1:app}',",
+            "\ttemplate: `<ej-tooltip id='tooltip' content='Tooltip content'>Hover Me</ej-tooltip>`",
+            "})",
+            "",
+            "export class ${2:App}Component {",
+                "\tconstructor() {}",
+            "}"
+        ]
+    }
+}

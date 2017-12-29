@@ -1,0 +1,90 @@
+{
+    "Angular ListView Module": {
+        "prefix": "ej2-ng-listview-module",
+        "description": "Angular ListView Module",
+        "body": [
+            "import { NgModule } from '@angular/core';",
+            "import { BrowserModule  } from '@angular/platform-browser';",
+            "import { ${1:App}Component } from './${1:app}.component';",
+            "import { ListViewModule } from '@syncfusion/ej2-ng-lists';",
+            "",
+            "@NgModule({",
+            "\timports: [",
+            "\t\tBrowserModule,ListViewModule",
+            "\t],",
+            "\tdeclarations: [${1:App}Component],",
+            "\tbootstrap: [${1:App}Component],",
+            "})",
+            "export class ${1:App}Module { }",
+            "$0"
+        ]
+    },
+    "Angular Basic ListView Component": {
+        "prefix": "ej2-ng-listview",
+        "description": "This will insert the snippet for ListView",
+        "body": [
+            "import { Component } from '@angular/core';",
+            "",
+            "@Component({",
+            "\tselector: '${1:app}',",
+            "\ttemplate: `<ej-listview id='sample-list' [dataSource]='data'></ej-listview>`",
+            "})",
+            "",
+            "export class ${2:App}Component {",
+            "\tpublic data: Object = [",
+                "\t{ text: 'Artwork', id: '01' },",
+                "\t{ text: 'Abstract', id: '02' },",
+                "\t{ text: 'Modern Painting', id: '03' },",
+                "\t{ text: 'Ceramics', id: '04' },",
+                "\t{ text: 'Animation Art', id: '05' },",
+                "\t{ text: 'Oil Painting', id: '06' }];",
+            "}"
+        ]
+    },
+    "Angular DataSource in ListView Component": {
+        "prefix": "ej2-ng-listview-ds-remote",
+        "description": "ListView is rendered with Remote DataSource",
+        "body": [
+            "import { Component } from '@angular/core';",
+            "import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';",
+            "",
+            "@Component({",
+            "\tselector: '${1:app}',",
+            "\ttemplate: `<ej-listview id='sample-list' [dataSource]='data' [query]='query' [fields]='fields' [showHeader]='true' [headerTitle]='headertitle'></ej-listview>`",
+            "})",
+            "",
+            "export class ${2:App}Component {",
+            "\tpublic data: Object = new DataManager({",
+                "\t\turl: 'http://js.syncfusion.com/ejServices/Wcf/Northwind.svc/',",
+                "\t});",
+                "\tpublic query = new Query().from('Products').select('ProductID,ProductName').take(6),",
+                "\tpublic fields: Object = { id: 'ProductID', text: 'ProductName'  };",
+                "\tpublic headertitle = 'Product Name';",
+            "}"
+        ]
+    },
+    "Angular RTL in ListView Component": {
+        "prefix": "ej2-ng-listview-rtl",
+        "description": "ListView is rendered with RTL support",
+        "body": [
+            "import { Component } from '@angular/core';",
+            "",
+            "@Component({",
+            "\tselector: '${1:app}',",
+            "\ttemplate: `<ej-listview id='sample-list' [dataSource]='data' [enableRtl]='rtl' [headerTitle]='headerTitle' [showHeader]='true'></ej-listview>`",
+            "})",
+            "",
+            "export class ${2:App}Component {",
+                "\tpublic data: Object = [",
+                    "\t{ text: 'Artwork', id: '01' },",
+                    "\t{ text: 'Abstract', id: '02' },",
+                    "\t{ text: 'Modern Painting', id: '03' },",
+                    "\t{ text: 'Ceramics', id: '04' },",
+                    "\t{ text: 'Animation Art', id: '05' },",
+                    "\t{ text: 'Oil Painting', id: '06' }];",
+                    "\tpublic headerTitle: string = 'Arts';",
+            "}"
+        ]
+    }
+}
+

@@ -19,15 +19,12 @@
     "contributes": {
         "snippets": [
             {
-                "language": "angular",
-                "path": "./index.json",
-                "extensions": [
-                    ".ts"
-                ]
+                "language": "typescript",
+                "path": "./index.json"
             }
         ],
         "activationEvents": [
-            "onLanguage:angular"
+            "onLanguage:typescript"
         ]
     },
     "license": "SEE LICENSE IN LICENSE.md",

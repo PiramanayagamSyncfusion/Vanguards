@@ -1,0 +1,102 @@
+{
+    "Angular Multiselect Module": {
+        "prefix": "ej2-ng-multiselect-module",
+        "description": "Angular MultiSelect Module",
+        "body": [
+            "import { NgModule } from '@angular/core';",
+            "import { BrowserModule  } from '@angular/platform-browser';",
+            "import { FormsModule } from '@angular/forms';",
+            "",
+            "import { ${1:App}Component } from './${1:app}.component';",
+            "import { MultiSelectComponent } from '@syncfusion/ej2-ng-dropdowns';",
+            "",
+            "@NgModule({",
+            "\timports: [",
+            "\t\tBrowserModule,FormsModule",
+            "\t],",
+            "\tdeclarations: [${1:App}Component, MultiSelectComponent],",
+            "\tbootstrap: [${1:App}Component],",
+            "})",
+            "export class ${1:App}Module { }",
+            "$0"
+        ]
+    },
+    "Angular Basic Multiselect Component": {
+        "prefix": "ej2-ng-multiselect",
+        "description": "This will insert the snippet for MultiSelect",
+        "body": [
+            "import { Component } from '@angular/core';",
+            "import { MultiSelectComponent } from '@syncfusion/ej2-ng-dropdowns';",
+            "",
+            "@Component({",
+            "\tselector: '${1:app}',",
+            "\ttemplate: `<ej-multiselect id='multiselectelement' [dataSource]='data' [placeholder]='placeholder'></ej-multiselect>`",
+            "})",
+            "",
+            "export class ${2:App}Component {",
+            "\tconstructor() {}",
+            "\tpublic data: string[] = ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis'];",
+            "\tpublic placeholder: string = 'Select games';",
+            "}"
+        ]
+    },
+    "Angular Remote Multiselect Component": {
+        "prefix": "ej2-ng-multiselect-ds-remote",
+        "description": "Render the MultiSelect component with Remote DataSource",
+        "body": [
+            "import { Component } from '@angular/core';",
+            "import { MultiSelectComponent } from '@syncfusion/ej2-ng-dropdowns';",
+            "",
+            "@Component({",
+            "\tselector: '${1:app}',",
+            "\ttemplate: `<ej-multiselect id='multiselectelement' [dataSource]='data' [fields]='fields' [placeholder]='placeholder' [query]='query' [sortOrder]='sorting'></ej-multiselect>`",
+            "})",
+            "",
+            "export class ${2:App}Component {",
+            "\tconstructor() {}",
+            "\tpublic data: DataManager = new DataManager({",
+            "\t\turl: 'http://services.odata.org/V4/Northwind/Northwind.svc/',",
+            "\t\tadaptor: new ODataV4Adaptor,",
+            "\t\tcrossDomain: true",
+            "\t});",
+            "\tpublic fields: Object = { text: 'ContactName', value: 'CustomerID' };",
+            "\tpublic query: Query = new Query().from('Customers').select(['ContactName', 'CustomerID']).take(5);",
+            "\tpublic placeholder: string = 'Select customers';",
+            "\tpublic sorting: string = 'Ascending';",
+            "}"
+        ]
+    },
+    "Angular Grouping Multiselect Component": {
+        "prefix": "ej2-ng-multiselect-grouping",
+        "description": "Render the MultiSelect component with Grouping support",
+        "body": [
+            "import { Component } from '@angular/core';",
+            "import { MultiSelectComponent } from '@syncfusion/ej2-ng-dropdowns';",
+            "",
+            "@Component({",
+            "\tselector: '${1:app}',",
+            "\ttemplate: `<ej-multiselect id='multiselectelement' [dataSource]='vegetableData' [fields]='fields'[placeholder]='placeholder' [popupHeight]='height'></ej-multiselect>`",
+            "})",
+            "",
+            "export class ${2:App}Component {",
+            "\tconstructor() {}",
+            "\tpublic vegetableData: { [key: string]: Object }[] = [",
+            "\t\t{ vegetable: 'Cabbage', category: 'Leafy and Salad', id: 'item1' },",
+            "\t\t{ vegetable: 'Spinach', category: 'Leafy and Salad', id: 'item2' },",
+            "\t\t{ vegetable: 'Wheat grass', category: 'Leafy and Salad', id: 'item3' },",
+            "\t\t{ vegetable: 'Yarrow', category: 'Leafy and Salad', id: 'item4' },",
+            "\t\t{ vegetable: 'Pumpkins', category: 'Leafy and Salad', id: 'item5' },",
+            "\t\t{ vegetable: 'Chickpea', category: 'Beans', id: 'item6' },",
+            "\t\t{ vegetable: 'Green bean', category: 'Beans', id: 'item7' },",
+            "\t\t{ vegetable: 'Horse gram', category: 'Beans', id: 'item8' },",
+            "\t\t{ vegetable: 'Garlic', category: 'Bulb and Stem', id: 'item9' },",
+            "\t\t{ vegetable: 'Nopal', category: 'Bulb and Stem', id: 'item10' },",
+            "\t\t{ vegetable: 'Onion', category: 'Bulb and Stem', id: 'item11' }",
+            "\t];",
+            "\tpublic fields: Object = { groupBy: 'category', text: 'vegetable', value: 'id' };",
+            "\tpublic height: string = '200px';",
+            "\tpublic placeholder: string = 'Select vegetables';",
+            "}"
+        ]
+    }
+}

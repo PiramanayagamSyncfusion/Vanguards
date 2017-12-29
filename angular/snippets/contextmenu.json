@@ -1,0 +1,46 @@
+{
+    "Angular ContextMenu Module": {
+        "prefix": "ej2-ng-contextmenu-module",
+        "description": "Angular ContextMenu Module",
+        "body": [
+            "import { NgModule } from '@angular/core';",
+            "import { BrowserModule  } from '@angular/platform-browser';",
+            "import { ${1:App}Component } from './${1:app}.component';",
+            "import { ContextMenuModule } from '@syncfusion/ej2-ng-navigations';",
+            "import { enableRipple } from '@syncfusion/ej2-base';",
+            "",
+            "enableRipple(true);",
+            "",
+            "@NgModule({",
+            "\timports: [",
+            "\t\tBrowserModule,ContextMenuModule",
+            "\t],",
+            "\tdeclarations: [${1:App}Component],",
+            "\tbootstrap: [${1:App}Component],",
+            "})",
+            "export class ${1:App}Module { }",
+            "$0"
+        ]
+    },
+    "Angular Basic ContextMenu Component": {
+        "prefix": "ej2-ng-contextmenu",
+        "description": "This will insert the snippet for ContextMenu",
+        "body": [
+            "import { Component } from '@angular/core';",
+            "import { MenuItemModel } from '@syncfusion/ej2-navigations';",
+            "",
+            "@Component({",
+            "\tselector: '${1:app}',",
+            "\ttemplate: `<div id='target'>Right click / Touch hold to open the ContextMenu</div>",
+            "\t\t<ej-contextmenu id='contextmenu' target='#target' [items]= 'menuItems'></ej-contextmenu>`",
+            "})",
+            "",
+            "export class ${2:App}Component {",
+            "\tpublic menuItems: MenuItemModel[] = [",
+            "\t{ text: 'Cut' },",
+            "\t{ text: 'Copy' },",
+            "\t{ text: 'Paste' }];",
+            "}"
+        ]
+    }
+}

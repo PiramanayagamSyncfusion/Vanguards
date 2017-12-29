@@ -1,0 +1,67 @@
+{
+    "Angular Dialog Module": {
+        "prefix": "ej2-ng-dialog-module",
+        "description": "Angular Dialog Module",
+        "body": [
+            "import { NgModule } from '@angular/core';",
+            "import { BrowserModule  } from '@angular/platform-browser';",
+            "import { ${1:App}Component } from './${1:app}.component';",
+            "import { DialogComponent } from '@syncfusion/ej2-ng-popups';",
+            "",
+            "@NgModule({",
+            "\timports: [",
+            "\t\tBrowserModule",
+            "\t],",
+            "\tdeclarations: [${1:App}Component,DialogComponent],",
+            "\tbootstrap: [${1:App}Component],",
+            "})",
+            "export class ${1:App}Module { }",
+            "$0"
+        ]
+    },
+    "Angular Basic Dialog Component": {
+        "prefix": "ej2-ng-dialog",
+        "description": "This will insert the snippet for Dialog",
+        "body": [
+            "import { Component, ViewChild, OnInit } from '@angular/core';",
+            "import { DialogComponent } from '@syncfusion/ej2-ng-popups';",
+            "",
+            "@Component({",
+            "\tselector: '${1:app}',",
+            "\ttemplate: `<button class='e-control e-btn' style='position: absolute;' id='targetButton' (click)='onOpenDialog($event)'>Open Dialog</button>",
+            "\t\t\t<ej-dialog id='dialog' #ejDialog content='This is a Dialog with content' [target]='targetElement' width='250px'> </ej-dialog>`",
+            "})",
+            "",
+            "export class ${2:App}Component {",
+            "\t@ViewChild('ejDialog') ejDialog: DialogComponent;",
+            "\tpublic targetElement: HTMLElement = document.getElementById('dialog-container');",
+            "\tonOpenDialog(event) {",
+            "\t\tthis.ejDialog.show();",
+            "}",
+            "}"
+        ]
+    },
+    "Angular RTL in Dialog Component": {
+        "prefix": "ej2-ng-dialog-rtl",
+        "description": "Dialog is rendered with RTL support",
+        "body": [
+            "import { Component, ViewChild, OnInit } from '@angular/core';",
+            "import { DialogComponent } from '@syncfusion/ej2-ng-popups';",
+            "",
+            "@Component({",
+            "\tselector: '${1:app}',",
+            "\ttemplate: `<div id='dialog-container><button class='e-control e-btn' style='position: absolute;' id='targetButton' (click)='onOpenDialog($event)'>Open Dialog</button>",
+            "\t\t\t<ej-dialog id='dialog' #ejDialog content='This is a Dialog with content' [target]='targetElement' [enableRtl]='enableRtl' width='250px'> </ej-dialog></div>`",
+            "})",
+            "",
+            "export class ${2:App}Component {",
+            "\t@ViewChild('ejDialog') ejDialog: DialogComponent;",
+            "\tpublic enableRtl: Boolean = true;",
+            "\tpublic targetElement: HTMLElement = document.getElementById('dialog-container');",
+            "\tonOpenDialog(event) {",
+            "\t\tthis.ejDialog.show();",
+            "}",
+            "}"
+        ]
+    }
+}

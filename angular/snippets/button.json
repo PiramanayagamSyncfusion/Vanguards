@@ -1,0 +1,99 @@
+{
+    "Angular Button Module": {
+        "prefix": "ej2-ng-button-module",
+        "description": "Angular Button Module",
+        "body": [
+            "import { NgModule } from '@angular/core';",
+            "import { BrowserModule  } from '@angular/platform-browser';",
+            "",
+            "import { ${1:App}Component } from './${1:app}.component';",
+            "import { ButtonModule } from '@syncfusion/ej2-ng-buttons';",
+            "import { enableRipple } from '@syncfusion/ej2-base';",
+            "enableRipple(true);",
+            "",
+            "@NgModule({",
+            "\timports: [",
+            "\t\tBrowserModule,",
+            "\t\tButtonModule,",
+            "\t],",
+            "\tdeclarations: [${1:App}Component],",
+            "\tbootstrap: [${1:App}Component],",
+            "})",
+            "export class ${1:App}Module { }",
+            "$0"
+        ]
+    },
+    "Angular Basic Button Component": {
+        "prefix": "ej2-ng-button",
+        "description": "This will insert the snippet for Button",
+        "body": [
+            "import { Component } from '@angular/core';",
+            "",
+            "@Component({",
+            "\tselector: '${1:app}',",
+            "\ttemplate: `<button ej-button>Button</button>`",
+            "})",
+            "",
+            "export class ${2:App}Component {",
+            "}"
+        ]
+    },
+    "Angular Checkbox": {
+        "prefix": "ej2-ng-checkbox",
+        "description": "Insert the snippet for Checkbox",
+        "body": [
+            "import { Component } from '@angular/core';",
+            "",
+            "@Component({",
+            "\tselector: '${1:app}',",
+            "\ttemplate: `<div class='checkbox-control'>",
+            "\t<div class='row'>",
+            "\t\t <ej-checkbox #checkbox label='CheckBox: true' [checked]='true' (change)='changeHandler()'></ej-checkbox>",
+            "\t</div>",
+            "\t<div class='row'>",
+            "\t\t<ej-checkbox label='Checked, Disabled' [checked]='true' [disabled] = 'true'></ej-checkbox>",
+            "\t</div>",
+            "\t<div class='row'>",
+            "\t\t<ej-checkbox label='Indeterminate, Disabled' [indeterminate] = 'true' [disabled] = 'true'></ej-checkbox>",
+            "\t</div>",
+            "\t</div>`",
+            "})",
+            "",
+            "export class ${2:App}Component {",
+            "\tconstructor() { }",
+            "\tpublic changeHandler() : void {",
+            "\t\tthis.checkbox.label = 'CheckBox: ' + this.checkbox.checked;",
+            "\t}",
+            "}"
+        ]
+    },
+    "Angular Radio Button": {
+        "prefix": "ej2-ng-radio",
+        "description": "Insert the snippet for Radio button",
+        "body": [
+            "import { Component } from '@angular/core';",
+            "",
+            "@Component({",
+            "\tselector: '${1:app}',",
+            "\ttemplate: ` <div class='radiobutton-control'>",
+            "\t<h4>Select a payment method</h4>",
+            "\t<div class='row'>",
+            "\t\t<ej-radiobutton label='Credit/Debit card' name='payment' value='credit/debit' checked='true'></ej-radiobutton>",
+            "\t</div>",
+            "\t<div class='row'>",
+            "\t\t<ej-radiobutton label='Net Banking' name='payment' value='netbanking'></ej-radiobutton>",
+            "\t</div>",
+            "\t<div class='row'>",
+            "\t\t<ej-radiobutton label='Cash on Delivery' name='payment' value='cashondelivery'></ej-radiobutton>",
+            "\t</div>",
+            "\t<div class='row'>",
+            "\t\t<ej-radiobutton label='Other Wallets' name='payment' value='others'></ej-radiobutton>",
+            "\t</div>",
+            "\t</div>`",
+            "})",
+            "",
+            "export class ${2:App}Component {",
+            "}"
+        ]
+    }
+}

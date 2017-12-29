@@ -1,0 +1,78 @@
+{
+    "Angular ToolBar Module": {
+        "prefix": "ej2-ng-accordion-module",
+        "description": "Angular Toolbar Module",
+        "body": [
+            "import { NgModule } from '@angular/core';",
+            "import { BrowserModule  } from '@angular/platform-browser';",
+            "import { ${1:App}Component } from './${1:app}.component';",
+            "import { ToolbarComponent, ItemDirective, ItemsDirective } from '@syncfusion/ej2-ng-navigations';",
+            "",
+            "@NgModule({",
+            "\timports: [",
+            "\t\tBrowserModule",
+            "\t],",
+            "\tdeclarations: [${1:App}Component,ToolbarComponent,ItemsDirective,ItemDirective],",
+            "\tbootstrap: [${1:App}Component],",
+            "})",
+            "export class ${1:App}Module { }",
+            "$0"
+        ]
+    },
+    "Angular Basic ToolBar Component": {
+        "prefix": "ej2-ng-toolbar",
+        "description": "This will insert the snippet for Toolbar",
+        "body": [
+            "import { Component, ViewChild  } from '@angular/core';",
+            "import {Toolbar} from '@syncfusion/ej2-navigations';",
+            "",
+            "@Component({",
+            "\tselector: '${1:app}',",
+            "\ttemplate: `<ej-toolbar>",
+            "\t<e-items>",
+            "\t\t<e-items>",
+            "\t\t<e-item text='Copy'></e-item>",
+            "\t\t<e-item text='Paste'></e-item>",
+            "\t\t<e-item type='Separator'></e-item>",
+            "\t\t<e-item text='Bold'></e-item>",
+            "\t\t<e-item text='Italic'></e-item>",
+            "\t\t<e-item text='Underline'></e-item>",
+            "\t</e-items>",
+            "\t</ej-toolbar>`",
+            "})",
+            "",
+            "export class ${2:App}Component {",
+            "\t @ViewChild('element') element;",
+            "\t ngAfterViewInit() { }",
+            "}"
+        ]
+    },
+    "Angular RTL in ToolBar Component": {
+        "prefix": "ej2-ng-toolbar-rtl",
+        "description": "Toolbar is rendered with RTL support",
+        "body": [
+            "import { Component, ViewChild } from '@angular/core';",
+            "\timport {Toolbar} from '@syncfusion/ej2-navigations';",
+            "",
+            "@Component({",
+            "\tselector: '${1:app}',",
+            "\ttemplate: `<ej-toolbar enableRtl='true'>",
+            "\t<e-items>",
+            "\t\t<e-items>",
+            "\t\t<e-item text='Copy'></e-item>",
+            "\t\t<e-item text='Paste'></e-item>",
+            "\t\t<e-item type='Separator'></e-item>",
+            "\t\t<e-item text='Bold'></e-item>",
+            "\t\t<e-item text='Italic'></e-item>",
+            "\t\t<e-item text='Underline'></e-item>",
+            "\t</e-items>",
+            "\t</ej-toolbar>`",
+            "})",
+            "",
+            "export class ${2:App}Component {",
+            "\t @ViewChild('element') element;",
+            "\t ngAfterViewInit() { }",
+            "}"
+        ]
+    }
+}

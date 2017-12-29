@@ -1,0 +1,100 @@
+{
+    "Angular DropdownList Module": {
+        "prefix": "ej2-ng-dropdown-module",
+        "description": "Angular DropdownList Module",
+        "body": [
+            "import { NgModule } from '@angular/core';",
+            "import { BrowserModule  } from '@angular/platform-browser';",
+            "import { ${1:App}Component } from './${1:app}.component';",
+            "import { FormsModule } from '@angular/forms';",
+            "import { DropDownListComponent } from '@syncfusion/ej2-ng-dropdowns';",
+            "",
+            "@NgModule({",
+            "\timports: [",
+            "\t\tBrowserModule,FormsModule",
+            "\t],",
+            "\tdeclarations: [${1:App}Component,DropDownListComponent],",
+            "\tbootstrap: [${1:App}Component],",
+            "})",
+            "export class ${1:App}Module { }",
+            "$0"
+        ]
+    },
+    "Angular Basic DropdownList Component": {
+        "prefix": "ej2-ng-dropdown",
+        "description": "This will insert the snippet for DropDownList",
+        "body": [
+            "import { Component } from '@angular/core';",
+            "import { ComboBoxComponent } from '@syncfusion/ej2-ng-dropdowns';",
+            "",
+            "@Component({",
+            "\tselector: '${1:app}',",
+            "\ttemplate: `<ej-dropdownlist id='ddlelement' [dataSource]='data' placeholder = 'Select a game'></ej-dropdownlist>`",
+            "})",
+            "",
+            "export class ${2:App}Component {",
+            "\t public data: string[] = ['Snooker', 'Tennis', 'Cricket', 'Football', 'Rugby'];",
+            "}"
+        ]
+    },
+    "Angular DataBinding in DropdownList Component": {
+        "prefix": "ej2-ng-dropdown-ds-remote",
+        "description": "DropDownList is rendered with Remote DataSource",
+        "body": [
+            "import { Component } from '@angular/core';",
+            "import { DropDownListComponent } from '@syncfusion/ej2-ng-dropdowns';",
+            "import { Query, DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data'",
+            "",
+            "@Component({",
+            "\tselector: '${1:app}',",
+            "\ttemplate: `<ej-dropdownlist id='ddlelement' #samples [dataSource]='data' [fields]='fields' [placeholder]='text' [query]='query' [sortOrder]='sorting'></ej-dropdownlist>`",
+            "})",
+            "",
+            "export class ${2:App}Component {",
+            "\tconstructor(){ }",
+            "\tpublic data: DataManager = new DataManager({",
+            "\t\turl: 'http://services.odata.org/V4/Northwind/Northwind.svc/',",
+            "\t\tadaptor: new ODataV4Adaptor,",
+            "\t\tcrossDomain: true",
+            "});",
+            "\tpublic fields: Object = { text: '${3:ContactName}', value: '${4:CustomerID}' };",
+            "\tpublic query: Query = new Query().from('Customers').select(['ContactName', 'CustomerID']).take(6),",
+            "\tpublic text: string = 'Select a customer';",
+            "\tpublic sorting: string = 'Ascending';",
+            "}"
+        ]
+    },
+    "Angular Filtering in DropDownList Component": {
+        "prefix": "ej2-ng-dropdown-filter",
+        "description": "DropDownList is rendered with Filtering support ",
+        "body": [
+            "import { Component, ViewChild  } from '@angular/core';",
+            "import { ComboBoxComponent } from '@syncfusion/ej2-ng-dropdowns';",
+            "import { FilteringEventArgs } from '@syncfusion/ej2-dropdowns';",
+            "import { EmitType } from '@syncfusion/ej2-base';",
+            "import { Query } from '@syncfusion/ej2-data'",
+            "",
+            "@Component({",
+            "\tselector: '${1:app}',",
+            "\ttemplate: `<ej-dropdownlist id='ddlelement' #samples [dataSource]='data' [fields]='fields' [placeholder]='text' [allowFiltering]='true' (filtering)='onFiltering($event)'></ej-dropdownlist>`",
+            "})",
+            "",
+            "export class ${2:App}Component {",
+            "\t@ViewChild('samples')",
+            "\tconstructor(){ }",
+            "\tpublic data: { [key: string]: Object }[] = [",
+            "\t\t{ Id: 's3', Country: 'Alaska' },",
+            "\t\t{ Id: 's1', Country: 'California' },",
+            "\t\t{ Id: 's2', Country: 'Florida' },",
+            "\t\t{ Id: 's4', Country: 'Georgia' }];",
+            "\tpublic fields: Object = { text: '${3:Country}', value: '${4:Id}' };",
+            "\tpublic text: string = 'Select a country';",
+            "\tpublic onFiltering: EmitType =  (e: FilteringEventArgs) => {",
+            "\tlet query = new Query();",
+            "\tquery = (e.text != '') ? query.where('Country', 'startswith', e.text, true) : query;",
+            "\te.updateData(this.data, query);",
+            "};",
+            "}"
+        ]
+    }
+}
