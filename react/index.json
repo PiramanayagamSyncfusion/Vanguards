@@ -1,0 +1,30 @@
+{
+	"TypeScript TreeView Module": {
+		"prefix": "ej2-react-treeview",
+		"description": "TypeScript TreeView Module",
+		"body": [
+			"import { TreeView } from '@syncfusion/ej2-navigations';",
+			"",
+			"let data: { [key: string]: Object }[] = [",
+			"\t{",
+			"\t\tnodeId: '01', nodeText: 'Music',",
+			"\t\tnodeChild: [",
+			"\t\t\t{ nodeId: '01-01', nodeText: 'Gouttes.mp3' }",
+			"\t\t]",
+			"\t},",
+			"\t{",
+			"\t\tnodeId: '02', nodeText: 'Videos', expanded: true,",
+			"\t\tnodeChild: [",
+			"\t\t\t{ nodeId: '02-01', nodeText: 'Naturals.mp4' },",
+			"\t\t\t{ nodeId: '02-02', nodeText: 'Wild.mpeg' },",
+			"\t\t]",
+			"\t},",
+			"];",
+			"",
+			"let treeObj: TreeView = new TreeView({",
+			"\tfields: { dataSource: '${1:data}', id: '${2:nodeId}', text: '${3:nodeText}', child: '${4:nodeChild}' }",
+			"});",
+			"treeObj.appendTo('#${5:tree}');"
+		]
+	}
+}

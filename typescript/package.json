@@ -20,7 +20,7 @@
         "snippets": [
             {
                 "language": "typescript",
-                "path": "./snippets/index.json"
+                "path": "./index.json"
             }
         ],
         "activationEvents": [
