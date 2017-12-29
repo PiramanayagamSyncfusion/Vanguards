@@ -15,7 +15,7 @@
             "\t);",
             "\t}",
             "}",
-            "ReactDom.render(<${1:App} />,document.getElementById('button'));"
+            "ReactDOM.render(<${1:App} />,document.getElementById('button'));"
         ]
     },
     "React CheckBox Module": {
@@ -34,7 +34,7 @@
             "\t);",
             "\t}",
             "}",
-            "ReactDom.render(<${1:App} />,document.getElementById('check-box'));"
+            "ReactDOM.render(<${1:App} />,document.getElementById('check-box'));"
         ]
     },
     "React RadioButton Module": {
@@ -56,7 +56,7 @@
             "\t);",
             "\t}",
             "}",
-            "ReactDom.render(<${1:App} />,document.getElementById('radio-button'));"
+            "ReactDOM.render(<${1:App} />,document.getElementById('radio-button'));"
         ]
     }
 }

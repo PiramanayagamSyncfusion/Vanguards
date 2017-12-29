@@ -71,14 +71,9 @@
             "];",
             "let treeObj: TreeView = new TreeView({",
             "\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}', child: '${4:child}' },",
-            "\tallowEditing: true,",
-            "\tnodeEditing: editing",
+            "\tallowEditing: true",
             "});",
-            "treeObj.appendTo('#{5:tree}');",
-            "function editing(args: NodeEditEventArgs) {",
-            "\tif (args.node.parentNode.parentNode.nodetext !== 'LI') {",
-            "\t\targs.cancel = true;",
-            "\t}",
+            "treeObj.appendTo('#${5:tree}');",
             "}"
        ]
     },
