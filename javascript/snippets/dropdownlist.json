@@ -36,7 +36,7 @@
     },
 
   "JavaScript DropDownList with Filtering": {
-      "prefix": "ej2-dropdown-filter",
+      "prefix": "ej2-js-dropdown-filter",
       "description": "JavaScript DropDownList with Filtering",
       "body": [
           "var dataSource = new ej.data.DataManager({",
