@@ -22,7 +22,7 @@
             "];",
             "",
             "let treeObj: TreeView = new TreeView({",
-            "\tfields: { dataSource: '${1:data}', id: '${2:nodeId}', text: '${3:nodeText}', child: '${4:nodeChild}' }",
+            "\tfields: { dataSource: ${1:data}, id: '${2:nodeId}', text: '${3:nodeText}', child: '${4:nodeChild}' }",
             "});",
             "treeObj.appendTo('#${5:tree}');"
         ]
