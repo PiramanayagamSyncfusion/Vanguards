@@ -2,7 +2,7 @@
 
 ![Logo](./images/synclogo.png)
 
-This extension will add JavaScript snippet for Essential JS 2 components.
+This extension will insert the Essential JS 2 JavaScript components.
 
 ## JavaScript Snippets
 

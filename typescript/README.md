@@ -2,7 +2,7 @@
 
 ![Logo](./images/synclogo.png)
 
-This extension will add TypeScript snippet for Essential JS 2 components.
+This extension will insert the Essential JS 2 TypeScript components.
 
 ## TypeScript Snippets
 

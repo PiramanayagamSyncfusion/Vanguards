@@ -2,7 +2,7 @@
 
 ![Logo](./images/synclogo.png)
 
-This extension will add Angualr snippet for Essential JS 2 components.
+This extension will insert the Essential JS 2 Angular components.
 
 ## Angular Snippets
 
