@@ -26,10 +26,10 @@
         "description": "JavaScript ListView with Remote DataSource",
        "body": [
             "var dataSource = new ej.data.DataManager({",
-            "\turl: 'http://services.odata.org/V4/Northwind/Northwind.svc/',",
+            "\turl: 'http://js.syncfusion.com/ejServices/Wcf/Northwind.svc/',",
             "\tcrossDomain: true",
           "});",
-          "var query=new ej.data.Query().from('Products').select('ProductID,ProductName').take(6),",
+          "var query=new ej.data.Query().from('Products').select('ProductID,ProductName').take(6);",
             "var listviewInstance   = new ej.lists.ListView({",
             "\tdataSource: ${1:dataSource},",
             "\tquery: ${2:query},",

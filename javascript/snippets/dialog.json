@@ -25,7 +25,7 @@
             "\tcontent: 'This is a Dialog with content',",
             "\ttarget: document.getElementById('${1:container}'),",
             "\twidth: '250px',",
-            "\tenableRTL:true",
+            "\tenableRtl:true",
              "});",
             "dialog.appendTo('#${2:dialog}');",
             "document.getElementById('${3:targetButton}').onclick = function() {",

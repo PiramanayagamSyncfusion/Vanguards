@@ -71,15 +71,10 @@
             "",
             "var treeObj =  new ej.navigations.TreeView({",
             "\tfields: { dataSource: ${1:dataSource}, id: '${2:id}', text: '${3:text}', child: '${4:Child}' },",
-            "\tallowEditing:true,",
-            "\tnodeEditing: editing",
+            "\tallowEditing:true",
             "});",
-            "treeObj.appendTo('#${5:tree}');",
-            "function editing(args) {",
-            "\tif (args.node.parentNode.parentNode.nodetext !== 'LI') {",
-            "\t\targs.cancel = true;",
-            " \t}",
-            "}"
+            "treeObj.appendTo('#${5:tree}');"
+            
           ]
     } ,
 

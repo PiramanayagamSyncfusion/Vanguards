@@ -24,7 +24,7 @@
           "\t},",
           "\tfloatLabelType: 'Never'",
           "});",
-            "mask.appendTo('#${1:mask1}');"      
+            "mask1.appendTo('#${1:mask1}');"      
           ]
     } 
     
