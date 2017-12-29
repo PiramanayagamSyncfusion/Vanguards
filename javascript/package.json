@@ -19,12 +19,15 @@
     "contributes": {
         "snippets": [
             {
-                "language": "typescript",
+                "language": "javascript",
                 "path": "./snippets/index.json"
             }
         ],
+        "extensions": [
+          ".js"
+        ],
         "activationEvents": [
-            "onLanguage:typescript"
+            "onLanguage:javascript"
         ]
     },
     "license": "SEE LICENSE IN LICENSE.md",
@@ -33,11 +36,11 @@
         "url": "https://github.com/PiramanayagamSyncfusion/Vanguards.git"
     },
     "keywords": [
-        "TypeScript",
+        "JavaScript",
         "Syncfusion",
         "TreeView",
         "ej2",
-        "ej2-treeview",
-        "ej2-navigation"
+        "ej2-js-treeview",
+        "ej2-js-navigation"
     ]
 }

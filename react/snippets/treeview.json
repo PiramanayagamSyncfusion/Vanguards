@@ -1,6 +1,6 @@
 {
     "TypeScript TreeView Module": {
-        "prefix": "ej2-treeview",
+        "prefix": "ej2-react-treeview",
         "description": "TypeScript TreeView Module",
         "body": [
             "import { TreeView } from '@syncfusion/ej2-navigations';",

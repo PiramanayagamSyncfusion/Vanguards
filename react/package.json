@@ -19,12 +19,15 @@
     "contributes": {
         "snippets": [
             {
-                "language": "typescript",
-                "path": "./snippets/index.json"
+                "language": "javascriptreact",
+                "path": "./snippets/index.json",
+                "extensions": [
+                    ".jsx"
+                ]
             }
         ],
         "activationEvents": [
-            "onLanguage:typescript"
+            "onLanguage:javascriptreact"
         ]
     },
     "license": "SEE LICENSE IN LICENSE.md",
@@ -33,11 +36,11 @@
         "url": "https://github.com/PiramanayagamSyncfusion/Vanguards.git"
     },
     "keywords": [
-        "TypeScript",
+        "React",
         "Syncfusion",
         "TreeView",
         "ej2",
-        "ej2-treeview",
-        "ej2-navigation"
+        "ej2-react-treeview",
+        "ej2-react-navigation"
     ]
 }
