@@ -2,7 +2,7 @@
     "name": "ej2-js-packages",
     "displayName": "JavaScript snippet for Essential JS 2 components",
     "description": "JavaScript snippet for Essential JS 2 components",
-    "version": "1.4.0",
+    "version": "1.6.0",
     "publisher": "gurunathan",
     "engines": {
         "vscode": "^1.8.0"
@@ -20,7 +20,7 @@
         "snippets": [
             {
                 "language": "javascript",
-                "path": "./index.json"
+                "path": "./snippets/index.json"
             }
         ],
         "extensions": [
@@ -38,6 +38,9 @@
     "devDependencies": {
         "gulp": "latest",
         "gulp-merge-json": "latest"
+    },
+    "scripts": {
+        "vscode:prepublish": "gulp merge"
     },
     "keywords": [
         "JavaScript",

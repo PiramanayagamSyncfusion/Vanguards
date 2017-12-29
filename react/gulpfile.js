@@ -4,5 +4,5 @@ var gulp = require('gulp'),
 gulp.task('merge', function() {
   gulp.src('./snippets/**.json')
       .pipe(merge({ fileName: 'index.json'}))
-      .pipe(gulp.dest('./'))
+      .pipe(gulp.dest('./snippets'))
 });
