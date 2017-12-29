@@ -2,7 +2,7 @@
     "name": "ej2-ng-packages",
     "displayName": "Angular snippet for Essential JS 2 components",
     "description": "Angular snippet for Essential JS 2 components",
-    "version": "1.9.0",
+    "version": "1.11.0",
     "publisher": "gurunathan",
     "engines": {
         "vscode": "^1.8.0"
