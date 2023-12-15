@@ -1,5 +1,5 @@
 # Vanguards
-VS code Extension for EJ2 components
+VS code Extension for EJ2 components.
 
 ![Logo](./angular/images/synclogo.png)
 
